@@ -1,0 +1,23 @@
+{
+  "name": "vit.to",
+  "version": "0.0.1",
+  "description": "A metalsmith based website of my personal homepage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitto/vit.to.git"
+  },
+  "keywords": [
+    "static",
+    "site"
+  ],
+  "author": "Vittorio <me@vittoriovittori.com> (http://vit.to/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vitto/vit.to/issues"
+  },
+  "homepage": "https://github.com/vitto/vit.to#readme"
+}
