@@ -1,7 +1,6 @@
 # vit.to
 My website
 
-
 Test this page at https://vitto.github.io/vit.to/
 
 ### Develop
@@ -20,5 +19,11 @@ npm run serve
 
 ### Deploy
 
-Is based on this gist:
+Deploy the `dist` folder into the `gh-pages` branch
+
+```
+npm run deploy
+```
+
+It's based on this gist:
 https://gist.github.com/cobyism/4730490
