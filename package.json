@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "twig": "cd frontend && node metalsmith.js",
-    "clean": "rm -rf frontend/build || true && rm -rf frontend/source || true && rm -rf frontend/assets || true",
+    "clean": "rm -rf frontend/build/* || true && rm -rf frontend/source/* || true && rm -rf frontend/assets/* || true",
     "build": "npm run clean && npm run build:prod && npm run source && npm run twig && npm run serve",
     "build:prod": "cd frontend && ../node_modules/.bin/webpack --progress --profile --colors --env=prod",
     "build:dev": "cd frontend && ../node_modules/.bin/webpack --progress --profile --colors --env=dev",

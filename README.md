@@ -11,3 +11,8 @@ python -m SimpleHTTPServer 8000
 ``
 
 Check it on [localhost:8000](http://localhost:8000)
+
+### Deploy
+
+Is based on this gist:
+https://gist.github.com/cobyism/4730490

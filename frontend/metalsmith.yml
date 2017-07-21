@@ -3,10 +3,10 @@ metadata:
   repo: https://github.com/vitto/vit.to
 clean: true
 source: source
-destination: build
+destination: ../build
 collections:
   diy:
-    pattern: ../_posts/*.md
+    pattern: ../posts/*.md
     sortBy: 'date'
 markdown:
   smartypants: true
