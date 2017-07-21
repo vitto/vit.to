@@ -1,8 +1,8 @@
-function buildConfig(env) {
+function buildConfig (env) {
   if (!env) {
-    env = 'dev';
+    env = 'dev'
   }
   return require('./webpack.' + env + '.js')(env)
 }
 
-module.exports = buildConfig;
+module.exports = buildConfig

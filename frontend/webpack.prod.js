@@ -1,30 +1,30 @@
-'use strict';
+'use strict'
 
-const webpack = require('webpack');
-const glob = require('glob');
-const autoprefixer = require('autoprefixer');
+const webpack = require('webpack')
+const autoprefixer = require('autoprefixer')
+const path = require('path')
 
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const ManifestPlugin = require('webpack-manifest-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const ManifestPlugin = require('webpack-manifest-plugin')
 
-const __dist = __dirname + '/../dist';
-const __js = __dirname + '/js';
-const __modules = __dirname + '/../node_modules';
-const __sass = __dirname + '/sass/default';
-const __images = __dirname + '/sass/default/img';
-const publicPath = '../';
+const __dist = path.join(__dirname, '/assets')
+const __js = path.join(__dirname, '/js')
+const __modules = path.join(__dirname, '/../node_modules')
+const __sass = path.join(__dirname, '/sass/default')
+const __images = path.join(__dirname, '/sass/default/img')
+const publicPath = '../'
 
 module.exports = function (env) {
   return {
     entry: {
       'js/app': __js + '/main.js',
-      'js/vendor' : [
+      'js/vendor': [
         __modules + '/jquery/dist/jquery.js'
       ],
       'css/style': [
         __sass + '/import.scss'
-      ],
+      ]
       // 'css/vendor-style': [
       //   __modules + '/fontello/fontello-codes.css'
       // ]
@@ -49,7 +49,7 @@ module.exports = function (env) {
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: ['css-loader']
-        }),
+        })
         // exclude: __dirname + '/src'
       }, {
         test: /\.[ot]tf$/,
@@ -83,40 +83,43 @@ module.exports = function (env) {
           publicPath: publicPath
         }
       }, {
-          test: /\.js$/,
-          exclude: /(node_modules|bower_components)/,
-          use: {
-              loader: 'babel-loader',
-              options: {
-                  presets: ['es2015']
-              }
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['es2015']
           }
+        }
       }]
     },
-    plugins: [new CopyWebpackPlugin([{
-      from: __images,
-      to: __dist + '/img'
-    }]),
-    new webpack.LoaderOptionsPlugin({
-      minimize: true,
-      debug: false,
-      options: {
-        postcss: [autoprefixer()]
-      }
-    }),
-    new ExtractTextPlugin('[name].[chunkhash].css'), new webpack.optimize.UglifyJsPlugin({
-      beautify: false,
-      mangle: {
-        screw_ie8: true,
-        keep_fnames: true
-      },
-      compress: {
-        screw_ie8: true
-      },
-      comments: false
-    }),
-    new ManifestPlugin({
-      basePath: 'build/'
-    })]
-  };
-};
+    plugins: [
+      new CopyWebpackPlugin([{
+        from: __images,
+        to: __dist + '/img'
+      }]),
+      new webpack.LoaderOptionsPlugin({
+        minimize: true,
+        debug: false,
+        options: {
+          postcss: [autoprefixer()]
+        }
+      }),
+      new ExtractTextPlugin('[name].[chunkhash].css'),
+      new webpack.optimize.UglifyJsPlugin({
+        beautify: false,
+        mangle: {
+          screw_ie8: true,
+          keep_fnames: true
+        },
+        compress: {
+          screw_ie8: true
+        },
+        comments: false
+      }),
+      new ManifestPlugin({
+        basePath: 'build/'
+      })
+    ]
+  }
+}

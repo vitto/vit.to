@@ -1,0 +1,22 @@
+metadata:
+  home: http://vit.to
+  repo: https://github.com/vitto/vit.to
+clean: true
+source: source
+destination: build
+collections:
+  diy:
+    pattern: ../_posts/*.md
+    sortBy: 'date'
+markdown:
+  smartypants: true
+  gfm: true
+  tables: true
+permalinks:
+  relative: false
+  pattern: 'diy/:date/:title'
+  date: YYYY-MM-DD
+twig:
+  directory: twig
+  view: base.twig
+  cache: false

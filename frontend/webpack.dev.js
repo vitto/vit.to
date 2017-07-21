@@ -1,32 +1,32 @@
-'use strict';
+'use strict'
 
-const webpack = require('webpack');
-const glob = require('glob');
-const autoprefixer = require('autoprefixer');
+const webpack = require('webpack')
+const autoprefixer = require('autoprefixer')
+const path = require('path')
 
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const ManifestPlugin = require('webpack-manifest-plugin');
-const WebpackShellPlugin = require('webpack-shell-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const ManifestPlugin = require('webpack-manifest-plugin')
+const WebpackShellPlugin = require('webpack-shell-plugin')
 
-const __dist = __dirname + '/../dist';
-const __js = __dirname + '/js';
-const __modules = __dirname + '/../node_modules';
-const __sass = __dirname + '/sass/default';
-const __images = __dirname + '/sass/default/img';
-const publicPath = '../';
-const basePath = '/';
+const __dist = path.join(__dirname, '/assets')
+const __js = path.join(__dirname, '/js')
+const __modules = path.join(__dirname, '/../node_modules')
+const __sass = path.join(__dirname, '/sass/default')
+const __images = path.join(__dirname, '/sass/default/img')
+const publicPath = path.join(__dirname, '../')
+const basePath = '/'
 
 module.exports = function (env) {
   return {
     entry: {
       'js/app': __js + '/main.js',
-      'js/vendor' : [
+      'js/vendor': [
         __modules + '/jquery/dist/jquery.js'
       ],
       'css/style': [
         __sass + '/import.scss'
-      ],
+      ]
       // 'css/vendor-style': [
       //   __modules + '/fontello/fontello-codes.css'
       // ]
@@ -88,14 +88,14 @@ module.exports = function (env) {
           publicPath: publicPath
         }
       }, {
-          test: /\.js$/,
-          exclude: /(node_modules|bower_components)/,
-          use: {
-              loader: 'babel-loader',
-              options: {
-                  presets: ['es2015']
-              }
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['es2015']
           }
+        }
       }]
     },
     plugins: [
@@ -108,12 +108,13 @@ module.exports = function (env) {
           postcss: [autoprefixer()]
         }
       }),
-      new ExtractTextPlugin('[name].bundle.css'), new ManifestPlugin({
+      new ExtractTextPlugin('[name].bundle.css'),
+      new ManifestPlugin({
         basePath: basePath
       }),
       new WebpackShellPlugin({
         onBuildExit: [
-          'npm run finish'
+          'npm run twig'
         ]
       })
     ],
@@ -122,5 +123,5 @@ module.exports = function (env) {
       compress: true,
       port: 9000
     }
-  };
-};
+  }
+}
