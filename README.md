@@ -8,7 +8,7 @@ To test it locally, just run this in the same folder
 
 ```
 python -m SimpleHTTPServer 8000
-``
+```
 
 Check it on [localhost:8000](http://localhost:8000)
 
