@@ -114,6 +114,7 @@ module.exports = function (env) {
       }),
       new WebpackShellPlugin({
         onBuildExit: [
+          'npm run source',
           'npm run twig'
         ]
       })

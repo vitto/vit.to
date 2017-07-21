@@ -3,7 +3,7 @@ metadata:
   repo: https://github.com/vitto/vit.to
 clean: true
 source: source
-destination: ../build
+destination: build
 collections:
   diy:
     pattern: ../posts/*.md

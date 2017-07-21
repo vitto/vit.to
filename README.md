@@ -4,13 +4,19 @@ My website
 
 Test this page at https://vitto.github.io/vit.to/
 
-To test it locally, just run this in the same folder
+### Develop
+
+To watch code during development
 
 ```
-python -m SimpleHTTPServer 8000
+npm run watch
 ```
 
-Check it on [localhost:8000](http://localhost:8000)
+To test code via HTTP go to: http://localhost:8000/
+
+```
+npm run serve
+```
 
 ### Deploy
 
