@@ -1,7 +1,6 @@
 # vit.to
-My website
 
-Test this page at https://vitto.github.io/vit.to/
+Test my website at https://vitto.github.io/vit.to/ or http://vit.to
 
 ### Develop
 
