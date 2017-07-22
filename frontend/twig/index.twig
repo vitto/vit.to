@@ -8,13 +8,20 @@
     </aside>
     <main class="main">
       <section class="crafts">
-        {% set items = global.faker.random.number(25) %}
+        {% set items = global.faker.random.number(10, 25) %}
         {% for i in 0..(items) %}
-          <article class="piece">
-            <h1>
-              {{ global.faker.lorem.sentence }}
-            </h1>
-          </article>
+          <div class="crafts__item">
+            <article class="piece">
+              <div class="piece__picture">
+                <img class="piece__image" src="{{ global.images.white[i] }}" alt="">
+              </div>
+              <div class="piece__details">
+                <h1>
+                  {{ global.faker.lorem.sentence }}
+                </h1>
+              </div>
+            </article>
+          </div>
         {% endfor %}
       </section>
     </main>

@@ -8,9 +8,11 @@ const yaml = require('js-yaml')
 const faker = require('faker')
 
 var m = yaml.safeLoad(fs.readFileSync('metalsmith.yml', 'utf-8'))
+var images = yaml.safeLoad(fs.readFileSync('fake-images.yml', 'utf-8'))
 
 m.twig.global = {
-  faker: faker
+  faker: faker,
+  images: images
 }
 
 metalsmith(__dirname)

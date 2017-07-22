@@ -1,3 +1,25 @@
 @include block ('piece') {
-  width: 50%;
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  @include debug;
+
+  @include element ('picture') {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+    overflow: hidden;
+  }
+
+  @include element ('image') {
+    height: auto;
+    mix-blend-mode: multiply;
+    width: 100%;
+  }
+
+  @include element ('details') {
+    min-height: 200px;
+  }
 }
