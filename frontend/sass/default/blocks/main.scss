@@ -1,0 +1,9 @@
+@include block ('main') {
+  @include debug;
+  margin-left: 20%;
+  padding: 0 s(3);
+
+  @include media ('<=desktop-small') {
+    margin-left: $aside--min-width;
+  }
+}

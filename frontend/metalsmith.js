@@ -5,8 +5,13 @@ const metalsmith = require('metalsmith')
 const permalinks = require('metalsmith-permalinks')
 const twig = require('metalsmith-twig')
 const yaml = require('js-yaml')
+const faker = require('faker')
 
-const m = yaml.safeLoad(fs.readFileSync('metalsmith.yml', 'utf-8'))
+var m = yaml.safeLoad(fs.readFileSync('metalsmith.yml', 'utf-8'))
+
+m.twig.global = {
+  faker: faker
+}
 
 metalsmith(__dirname)
   .metadata(m.metadata)

@@ -1,0 +1,5 @@
+@include block ('crafts') {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+}

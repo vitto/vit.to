@@ -1,9 +1,22 @@
 <!doctype html>
-<html>
-{% include 'partials/head.twig' %}
-
-<body class="body">
-  {{ contents }}
-</body>
-
+<html lang="en">
+  {% include 'partials/head.twig' %}
+  <body class="body">
+    <aside class="aside">
+      {% include 'partials/aside__header.twig' %}
+      {% include 'partials/aside__footer.twig' %}
+    </aside>
+    <main class="main">
+      <section class="crafts">
+        {% set items = global.faker.random.number(25) %}
+        {% for i in 0..(items) %}
+          <article class="piece">
+            <h1>
+              {{ global.faker.lorem.sentence }}
+            </h1>
+          </article>
+        {% endfor %}
+      </section>
+    </main>
+  </body>
 </html>

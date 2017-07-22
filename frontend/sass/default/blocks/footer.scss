@@ -1,0 +1,12 @@
+@include block ('footer') {
+  @include element ('link') {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  @include element ('logo') {
+    height: auto;
+    max-width: 57px;
+    width: 100%;
+  }
+}

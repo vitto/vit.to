@@ -1,0 +1,18 @@
+@include block ('aside') {
+  $shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+
+  background-color: $aside--background;
+  box-shadow: $shadow;
+  display: inline-flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  padding: s(3);
+  position: fixed;
+  white-space: nowrap;
+  width: 20%;
+
+  @include media ('<=desktop-small') {
+    width: $aside--min-width;
+  }
+}

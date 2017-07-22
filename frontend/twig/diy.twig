@@ -1,10 +1,15 @@
 <!doctype html>
-<html>
-{% include 'partials/head.twig' %}
-
-<body class="body">
-  - diy - <br>
-  {{ contents }}
-</body>
-
+<html lang="en">
+  {% include 'partials/head.twig' %}
+  <body class="body">
+    <aside class="aside">
+      {% include 'partials/aside__header.twig' %}
+      {% include 'partials/aside__footer.twig' %}
+    </aside>
+    <main class="main">
+      <article>
+        {{ contents }}
+      </article>
+    </main>
+  </body>
 </html>
