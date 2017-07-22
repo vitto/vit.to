@@ -24,5 +24,5 @@ Deploy the `dist` folder into the `gh-pages` branch
 npm run deploy
 ```
 
-It's based on this gist:
+The deploy script is based on this gist:
 https://gist.github.com/cobyism/4730490
