@@ -1,6 +1,7 @@
 metadata:
   home: http://vit.to
   repo: https://github.com/vitto/vit.to
+  background: '#faf9f7'
 clean: true
 source: source
 destination: build
