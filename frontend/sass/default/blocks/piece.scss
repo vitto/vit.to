@@ -3,19 +3,19 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  @include debug;
 
   @include element ('picture') {
     align-items: center;
+    background-color: $product--background;
     display: flex;
     flex-grow: 1;
     justify-content: space-around;
+    mix-blend-mode: multiply;
     overflow: hidden;
   }
 
   @include element ('image') {
     height: auto;
-    mix-blend-mode: multiply;
     width: 100%;
   }
 
