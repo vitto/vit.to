@@ -9,10 +9,10 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const ManifestPlugin = require('webpack-manifest-plugin')
 
 const __dist = path.join(__dirname, '/assets')
+const __images = path.join(__dirname, '/sass/default/img')
 const __js = path.join(__dirname, '/js')
 const __modules = path.join(__dirname, '/../node_modules')
 const __sass = path.join(__dirname, '/sass/default')
-const __images = path.join(__dirname, '/sass/default/img')
 const publicPath = '../'
 
 module.exports = function (env) {
@@ -24,10 +24,10 @@ module.exports = function (env) {
       ],
       'css/style': [
         __sass + '/import.scss'
+      ],
+      'css/vendor-style': [
+        __modules + '/material-design-icons/iconfont/material-icons.css'
       ]
-      // 'css/vendor-style': [
-      //   __modules + '/fontello/fontello-codes.css'
-      // ]
     },
     output: {
       path: __dist,
@@ -56,6 +56,14 @@ module.exports = function (env) {
         loader: 'url-loader',
         options: {
           limit: 50000,
+          name: './fonts/[name].[ext]',
+          publicPath: publicPath
+        }
+      }, {
+        test: /\.eot$/,
+        loader: 'url-loader?mimetype=application/font-eot',
+        options: {
+          limit: 65000,
           name: './fonts/[name].[ext]',
           publicPath: publicPath
         }

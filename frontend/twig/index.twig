@@ -8,21 +8,18 @@
     </aside>
     <main class="main">
       <section class="crafts">
-        {% set items = global.faker.random.number(10, 25) %}
+        {% set items = global.faker.random.number(20) %}
+        {% if items < 6 %}
+          {% set items = 6 %}
+        {% endif %}
         {% for i in 0..(items) %}
-          <div class="crafts__item">
-            <article class="piece">
-              <div class="piece__picture">
-                <img class="piece__image" src="{{ global.images.white[i] }}" alt="">
-              </div>
-              <div class="piece__details">
-                <h1>
-                  {{ global.faker.lorem.sentence }}
-                </h1>
-              </div>
-            </article>
-          </div>
+          <a class="crafts__item" href="/diy/2017-07-04/pirelli-tires-coffee-table">
+            {% include 'partials/piece.twig' %}
+          </a>
         {% endfor %}
+        <div class="crafts__call">
+          Call to action per richiedere un pezzo specifico
+        </div>
       </section>
     </main>
   </body>

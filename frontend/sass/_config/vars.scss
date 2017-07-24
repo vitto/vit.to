@@ -3,7 +3,8 @@ $font-family-sans: -apple-system, BlinkMacSystemFont, helvetica, arial, sans-ser
 $font-family-serif: georgia, 'times new roman', times, serif;
 $font-family-monospace: menlo, monaco, 'courier new', monospace;
 
-$color-desert-storm: #faf9f7;
 $color-white: #fff;
+$color-desert-storm: hsl(40, 23%, 95%);
+$color-mercury: #e9e8e6;
+$color-gray: mix(#fff, #5b5a57, 35%);
 $color-chicago: #5b5a57;
-$color-gray: mix(#fff, #5b5a57, 25%);

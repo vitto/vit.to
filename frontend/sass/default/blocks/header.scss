@@ -1,13 +1,10 @@
 @include block ('header') {
   @include element ('title') {
-    font-size: 20px;
-    font-weight: 600;
+    @extend %title;
     margin: 0;
   }
 
   @include element ('phrase') {
-    color: $header__phrase--color;
-    font-size: 12px;
-    font-weight: 200;
+    @extend %text;
   }
 }

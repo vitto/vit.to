@@ -1,6 +1,6 @@
 @include block ('body') {
   background-color: $body--background;
-  color: $body--text-color;
+  color: $text-color;
   font-family: $font-family-sans;
   line-height: 1.25;
   margin: 0;

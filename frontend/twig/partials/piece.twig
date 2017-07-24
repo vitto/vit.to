@@ -1,0 +1,20 @@
+<article class="piece">
+  <div class="piece__picture">
+    <img class="piece__image" src="{{ global.images.white[i] }}" alt="">
+  </div>
+  <div class="piece__details">
+    <h2 class="piece__title">
+      {{ global.faker.lorem.words(3) }}
+    </h2>
+    <div class="piece__availability">
+      {% if faker.random.boolean %}
+        <i class="piece__icon material-icons">shopping_cart</i>
+      {% else %}
+        <i class="piece__icon material-icons">remove_shopping_cart</i>
+      {% endif %}
+      <h4 class="piece__furniture">
+        {{ global.faker.lorem.words(2) }}
+      </h4>
+    </div>
+  </div>
+</article>

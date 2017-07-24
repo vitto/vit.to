@@ -15,4 +15,8 @@
   @include media ('<=desktop-small') {
     width: $aside--min-width;
   }
+
+  @include element ('buttons') {
+    margin-top: s(2);
+  }
 }

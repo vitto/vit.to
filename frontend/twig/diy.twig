@@ -3,12 +3,31 @@
   {% include 'partials/head.twig' %}
   <body class="body">
     <aside class="aside">
-      {% include 'partials/aside__header.twig' %}
+      <div class="aside__header">
+        {% include 'partials/aside__header.twig' %}
+        <div class="aside__buttons">
+          <a href="{{ relativePath }}" class="button button--back">Indietro</a>
+        </div>
+      </div>
+      {% include 'partials/aside__preview.twig' %}
       {% include 'partials/aside__footer.twig' %}
     </aside>
     <main class="main">
-      <article>
-        {{ contents }}
+      <article class="article">
+        <header class="article__header">
+          <img src="./{{ cover }}" class="article__image">
+        </header>
+        <div class="markdown">
+          <h1 class="article__title">
+            {{ title }}
+          </h1>
+          <div class="article__details">
+            {{ furniture }}
+            
+          </div>
+
+          {{ contents }}
+        </div>
       </article>
     </main>
   </body>

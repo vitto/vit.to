@@ -1,25 +1,50 @@
 @include block ('piece') {
+
   align-items: stretch;
   display: flex;
   flex-direction: column;
-  height: 100%;
 
   @include element ('picture') {
     align-items: center;
-    background-color: $product--background;
+    background-color: transparent;
     display: flex;
     flex-grow: 1;
     justify-content: space-around;
-    mix-blend-mode: multiply;
     overflow: hidden;
+    position: relative;
   }
 
   @include element ('image') {
     height: auto;
+    mix-blend-mode: multiply;
     width: 100%;
   }
 
+  @include element ('title') {
+    @extend %title;
+    display: inline-block;
+  }
+
+  @include element ('furniture') {
+    @extend %text;
+    display: inline-block;
+    transition: color $hover-ease;
+  }
+
   @include element ('details') {
-    min-height: 200px;
+    border-top: $piece--dedails--border-top;
+    padding-bottom: s(1);
+    padding-top: s(1);
+    transition: border-color $hover-ease;
+  }
+
+  @include element ('icon') {
+    margin-right: s(0.25);
+    transition: color $hover-ease;
+  }
+
+  @include element ('availability') {
+    align-items: center;
+    display: flex;
   }
 }

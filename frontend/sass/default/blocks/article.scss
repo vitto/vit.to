@@ -1,0 +1,14 @@
+@include block ('article') {
+
+  padding-bottom: s(3);
+
+  @include element ('header') {
+    margin-left: s(-3);
+    margin-right: s(-3);
+  }
+
+  @include element ('image') {
+    height: auto;
+    width: 100%;
+  }
+}

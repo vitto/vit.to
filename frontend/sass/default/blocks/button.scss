@@ -1,0 +1,25 @@
+@include block ('button') {
+
+  @extend %text;
+
+  align-items: center;
+  background-color: black;
+  border-radius: $button--radius;
+  color: white;
+  display: flex;
+  height: s(2);
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color $hover-ease, color $hover-ease;
+
+  @include modifier ('back') {
+    background-color: $button--back--background;
+    color: $button--back--color;
+
+    &:hover {
+      background-color: $button--back--background--hover;
+      color: $button--back--color--hover;
+    }
+  }
+
+}
