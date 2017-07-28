@@ -52,6 +52,7 @@
     height: auto;
     justify-content: flex-start;
     padding: s(0.375) s(0.5);
+    white-space: normal;
 
     &:hover {
       background-color: $button--try-budget--background--hover;
@@ -74,8 +75,16 @@
       background-color: $button--available--background--hover;
       color: $button--available--color--hover;
 
+      @include element ('title') {
+        color: inherit;
+      }
+
       @include element ('comment') {
-        color: $button--available--color--hover;
+        color: inherit;
+      }
+
+      @include element ('price') {
+        color: inherit;
       }
     }
   }
@@ -86,6 +95,7 @@
     height: auto;
     justify-content: flex-start;
     padding: s(0.375) s(0.5);
+    white-space: normal;
 
     &:hover {
       background-color: $button--try-budget-available--background--hover;

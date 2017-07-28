@@ -2,3 +2,4 @@ node_modules
 frontend/source
 frontend/build
 frontend/assets
+*.log.*

@@ -10,7 +10,7 @@
   padding: s(3);
   position: fixed;
   white-space: nowrap;
-  width: 20%;
+  width: $aside--width;
 
   @include media ('<=desktop-small') {
     width: $aside--min-width;

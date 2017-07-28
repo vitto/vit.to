@@ -1,20 +1,29 @@
 <article class="piece">
   <div class="piece__picture">
-    <img class="piece__image" src="{{ global.images.white[i] }}" alt="">
+    <img class="piece__image b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="{{ global.images.white[i] }}" alt="">
   </div>
   <div class="piece__details">
     <h2 class="piece__title">
       {{ global.faker.lorem.words(3) }}
     </h2>
-    <div class="piece__availability">
-      {% if global.faker.random.boolean %}
+    <div class="piece__infos">
+      {% set isAvailable = global.faker.random.boolean %}
+      {% if isAvailable %}
         <i class="piece__icon material-icons">shopping_cart</i>
       {% else %}
-        <i class="piece__icon material-icons">remove_shopping_cart</i>
+        <i class="piece__icon piece__icon--sold-out material-icons">remove_shopping_cart</i>
       {% endif %}
-      <h4 class="piece__furniture">
-        {{ global.faker.lorem.words(2) }}
-      </h4>
+      <div class="piece__description">
+        <h4 class="piece__furniture">
+          {{ global.faker.lorem.words(2) }}
+        </h4>
+        {% if isAvailable %}
+          <span class="piece__availability">Disponibile</span>
+        {% else %}
+          <span class="piece__availability piece__availability--sold-out">Esaurito</span>
+        {% endif %}
+      </div>
+
     </div>
   </div>
 </article>

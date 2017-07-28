@@ -10,14 +10,10 @@
   }
 
   @include element ('item') {
-    flex-grow: 1;
+    flex-grow: 2;
 
     @include modifier ('limit') {
-      max-width: 200px;
-
-      @include media ('<mobile-large') {
-        max-width: none;
-      }
+      flex-grow: 1;
     }
   }
 }

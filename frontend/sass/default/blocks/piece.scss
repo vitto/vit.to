@@ -3,6 +3,7 @@
   align-items: stretch;
   display: flex;
   flex-direction: column;
+  width: 100%;
 
   @include element ('picture') {
     align-items: center;
@@ -27,7 +28,13 @@
 
   @include element ('furniture') {
     @extend %text;
-    display: inline-block;
+    display: block;
+    transition: color $hover-ease;
+  }
+
+  @include element ('availability') {
+    @extend %text;
+    display: block;
     transition: color $hover-ease;
   }
 
@@ -43,7 +50,7 @@
     transition: color $hover-ease;
   }
 
-  @include element ('availability') {
+  @include element ('infos') {
     align-items: center;
     display: flex;
   }

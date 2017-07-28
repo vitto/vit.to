@@ -35,6 +35,16 @@
 
         @include element ('icon') {
           color: $text-color--hover;
+          @include modifier ('sold-out') {
+            color: $piece--availability--sold-out;
+          }
+        }
+
+        @include element ('availability') {
+          color: $text-color--hover;
+          @include modifier ('sold-out') {
+            color: $piece--availability--sold-out;
+          }
         }
 
         @include element ('details') {

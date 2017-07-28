@@ -1,5 +1,5 @@
 @include block ('main') {
-  margin-left: 20%;
+  margin-left: $aside--width;
   padding: 0 s(3);
 
   @include media ('<=desktop-small') {

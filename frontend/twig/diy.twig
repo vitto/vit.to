@@ -17,17 +17,36 @@
         <header class="article__header">
           <img src="{{ cover }}" class="article__image">
         </header>
-        <div class="markdown">
+
+        <div class="article__contents">
           <h1 class="article__title">
             {{ title }}
           </h1>
-          <div class="article__details">
-            {{ furniture }}
+          <ul class="article__infos">
+            <li class="article__info">
+              <i class="article__icon material-icons">weekend</i>
+              <span class="article__detail">
+                {{ furniture }}
+              </span>
+            </li>
+            <li class="article__info">
+              <i class="article__icon material-icons">access_time</i>
+              {% set printDate = date|date('l j F Y') %}
+              <time class="article__detail timeago" datetime="{{ date }}" title="{{ printDate }}">
+                {{ printDate }}
+              </time>
+            </li>
+          </ul>
+          <div class="markdown">
+            {{ contents }}
           </div>
-          {% include 'partials/actions.twig' %}
-          {{ contents }}
+
+          <div class="article__actions">
+            {% include 'partials/actions.twig' with { 'verbose': 'true' } %}
+          </div>
         </div>
       </article>
     </main>
+    {% include 'partials/scripts.twig' %}
   </body>
 </html>

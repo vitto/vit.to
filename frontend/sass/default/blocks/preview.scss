@@ -1,5 +1,8 @@
 @include block ('preview') {
 
+  flex-grow: 1;
+  margin-top: s(1);
+
   @include element ('picture') {
     display: block;
     height: auto;
@@ -24,9 +27,5 @@
   @include element ('furniture') {
     @extend %text;
     margin-top: 4px;
-  }
-
-  @include element ('actions') {
-    margin-top: s(1);
   }
 }

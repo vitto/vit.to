@@ -1,4 +1,17 @@
 @include block ('markdown') {
+  margin-bottom: s(3);
+  margin-top: s(3);
+
+  p {
+    color: $article--text--color;
+    font-size: 18px;
+    font-weight: 300;
+
+    & + p {
+      margin-top: s(1);
+    }
+  }
+
   img {
     border-radius: $markdown--image--radius;
     height: auto;

@@ -22,7 +22,12 @@ module.exports = function (env) {
     entry: {
       'js/app': __js + '/main.js',
       'js/vendor': [
-        __modules + '/jquery/dist/jquery.js'
+        __modules + '/jquery/dist/jquery.js',
+        __modules + '/blazy/blazy.js',
+        __modules + '/headroom.js/dist/headroom.js',
+        __modules + '/headroom.js/dist/headroom.jquery.js',
+        __modules + '/timeago.js/dist/timeago.js', // __modules + '/timeago.js/timeago.locales.min.js'
+        __modules + '/zooming/build/zooming.js'
       ],
       'css/style': [
         __sass + '/import.scss'
@@ -33,7 +38,7 @@ module.exports = function (env) {
     },
     output: {
       path: __dist,
-      filename: '[name].bundle.js',
+      filename: '[name].js',
       sourceMapFilename: '[name].map'
     },
     devtool: 'cheap-module-source-map',
@@ -116,7 +121,7 @@ module.exports = function (env) {
           postcss: [autoprefixer()]
         }
       }),
-      new ExtractTextPlugin('[name].bundle.css'),
+      new ExtractTextPlugin('[name].css'),
       new ManifestPlugin({
         basePath: basePath
       }),
@@ -125,6 +130,14 @@ module.exports = function (env) {
           'npm run source',
           'npm run twig'
         ]
+      }),
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        Blazy: 'blazy',
+        Headroom: 'headroom',
+        jQuery: 'jquery',
+        timeago: 'timeago.js',
+        Zooming: 'zooming'
       })
     ],
     devServer: {

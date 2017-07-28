@@ -20,7 +20,8 @@ module.exports = function (env) {
     entry: {
       'js/app': __js + '/main.js',
       'js/vendor': [
-        __modules + '/jquery/dist/jquery.js'
+        // __modules + '/jquery/dist/jquery.js',
+        __modules + '/blazy/blazy.js'
       ],
       'css/style': [
         __sass + '/import.scss'
