@@ -7,7 +7,7 @@
       {{ global.faker.lorem.words(3) }}
     </h2>
     <div class="piece__availability">
-      {% if faker.random.boolean %}
+      {% if global.faker.random.boolean %}
         <i class="piece__icon material-icons">shopping_cart</i>
       {% else %}
         <i class="piece__icon material-icons">remove_shopping_cart</i>

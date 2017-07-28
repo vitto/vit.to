@@ -6,5 +6,6 @@
 
   @include element ('phrase') {
     @extend %text;
+    margin-top: 2px;
   }
 }

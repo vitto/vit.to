@@ -6,6 +6,10 @@
 
 @import 'extends/typography';
 
+@import 'base/img';
+@import 'base/selection';
+
+@import 'blocks/actions';
 @import 'blocks/article';
 @import 'blocks/aside';
 @import 'blocks/body';
@@ -16,3 +20,4 @@
 @import 'blocks/main';
 @import 'blocks/markdown';
 @import 'blocks/piece';
+@import 'blocks/preview';

@@ -11,6 +11,15 @@
   justify-content: center;
   text-decoration: none;
   transition: background-color $hover-ease, color $hover-ease;
+  user-select: none;
+
+  @include media ('<=tablet-large') {
+    font-size: 11px;
+  }
+
+  @include modifier ('fill') {
+    width: 100%;
+  }
 
   @include modifier ('back') {
     background-color: $button--back--background;
@@ -20,6 +29,104 @@
       background-color: $button--back--background--hover;
       color: $button--back--color--hover;
     }
+  }
+
+  @include modifier ('sold-out') {
+    background-color: $button--sold-out--background;
+    color: $button--sold-out--color;
+    font-size: 13px;
+    height: auto;
+    justify-content: flex-start;
+    padding: s(0.375) s(0.5);
+    pointer-events: none;
+
+    &:hover {
+      background-color: $button--sold-out--background--hover;
+      color: $button--sold-out--color--hover;
+    }
+  }
+
+  @include modifier ('try-budget') {
+    background-color: $button--try-budget--background;
+    color: $button--try-budget--color;
+    height: auto;
+    justify-content: flex-start;
+    padding: s(0.375) s(0.5);
+
+    &:hover {
+      background-color: $button--try-budget--background--hover;
+      color: $button--try-budget--color--hover;
+
+      @include element ('comment') {
+        color: $button--try-budget--color--hover;
+      }
+    }
+  }
+
+  @include modifier ('available') {
+    background-color: $button--available--background;
+    color: $button--available--color;
+    height: auto;
+    justify-content: flex-start;
+    padding: s(0.375) s(0.5);
+
+    &:hover {
+      background-color: $button--available--background--hover;
+      color: $button--available--color--hover;
+
+      @include element ('comment') {
+        color: $button--available--color--hover;
+      }
+    }
+  }
+
+  @include modifier ('try-budget-available') {
+    background-color: $button--try-budget-available--background;
+    color: $button--try-budget-available--color;
+    height: auto;
+    justify-content: flex-start;
+    padding: s(0.375) s(0.5);
+
+    &:hover {
+      background-color: $button--try-budget-available--background--hover;
+      color: $button--try-budget-available--color--hover;
+
+      @include element ('comment') {
+        color: $button--try-budget-available--color--hover;
+      }
+    }
+  }
+
+  @include element ('icon') {
+    &:first-child {
+      margin-right: s(0.5);
+    }
+
+    &:last-child {
+      margin-left: s(0.5);
+    }
+
+    &:first-child:last-child {
+      margin: 0;
+    }
+  }
+
+  @include element ('title') {
+    font-weight: 500;
+  }
+
+  @include element ('text') {
+    color: inherit;
+  }
+
+  @include element ('price') {
+    color: $button--price--color;
+    transition: color $hover-ease;
+  }
+
+  @include element ('comment') {
+    color: $button--comment--color;
+    transition: color $hover-ease;
   }
 
 }

@@ -1,0 +1,32 @@
+@include block ('preview') {
+
+  @include element ('picture') {
+    display: block;
+    height: auto;
+    line-height: 0;
+    margin: auto;
+    max-width: 150px;
+    width: 100%;
+  }
+
+  @include element ('hr') {
+    border: 0;
+    border-top: $piece--dedails--border-top;
+    margin: s(1) 0;
+  }
+
+  @include element ('title') {
+    @extend %title;
+    font-size: 18px;
+    white-space: normal;
+  }
+
+  @include element ('furniture') {
+    @extend %text;
+    margin-top: 4px;
+  }
+
+  @include element ('actions') {
+    margin-top: s(1);
+  }
+}

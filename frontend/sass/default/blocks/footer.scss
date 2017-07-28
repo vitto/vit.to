@@ -1,4 +1,7 @@
 @include block ('footer') {
+
+  margin-top: s(1);
+
   @include element ('link') {
     color: inherit;
     display: inline-block;

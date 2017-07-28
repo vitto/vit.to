@@ -1,3 +1,13 @@
-<header class="preview">
-  image
-</header>
+<section class="preview">
+  <img class="preview__picture" src="preview.jpg">
+  <hr class="preview__hr">
+  <h2 class="preview__title">
+    {{ title }}
+  </h2>
+  <div class="preview__furniture">
+    {{ furniture }}
+  </div>
+  <div class="preview__actions">
+    {% include 'actions.twig' %}
+  </div>
+</section>

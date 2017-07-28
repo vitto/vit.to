@@ -4,8 +4,15 @@ $text-color: $color-gray;
 
 $hover-ease: 0.5s ease('out-expo');
 
+$actions--radius: 8px;
+$actions--background: $color-chicago;
+$actions--available--background: $color-mercury;
+
+
 $button--radius: 4px;
-$markdown--image--radius: 4px;
+$markdown--image--radius: 8px;
+
+$selection--background: $color-mercury;
 
 $aside--background: $color-white;
 $aside--min-width: 270px;
@@ -20,3 +27,25 @@ $button--back--color: $text-color;
 $button--back--color--hover: $color-chicago;
 $button--back--background: rgba($color-chicago, 0.1);
 $button--back--background--hover: rgba($color-chicago, 0.2);
+$button--sold-out--color: $text-color;
+$button--sold-out--color--hover: $color-chicago;
+$button--sold-out--background: $color-mercury;
+$button--sold-out--background--hover: $color-white;
+
+$button--try-budget--color: $color-mercury;
+$button--try-budget--color--hover: $color-white;
+$button--try-budget--background: $color-chicago;
+$button--try-budget--background--hover: $color-chicago;
+
+$button--available--color: $color-mercury;
+$button--available--color--hover: $color-white;
+$button--available--background: $color-chicago;
+$button--available--background--hover: $color-chicago;
+
+$button--try-budget-available--color: $text-color;
+$button--try-budget-available--color--hover: $color-chicago;
+$button--try-budget-available--background: $color-mercury;
+$button--try-budget-available--background--hover: $color-mercury;
+
+$button--price--color: $text-color;
+$button--comment--color: $color-star-dust;

@@ -1,0 +1,23 @@
+@include block ('actions') {
+  background-color: $actions--background;
+  border-radius: $actions--radius;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4px;
+
+  @include modifier ('available') {
+    background-color: $actions--available--background;
+  }
+
+  @include element ('item') {
+    flex-grow: 1;
+
+    @include modifier ('limit') {
+      max-width: 200px;
+
+      @include media ('<mobile-large') {
+        max-width: none;
+      }
+    }
+  }
+}

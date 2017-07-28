@@ -1,7 +1,6 @@
 @include block ('markdown') {
   img {
     border-radius: $markdown--image--radius;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3) inset;
     height: auto;
     width: 100%;
   }

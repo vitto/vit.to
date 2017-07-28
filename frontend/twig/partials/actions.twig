@@ -1,0 +1,51 @@
+{% if global.faker.random.boolean %}
+  <div class="actions">
+    <a class="actions__item actions__item--limit button button--sold-out" href="#">
+      <i class="button__icon material-icons">remove_shopping_cart</i>
+      <span class="button__infos">
+        <div class="button__title">
+          Esaurito
+        </div>
+        <div class="button__price">
+          600€
+        </div>
+      </span>
+    </a>
+    <a class="actions__item button button--try-budget" href="#">
+      <i class="button__icon material-icons">email</i>
+      <span class="button__infos">
+        <div class="button__text">
+          Richiedi simile
+        </div>
+        <div class="button__comment">
+          col tuo budget
+        </div>
+      </span>
+    </a>
+  </div>
+{% else %}
+  <div class="actions actions--available preview__actions">
+    <a class="actions__item actions__item--limit button button--available" href="#">
+      <i class="button__icon material-icons">shopping_cart</i>
+      <span class="button__infos">
+        <div class="button__title">
+          Acquista
+        </div>
+        <div class="button__price">
+          600€
+        </div>
+      </span>
+    </a>
+    <a class="actions__item button button--try-budget-available" href="#">
+      <i class="button__icon material-icons">email</i>
+      <span class="button__infos">
+        <div class="button__text">
+          Richiedi simile
+        </div>
+        <div class="button__comment">
+          col tuo budget
+        </div>
+      </span>
+    </a>
+  </div>
+{% endif %}
