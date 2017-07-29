@@ -28,4 +28,8 @@
     @extend %text;
     margin-top: 4px;
   }
+
+  @include element ('actions') {
+    margin-top: s(1);
+  }
 }

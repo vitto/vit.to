@@ -22,6 +22,7 @@ $body--background: $color-desert-storm;
 $body--text-color: $color-chicago;
 $header--phrase--color: $text-color;
 
+$markdown--border-top: 2px solid $color-mercury;
 $piece--dedails--border-top: 2px solid $color-mercury;
 $piece--availability--sold-out: $color-mercury;
 
@@ -55,3 +56,7 @@ $button--try-budget-available--background--hover: transparent;
 
 $button--price--color: $color-star-dust;
 $button--comment--color: $color-star-dust;
+
+$header--background: $color-white;
+$header--shadow: 0 0 0 1px rgba(0, 0, 0, 0.025), 0 0 4px rgba(0, 0, 0, 0.1);
+$aside--shadow: $header--shadow;

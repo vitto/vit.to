@@ -7,8 +7,20 @@
   var nodes = document.querySelectorAll('.timeago')
   timeagoInstance.render(nodes, 'it_IT')
 
-  var myElement = document.querySelector('header')
-  var headroom  = new Headroom(myElement);
-  headroom.init();
+  var header = document.querySelector('.header-mobile')
+  if (header !== null) {
+    var headerHeadroom = new Headroom(header)
+    headerHeadroom.init()
+  }
+
+  var footer = document.querySelector('.footer-mobile')
+  if (footer !== null) {
+    var footerHeadroom = new Headroom(footer, {
+      classes: {
+        unpinned: 'headroom--unpinned-bottom'
+      }
+    })
+    footerHeadroom.init()
+  }
 
 })()

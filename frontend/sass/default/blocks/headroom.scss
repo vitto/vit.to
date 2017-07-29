@@ -1,0 +1,18 @@
+@include block ('headroom') {
+  $headroom-ease: 0.5s ease('in-out-quart');
+
+  position: fixed;
+  transition: transform $headroom-ease, box-shadow $headroom-ease;
+
+  @include modifier ('unpinned') {
+    transform: translate(0, -100%);
+  }
+
+  @include modifier ('unpinned-bottom') {
+    transform: translate(0, 100%);
+  }
+
+  @include modifier ('pinned') {
+    transform: translate(0, 0);
+  }
+}

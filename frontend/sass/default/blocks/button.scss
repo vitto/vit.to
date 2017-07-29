@@ -17,6 +17,12 @@
     font-size: 11px;
   }
 
+  @include modifier ('inline') {
+    display: inline-flex;
+    padding-left: s(1);
+    padding-right: s(1);
+  }
+
   @include modifier ('fill') {
     width: 100%;
   }
@@ -34,7 +40,6 @@
   @include modifier ('sold-out') {
     background-color: $button--sold-out--background;
     color: $button--sold-out--color;
-    font-size: 13px;
     height: auto;
     justify-content: flex-start;
     padding: s(0.375) s(0.5);
@@ -61,6 +66,19 @@
       @include element ('comment') {
         color: $button--try-budget--color--hover;
       }
+    }
+  }
+
+  @include modifier ('home') {
+    background-color: $button--available--background;
+    color: $button--available--color;
+    height: auto;
+    justify-content: flex-start;
+    padding: s(0.375);
+
+    &:active {
+      background-color: $button--available--background--hover;
+      color: $button--available--color--hover;
     }
   }
 
@@ -122,11 +140,13 @@
   }
 
   @include element ('title') {
+    font-size: inherit;
     font-weight: 500;
   }
 
   @include element ('text') {
     color: inherit;
+    font-size: inherit;
   }
 
   @include element ('price') {

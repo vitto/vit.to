@@ -1,12 +1,21 @@
 @include block ('footer') {
 
+  align-items: center;
+  display: flex;
   margin-top: s(1);
+  width: 100%;
 
   @include element ('link') {
     color: inherit;
     display: inline-block;
     line-height: 0;
     text-decoration: none;
+
+    &:hover {
+      & + .footer__text {
+        opacity: 1;
+      }
+    }
 
     @include modifier ('next') {
       &:hover {
@@ -29,5 +38,13 @@
     height: 50px;
     transition: transform 0.5s ease('out-expo');
     width: 57px;
+  }
+
+  @include element ('text') {
+    @extend %text;
+    margin-left: s(0.5);
+    opacity: 0;
+    padding-bottom: 12px;
+    transition: opacity $hover-ease;
   }
 }

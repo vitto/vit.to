@@ -25,7 +25,6 @@ module.exports = function (env) {
         __modules + '/jquery/dist/jquery.js',
         __modules + '/blazy/blazy.js',
         __modules + '/headroom.js/dist/headroom.js',
-        __modules + '/headroom.js/dist/headroom.jquery.js',
         __modules + '/timeago.js/dist/timeago.js', // __modules + '/timeago.js/timeago.locales.min.js'
         __modules + '/zooming/build/zooming.js'
       ],
@@ -47,69 +46,74 @@ module.exports = function (env) {
       poll: 500 // decrese the value if the watcher is slowly (value is in milliseconds)
     },
     module: {
-      rules: [{
-        test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['css-loader', 'postcss-loader', 'sass-loader']
-        }),
-        exclude: __modules
-      }, {
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['css-loader']
-        })
-        // exclude: __dirname + '/src'
-      }, {
-        test: /\.[ot]tf$/,
-        loader: 'url-loader',
-        options: {
-          limit: 50000,
-          name: './fonts/[name].[ext]',
-          publicPath: publicPath
-        }
-      }, {
-        test: /\.woff$/,
-        loader: 'url-loader?mimetype=application/font-woff',
-        options: {
-          limit: 65000,
-          name: './fonts/[name].[ext]',
-          publicPath: publicPath
-        }
-      }, {
-        test: /\.eot$/,
-        loader: 'url-loader?mimetype=application/font-eot',
-        options: {
-          limit: 65000,
-          name: './fonts/[name].[ext]',
-          publicPath: publicPath
-        }
-      }, {
-        test: /\.woff2$/,
-        loader: 'url-loader?mimetype=application/font-woff2',
-        options: {
-          limit: 65000,
-          name: './fonts/[name].[ext]',
-          publicPath: publicPath
-        }
-      }, {
-        test: /\.(gif|png|jpe?g|svg)$/i,
-        loader: 'file-loader',
-        options: {
-          name: __images + '/[name].[ext]',
-          publicPath: publicPath
-        }
-      }, {
-        test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
+      rules: [
+        {
+          test: /\.scss$/,
+          use: ExtractTextPlugin.extract({
+            fallback: 'style-loader',
+            use: ['css-loader', 'postcss-loader', 'sass-loader']
+          }),
+          exclude: __modules
+        }, {
+          test: /\.css$/,
+          use: ExtractTextPlugin.extract({
+            fallback: 'style-loader',
+            use: ['css-loader']
+          })
+          // exclude: __dirname + '/src'
+        }, {
+          test: /\.[ot]tf$/,
+          loader: 'url-loader',
           options: {
-            presets: ['es2015']
+            limit: 50000,
+            name: './fonts/[name].[ext]',
+            publicPath: publicPath
           }
+        }, {
+          test: /\.woff$/,
+          loader: 'url-loader?mimetype=application/font-woff',
+          options: {
+            limit: 65000,
+            name: './fonts/[name].[ext]',
+            publicPath: publicPath
+          }
+        }, {
+          test: /\.eot$/,
+          loader: 'url-loader?mimetype=application/font-eot',
+          options: {
+            limit: 65000,
+            name: './fonts/[name].[ext]',
+            publicPath: publicPath
+          }
+        }, {
+          test: /\.woff2$/,
+          loader: 'url-loader?mimetype=application/font-woff2',
+          options: {
+            limit: 65000,
+            name: './fonts/[name].[ext]',
+            publicPath: publicPath
+          }
+        }, {
+          test: /\.(gif|png|jpe?g|svg)$/i,
+          loader: 'file-loader',
+          options: {
+            name: __images + '/[name].[ext]',
+            publicPath: publicPath
+          }
+        }, {
+          test: /\.js$/,
+          exclude: /(node_modules|bower_components)/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['es2015']
+            }
+          }
+        }, {
+          test: require.resolve('headroom.js'),
+          use: 'imports-loader?this=>window,define=>false,exports=>false'
         }
-      }]
+      ]
     },
     plugins: [
       new CopyWebpackPlugin([{
@@ -134,8 +138,8 @@ module.exports = function (env) {
       new webpack.ProvidePlugin({
         $: 'jquery',
         Blazy: 'blazy',
-        Headroom: 'headroom',
         jQuery: 'jquery',
+        // 'window.Headroom': 'headroom.js/dist/headroom.js',
         timeago: 'timeago.js',
         Zooming: 'zooming'
       })

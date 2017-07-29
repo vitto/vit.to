@@ -1,3 +1,31 @@
+@mixin interact {
+  background-color: $craft--hover;
+
+  @include block ('piece') {
+    @include element ('furniture') {
+      color: $text-color--hover;
+    }
+
+    @include element ('icon') {
+      color: $text-color--hover;
+      @include modifier ('sold-out') {
+        color: $piece--availability--sold-out;
+      }
+    }
+
+    @include element ('availability') {
+      color: $text-color--hover;
+      @include modifier ('sold-out') {
+        color: $piece--availability--sold-out;
+      }
+    }
+
+    @include element ('details') {
+      border-top-color: $craft--hover;
+    }
+  }
+}
+
 @include block ('crafts') {
   align-items: stretch;
   display: flex;
@@ -7,11 +35,36 @@
   padding-bottom: s(1.5);
   padding-top: s(1.5);
 
+  @include media ('<=mobile-large') {
+    margin: 0;
+    padding-top: s(3);
+  }
+
   @include element ('call') {
     align-items: center;
     display: flex;
     padding: s(1.5);
     width: 33.3333%;
+
+    @include media ('<=desktop-small') {
+      width: 50%;
+    }
+
+    @include media ('<=mobile-large') {
+      width: 100%;
+    }
+
+    // @include media ('<=tablet-large') {
+    //   &:active {
+    //     @include interact;
+    //   }
+    // }
+    //
+    // @include media ('>tablet-large') {
+    //   &:hover {
+    //     @include interact;
+    //   }
+    // }
   }
 
   @include element ('item') {
@@ -25,31 +78,23 @@
     transition: background-color $hover-ease;
     width: 33.3333%;
 
-    &:hover {
-      background-color: $craft--hover;
+    @include media ('<=desktop-small') {
+      width: 50%;
+    }
 
-      @include block ('piece') {
-        @include element ('furniture') {
-          color: $text-color--hover;
-        }
+    @include media ('<=tablet-large') {
+      &:active {
+        @include interact;
+      }
+    }
 
-        @include element ('icon') {
-          color: $text-color--hover;
-          @include modifier ('sold-out') {
-            color: $piece--availability--sold-out;
-          }
-        }
+    @include media ('<=mobile-large') {
+      width: 100%;
+    }
 
-        @include element ('availability') {
-          color: $text-color--hover;
-          @include modifier ('sold-out') {
-            color: $piece--availability--sold-out;
-          }
-        }
-
-        @include element ('details') {
-          border-top-color: $craft--hover;
-        }
+    @include media ('>tablet-large') {
+      &:hover {
+        @include interact;
       }
     }
   }

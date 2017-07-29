@@ -11,7 +11,7 @@
     "source": "cd frontend && mkdir source || true && cp -R assets/* source && cp -R ../posts/* source",
     "watch": "npm run clean && cd frontend && ../node_modules/.bin/webpack --progress --profile --colors --env=dev",
     "serve": "cd frontend/build && python -m SimpleHTTPServer 8000",
-    "deploy": "rm -rf dist/* && cp -a frontend/build/. dist/ && git subtree push --prefix dist origin gh-pages"
+    "deploy": "rm -rf dist/* && cp -a frontend/build/. dist/ && cp CNAME dist/. && git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",
@@ -40,6 +40,7 @@
     "faker": "^4.1.0",
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.29.0",
+    "imports-loader": "^0.7.1",
     "metalsmith": "^2.3.0",
     "metalsmith-beautify": "^0.2.0",
     "metalsmith-collections": "^0.9.0",
@@ -69,7 +70,8 @@
     "globals": [
       "$",
       "timeago",
-      "Blazy"
+      "Blazy",
+      "Headroom"
     ]
   }
 }

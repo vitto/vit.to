@@ -5,4 +5,13 @@
   @include media ('<=desktop-small') {
     margin-left: $aside--min-width;
   }
+
+  @include media ('<tablet-large') {
+    margin-left: 0;
+    padding: 0 s(1.5);
+  }
+
+  @include media ('<=mobile-large') {
+    padding: 0;
+  }
 }

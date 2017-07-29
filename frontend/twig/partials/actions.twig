@@ -1,5 +1,5 @@
 {% if global.faker.random.boolean %}
-  <div class="actions">
+  <div class="actions {% if onFooter %} actions--footer {% endif %}">
     <a class="actions__item actions__item--limit button button--sold-out" href="#">
       <i class="button__icon material-icons">remove_shopping_cart</i>
       <span class="button__infos">
@@ -21,7 +21,7 @@
     </a>
   </div>
 {% else %}
-  <div class="actions actions--available">
+  <div class="actions {% if onFooter %} actions--footer {% endif %} actions--available">
     <a class="actions__item actions__item--limit button button--available" href="#">
       <i class="button__icon material-icons">shopping_cart</i>
       <span class="button__infos">

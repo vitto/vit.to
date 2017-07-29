@@ -4,9 +4,16 @@
   display: flex;
   flex-wrap: wrap;
   padding: 4px;
+  width: 100%;
 
   @include modifier ('available') {
     background-color: $actions--available--background;
+  }
+
+  @include modifier ('footer') {
+    border-radius: 0;
+    flex-wrap: nowrap;
+    padding: s(0.5);
   }
 
   @include element ('item') {

@@ -1,8 +1,7 @@
 @include block ('aside') {
-  $shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 
   background-color: $aside--background;
-  box-shadow: $shadow;
+  box-shadow: $aside--shadow;
   display: inline-flex;
   flex-direction: column;
   height: 100vh;
@@ -18,5 +17,9 @@
 
   @include element ('buttons') {
     margin-top: s(2);
+  }
+
+  @include media ('<tablet-large') {
+    display: none;
   }
 }

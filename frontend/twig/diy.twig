@@ -2,6 +2,8 @@
 <html lang="en">
   {% include 'partials/head.twig' %}
   <body class="body">
+    {% include 'partials/header-mobile.twig' %}
+    {% include 'partials/footer-mobile.twig' %}
     <aside class="aside">
       <div class="aside__header">
         {% include 'partials/aside__header.twig' %}
@@ -37,6 +39,11 @@
               </time>
             </li>
           </ul>
+
+          <div class="article__actions article__actions--upper">
+            {% include 'partials/actions.twig' with { 'verbose': 'true' } %}
+          </div>
+
           <div class="markdown">
             {{ contents }}
           </div>

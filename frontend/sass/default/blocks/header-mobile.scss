@@ -1,0 +1,44 @@
+@include block ('header-mobile') {
+  align-items: center;
+  background-color: $header--background;
+  box-shadow: $header--shadow;
+  display: none;
+  justify-content: space-between;
+  left: 0;
+  padding: s(1);
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 2;
+
+  @include media ('<tablet-large') {
+    display: flex;
+  }
+
+  @include media ('<tablet-small') {
+    padding: s(0.5);
+  }
+
+  @include element ('logo') {
+    height: 55px;
+    position: relative;
+    top: 3px;
+    width: auto;
+
+    @include media ('<tablet-small') {
+      height: 32px;
+      top: 3px;
+    }
+  }
+
+  @include element ('home') {
+
+  }
+
+  @include element ('nav') {
+    width: 50%;
+    &:last-child {
+      text-align: right;
+    }
+  }
+}

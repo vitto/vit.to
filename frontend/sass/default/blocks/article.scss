@@ -6,6 +6,16 @@
     line-height: 0;
     margin-left: s(-3);
     margin-right: s(-3);
+
+    @include media ('<tablet-large') {
+      margin-left: s(-1.5);
+      margin-right: s(-1.5);
+      padding-top: s(4.5);
+    }
+
+    @include media ('<=tablet-small') {
+      padding-top: s(2.75);
+    }
   }
 
   @include element ('image') {
@@ -18,14 +28,24 @@
     font-size: 36px;
     font-weight: 700;
     margin: s(3) 0 0;
+
+    @include media ('<=mobile-large') {
+      font-size: 24px;
+      margin: s(1.5) 0 0;
+    }
   }
 
   @include element ('infos') {
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
     margin: 0;
     padding: 0;
+
+    @include media ('<=mobile-large') {
+      font-size: 14px;
+    }
   }
 
   @include element ('info') {
@@ -42,10 +62,21 @@
   @include element ('actions') {
     margin-bottom: s(1);
     margin-top: s(1);
+
+    @include modifier ('upper') {
+      @include media ('<=mobile-large') {
+        display: none;
+      }
+    }
   }
 
   @include element ('contents') {
     margin: auto;
     max-width: 768px;
+
+    @include media ('<=mobile-large') {
+      padding-left: s(1);
+      padding-right: s(1);
+    }
   }
 }
