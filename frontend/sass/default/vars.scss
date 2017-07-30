@@ -1,62 +1,58 @@
 $title-color: $color-chicago;
 $text-color--hover: $color-chicago;
 $text-color: $color-gray;
+
 $article--text--color: mix($color-chicago, $color-gray);
 
-$hover-ease: 0.5s ease('out-expo');
-
-$actions--radius: 8px;
-$actions--background: $color-chicago;
 $actions--available--background: rgba($color-chicago, 0.1);
-
-
-$button--radius: 4px;
-$markdown--image--radius: 8px;
-
-$selection--background: $color-mercury;
+$actions--background: $color-chicago;
+$actions--radius: 8px;
 
 $aside--background: $color-white;
-$aside--min-width: 270px;
-$aside--width: 25%;
+$aside--background--opaque: rgba($color-white, 0.85);
+$aside--background--blur: blur(4px);
+$aside--min-width: 330px;
+$aside--shadow: $solid-shadow;
+$aside--width: 26%;
+
 $body--background: $color-desert-storm;
 $body--text-color: $color-chicago;
-$header--phrase--color: $text-color;
 
-$markdown--border-top: 2px solid $color-mercury;
-$piece--dedails--border-top: 2px solid $color-mercury;
-$piece--availability--sold-out: $color-mercury;
-
-$craft--radius: 4px;
-$craft--hover: $color-white;
-
-$button--back--color: $text-color;
-$button--back--color--hover: $color-chicago;
-$button--back--background: rgba($color-chicago, 0.1);
-$button--back--background--hover: rgba($color-chicago, 0.2);
-
-$button--sold-out--color: $text-color;
-$button--sold-out--color--hover: $color-chicago;
-$button--sold-out--background: $color-mercury;
-$button--sold-out--background--hover: $color-white;
-
-$button--try-budget--color: $color-mercury;
-$button--try-budget--color--hover: $color-white;
-$button--try-budget--background: $color-chicago;
-$button--try-budget--background--hover: $color-chicago;
-
-$button--available--color: $color-mercury;
-$button--available--color--hover: $color-white;
-$button--available--background: $color-chicago;
 $button--available--background--hover: $color-chicago;
-
-$button--try-budget-available--color: $text-color;
-$button--try-budget-available--color--hover: $color-chicago;
-$button--try-budget-available--background: transparent;
-$button--try-budget-available--background--hover: transparent;
-
-$button--price--color: $color-star-dust;
+$button--available--background: $color-chicago;
+$button--available--color--hover: $color-white;
+$button--available--color: $color-mercury;
+$button--back--background--hover: rgba($color-chicago, 0.2);
+$button--back--background: rgba($color-chicago, 0.1);
+$button--back--color--hover: $color-chicago;
+$button--back--color: $text-color;
 $button--comment--color: $color-star-dust;
+$button--price--color: $color-star-dust;
+$button--radius: 4px;
+$button--sold-out--background--hover: $color-white;
+$button--sold-out--background: $color-mercury;
+$button--sold-out--color--hover: $color-chicago;
+$button--sold-out--color: $text-color;
+$button--try-budget--background--hover: $color-chicago;
+$button--try-budget--background: $color-chicago;
+$button--try-budget--color--hover: $color-white;
+$button--try-budget--color: $color-mercury;
+$button--try-budget-available--background--hover: transparent;
+$button--try-budget-available--background: transparent;
+$button--try-budget-available--color--hover: $color-chicago;
+$button--try-budget-available--color: $text-color;
+
+$craft--hover: $color-white;
+$craft--radius: 4px;
 
 $header--background: $color-white;
-$header--shadow: 0 0 0 1px rgba(0, 0, 0, 0.025), 0 0 4px rgba(0, 0, 0, 0.1);
-$aside--shadow: $header--shadow;
+$header--phrase--color: $text-color;
+$header--shadow: $solid-shadow;
+
+$markdown--border-top: 2px solid $color-mercury;
+$markdown--image--radius: 8px;
+
+$piece--availability--sold-out: $color-mercury;
+$piece--dedails--border-top: 2px solid $color-mercury;
+
+$selection--background: $color-mercury;

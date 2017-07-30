@@ -4,9 +4,11 @@ const markdown = require('metalsmith-markdown')
 const metalsmith = require('metalsmith')
 const permalinks = require('metalsmith-permalinks')
 const twig = require('metalsmith-twig')
+const sitemap = require('metalsmith-sitemap')
 const yaml = require('js-yaml')
 const faker = require('faker')
 const marked = require('marked')
+const moment = require('moment')
 
 var renderer = new marked.Renderer()
 
@@ -33,6 +35,7 @@ m.twig.global = {
   images: images
 }
 m.markdown.renderer = renderer
+m.sitemap.lastmod = moment().format('YYYY-MM-DD')
 
 metalsmith(__dirname)
   .metadata(m.metadata)
@@ -43,6 +46,7 @@ metalsmith(__dirname)
   .use(markdown(m.markdown))
   .use(permalinks(m.permalinks))
   .use(twig(m.twig))
+  .use(sitemap(m.sitemap))
   .build(function (err) {
     if (err) throw err
     console.log('Build done')

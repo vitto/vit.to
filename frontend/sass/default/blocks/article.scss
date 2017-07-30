@@ -1,7 +1,5 @@
 @include block ('article') {
 
-  padding-bottom: s(3);
-
   @include element ('header') {
     line-height: 0;
     margin-left: s(-3);

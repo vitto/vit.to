@@ -21,3 +21,11 @@ twig:
   directory: twig
   view: base.twig
   cache: false
+sitemap:
+  hostname: http://vit.to
+  changefreq: monthly
+  priority: 0.5
+  output: sitemap.xml
+  omitIndex: true
+  urlProperty: canonical
+  privateProperty: private

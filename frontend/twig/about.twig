@@ -3,21 +3,17 @@
   {% include 'partials/head.twig' %}
   <body class="body">
     {% include 'partials/header-mobile.twig' %}
-    <aside class="aside">
-      {% include 'partials/aside__header.twig' %}
+    <aside class="aside aside--opaque">
+      <div class="aside__header">
+        {% include 'partials/aside__header.twig' %}
+        <div class="aside__buttons">
+          <a href="{{ relativePath }}" class="button button--back">Indietro</a>
+        </div>
+      </div>
       {% include 'partials/aside__footer.twig' %}
     </aside>
-    <main class="main">
-      <section class="crafts">
-        {% for i in 0..16 %}
-          <a class="crafts__item" href="/diy/2017-07-04/pirelli-tires">
-            {% include 'partials/piece.twig' %}
-          </a>
-        {% endfor %}
-        <div class="crafts__call">
-          Call to action per richiedere un pezzo specifico
-        </div>
-      </section>
+    <main class="main main--about">
+      <img class="main__picture" src="{{ relativeUrl }}/img/vittorio-vittori.jpg" alt="">
     </main>
     {% include 'partials/scripts.twig' %}
   </body>

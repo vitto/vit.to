@@ -1,8 +1,17 @@
 <footer class="footer">
-  <a href="{{ relativePath }}about" class="footer__link footer__link--next">
-    <img class="footer__logo" src="{{ relativePath }}img/vittorio-vittori-logo.svg" alt="Vittorio Vittori">
-  </a>
-  <div class="footer__text">
-    About
-  </div>
+  {% if path != 'about' %}
+    <a href="{{ relativePath }}about" class="footer__link footer__link--next">
+      <img class="footer__logo" src="{{ relativePath }}img/vittorio-vittori-logo.svg" alt="Vittorio Vittori">
+    </a>
+    <div class="footer__text">
+      About
+    </div>
+  {% else %}
+    <a href="{{ relativePath }}" class="footer__link footer__link--prev">
+      <img class="footer__logo" src="{{ relativePath }}img/vittorio-vittori-logo.svg" alt="Vittorio Vittori">
+    </a>
+    <div class="footer__text">
+      Back to home
+    </div>
+  {% endif %}
 </footer>

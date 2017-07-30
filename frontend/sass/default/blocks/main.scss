@@ -14,4 +14,15 @@
   @include media ('<=mobile-large') {
     padding: 0;
   }
+
+  @include modifier ('about') {
+    margin-left: 0;
+    min-height: 100vh;
+    padding: 0;
+  }
+
+  @include element ('picture') {
+    height: auto;
+    width: 100%;
+  }
 }

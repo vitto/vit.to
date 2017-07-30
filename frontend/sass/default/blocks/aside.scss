@@ -11,15 +11,20 @@
   white-space: nowrap;
   width: $aside--width;
 
+  @include modifier ('opaque') {
+    backdrop-filter: $aside--background--blur;
+    background-color: $aside--background--opaque;
+  }
+
   @include media ('<=desktop-small') {
     width: $aside--min-width;
   }
 
-  @include element ('buttons') {
-    margin-top: s(2);
-  }
-
   @include media ('<tablet-large') {
     display: none;
+  }
+
+  @include element ('buttons') {
+    margin-top: s(2);
   }
 }
