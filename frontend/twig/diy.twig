@@ -7,9 +7,7 @@
     <aside class="aside">
       <div class="aside__header">
         {% include 'partials/aside__header.twig' %}
-        <div class="aside__buttons">
-          <a href="{{ relativePath }}" class="button button--back">Indietro</a>
-        </div>
+        {% include 'partials/aside__buttons.twig' %}
       </div>
       {% include 'partials/aside__preview.twig' %}
       {% include 'partials/aside__footer.twig' %}

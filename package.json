@@ -6,8 +6,7 @@
   "scripts": {
     "twig": "cd frontend && node metalsmith.js",
     "clean": "rm -rf frontend/build/* || true && rm -rf frontend/source/* || true && rm -rf frontend/assets/* || true",
-    "build": "npm run clean && npm run webpack && npm run source && npm run twig && npm run serve",
-    "webpack": "cd frontend && ../node_modules/.bin/webpack --progress --profile --colors --env=prod",
+    "build": "npm run clean && cd frontend && ../node_modules/.bin/webpack --progress --profile --colors --env=prod",
     "source": "cd frontend && mkdir source || true && cp -R assets/* source && cp -R ../posts/* source",
     "watch": "npm run clean && cd frontend && ../node_modules/.bin/webpack --progress --profile --colors --env=dev",
     "serve": "cd frontend/build && python -m SimpleHTTPServer 8000",

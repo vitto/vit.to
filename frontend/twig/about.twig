@@ -6,14 +6,41 @@
     <aside class="aside aside--opaque">
       <div class="aside__header">
         {% include 'partials/aside__header.twig' %}
-        <div class="aside__buttons">
-          <a href="{{ relativePath }}" class="button button--back">Indietro</a>
-        </div>
+        {% include 'partials/aside__buttons.twig' %}
       </div>
+
+      {% if bio %}
+        <div class="aside__info">
+          <h2 class="aside__title">Bio</h2>
+          <p class="aside__text">{{ bio }}</p>
+        </div>
+      {% endif %}
+
+      {% if contact %}
+        <div class="aside__info">
+          <h2 class="aside__title">Contact</h2>
+          <p class="aside__text">{{ contact.venue }}</p>
+          <p class="aside__text">{{ contact.phone }}</p>
+          <p class="aside__text">
+            <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>
+          </p>
+        </div>
+      {% endif %}
+
+      {% if credits %}
+        <div class="aside__info aside__info--bottom">
+          <i class="aside__icon material-icons">file_download</i>
+          <p class="aside__text">{{ credits }}</p>
+        </div>
+      {% endif %}
+
       {% include 'partials/aside__footer.twig' %}
     </aside>
     <main class="main main--about">
-      <img class="main__picture" src="{{ relativeUrl }}/img/vittorio-vittori.jpg" alt="">
+      <div class="main__picture"></div>
+      <div class="main__contents">
+        {{ contents }}
+      </div>
     </main>
     {% include 'partials/scripts.twig' %}
   </body>

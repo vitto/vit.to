@@ -1,5 +1,5 @@
 ---
-title: index
+title: DIY luxury crafts by Vittorio Vittori
 view: index.twig
 ---
 

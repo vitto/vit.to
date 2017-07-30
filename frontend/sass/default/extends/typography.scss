@@ -4,6 +4,10 @@
   font-weight: 700;
   letter-spacing: -1px;
 
+  @supports (background-image: -moz-linear-gradient(top right, #b51111, #eeeeee)) {
+    letter-spacing: 0;
+  }
+
   &::first-letter {
     text-transform: uppercase;
   }
@@ -19,8 +23,14 @@
 }
 
 %underline-hidden {
+  display: inline-block;
+
   &::after {
+    animation-duration: 0.75s;
+    animation-iteration-count: infinite;
+    animation-name: underline-blink;
     background-color: $color-mercury;
+    border-radius: 2px;
     content: '';
     display: block;
     height: 2px;
@@ -32,5 +42,19 @@
 %underline-hidden-visible {
   &::after {
     opacity: 1;
+  }
+}
+
+@keyframes underline-blink {
+  0% {
+    background-color: $color-mercury;
+  }
+
+  50% {
+    background-color: mix($color-mercury, $text-color, 75%);
+  }
+
+  100% {
+    background-color: $color-mercury;
   }
 }

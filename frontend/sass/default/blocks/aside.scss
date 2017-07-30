@@ -27,4 +27,43 @@
   @include element ('buttons') {
     margin-top: s(2);
   }
+
+  @include element ('info') {
+    padding-top: s(1);
+    white-space: normal;
+
+    @include modifier ('bottom') {
+      padding-bottom: s(1);
+    }
+  }
+
+  @include element ('title') {
+    @extend %title;
+  }
+
+  @include element ('text') {
+    @extend %text;
+
+    &::first-letter {
+      text-transform: none;
+    }
+
+    & + & {
+      margin-top: s(0.5);
+    }
+
+    a {
+      @extend %underline-hidden;
+      color: $title-color;
+      text-decoration: none;
+
+      &:hover {
+        @extend %underline-hidden-visible;
+      }
+    }
+  }
+
+  @include element ('icon') {
+    color: $title-color;
+  }
 }

@@ -22,7 +22,11 @@
   }
 
   @include element ('picture') {
-    height: auto;
+    background-image: theme('vittorio-vittori.jpg');
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
     width: 100%;
   }
 }
