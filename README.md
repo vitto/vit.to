@@ -10,11 +10,7 @@ To watch code during development
 npm run watch
 ```
 
-To test code via HTTP go to: http://localhost:8000/
-
-```
-npm run serve
-```
+The watcher will also let you to test pages via HTTP: http://localhost:8000/
 
 ### Deploy
 

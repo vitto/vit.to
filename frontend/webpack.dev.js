@@ -4,6 +4,7 @@ const webpack = require('webpack')
 const autoprefixer = require('autoprefixer')
 const path = require('path')
 
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const ManifestPlugin = require('webpack-manifest-plugin')
@@ -142,6 +143,11 @@ module.exports = function (env) {
         // 'window.Headroom': 'headroom.js/dist/headroom.js',
         timeago: 'timeago.js',
         Zooming: 'zooming'
+      }),
+      new BrowserSyncPlugin({
+        host: 'localhost',
+        port: 8000,
+        server: { baseDir: ['build'] }
       })
     ],
     devServer: {
