@@ -1,12 +1,12 @@
 ---
 title: About
 view: about.twig
-bio: Hello, I’m Vittorio, I craft unique DIY pieces with the intention to make them beautiful, functional and secure.
+bio: Ciao, sono Vittorio, creo pezzi unici di arte DIY con l'intenzione di renderli belli, funzionali e sicuri.
 contact:
-  venue: Via Oreste Regnoli 38, Forlì, Emilia-Romagna, Italy
+  venue: Produco questi lavori a Forlì,<br>Emilia-Romagna, Italy
   phone: +39 320 1852742
   email: vittorivittorio@gmail.com
-credits: Get the <a href="https://github.com/vitto/vit.to">source code</a> of this website designed by me
+credits: Scarica il <a href="https://github.com/vitto/vit.to">codice sorgente</a> di questo sito<br>che ho progettato
 ---
 
 hello world
