@@ -1,0 +1,36 @@
+<div class="modal">
+  <form class="modal__body">
+    <label class="input">
+      <input class="input__element" type="text" name="from" placeholder="Nome Cognome">
+      <i class="input__icon material-icons">face</i>
+    </label>
+    <label class="input">
+      <input class="input__element" type="email" name="reply_to" placeholder="tua@email.com">
+      <i class="input__icon material-icons">mail</i>
+    </label>
+    <label class="input input--textarea">
+      <textarea class="input__element" name="description" placeholder="Descrizione"></textarea>
+      <i class="input__icon material-icons">content_paste</i>
+    </label>
+    <input type="hidden" id="budget" value="23">
+    <div class="budget">
+      <div class="budget__column">
+        <img src="http://placehold.it/300x300" alt="" class="budget__image">
+      </div>
+      <div class="budget__column budget__column--active">
+        <img src="http://placehold.it/300x300" alt="" class="budget__image">
+      </div>
+      <div class="budget__column">
+        <img src="http://placehold.it/300x300" alt="" class="budget__image">
+      </div>
+    </div>
+    <p class="modal__text">
+      La qualità del lavoro dipenderà dai tagli sul budget, se questi saranno troppo alti, potrebbe non essere possibile realizzare il pezzo.
+    </p>
+
+    <div class="modal__footer">
+      <a href="#" class="button button--back modal__button">Chiudi</a>
+      <a href="#" class="button button--send modal__button">Invia</a>
+    </div>
+  </form>
+</div>

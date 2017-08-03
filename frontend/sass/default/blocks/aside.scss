@@ -11,6 +11,10 @@
   white-space: nowrap;
   width: $aside--width;
 
+  @supports not (backdrop-filter: $aside--background--blur) {
+    background-color: $aside--background--opaque-strenght;
+  }
+
   @include modifier ('opaque') {
     backdrop-filter: $aside--background--blur;
     background-color: $aside--background--opaque;

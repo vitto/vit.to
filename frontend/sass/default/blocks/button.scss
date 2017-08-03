@@ -37,6 +37,16 @@
     }
   }
 
+  @include modifier ('send') {
+    background-color: $button--available--background;
+    color: $button--available--color;
+
+    &:hover {
+      background-color: $button--available--background--hover;
+      color: $button--available--color--hover;
+    }
+  }
+
   @include modifier ('sold-out') {
     background-color: $button--sold-out--background;
     color: $button--sold-out--color;

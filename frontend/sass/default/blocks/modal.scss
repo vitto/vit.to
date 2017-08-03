@@ -1,0 +1,40 @@
+@include block ('modal') {
+  align-items: center;
+  backdrop-filter: $modal--background--blur;
+  background-color: $modal--background--opaque;
+  bottom: 0;
+  display: flex;
+  left: 0;
+  overflow: auto;
+  padding: 55px 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
+
+  @supports not (backdrop-filter: $modal--background--blur) {
+    background-color: $modal--background--opaque-strenght;
+  }
+
+  @include element ('body') {
+    background-color: $modal--body--background;
+    box-shadow: $modal--shadow;
+    margin: auto;
+    max-width: 500px;
+    padding: s(2);
+  }
+
+  @include element ('footer') {
+    display: flex;
+    margin: s(2) s(-0.5) 0;
+  }
+
+  @include element ('button') {
+    flex-grow: 1;
+    margin: 0 s(0.5);
+  }
+
+  @include element ('text') {
+    margin-top: s(1);
+  }
+}

@@ -2,6 +2,10 @@ metadata:
   home: http://vit.to
   repo: https://github.com/vitto/vit.to
   background: '#faf9f7'
+  service:
+    email_js:
+      user_id: user_eswCclJ3zfAWR2RR4qapH
+      service_id: gmail
 clean: true
 source: source
 destination: build

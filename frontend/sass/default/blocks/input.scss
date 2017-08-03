@@ -1,0 +1,45 @@
+@include block ('input') {
+  display: block;
+  position: relative;
+
+  & + & {
+    margin-top: s(1);
+  }
+
+  @include modifier ('textarea') {
+    @include element ('element') {
+      height: 130px;
+      resize: none;
+    }
+    @include element ('icon') {
+      top: s(0.5);
+    }
+  }
+
+  @include element ('element') {
+    background-color: transparent;
+    border: 0;
+    border-bottom: $input--border;
+    font-family: $font-family-sans;
+    padding: s(0.5) 0;
+    transition: border-bottom $hover-ease;
+    width: 100%;
+
+    &:focus {
+      border-bottom-color: $title-color;
+      outline: 0;
+
+      & + .input__icon {
+        color: $input--focus;
+      }
+    }
+  }
+
+  @include element ('icon') {
+    color: $input--unfocus;
+    position: absolute;
+    right: 0;
+    top: 20%;
+    transition: color $hover-ease;
+  }
+}

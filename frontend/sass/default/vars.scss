@@ -10,6 +10,7 @@ $actions--radius: 8px;
 
 $aside--background: $color-white;
 $aside--background--opaque: rgba($color-white, 0.85);
+$aside--background--opaque-strenght: rgba($color-white, 0.95);
 $aside--background--blur: blur(4px);
 $aside--min-width: 330px;
 $aside--shadow: $solid-shadow;
@@ -51,6 +52,17 @@ $header--shadow: $solid-shadow;
 
 $markdown--border-top: 2px solid $color-mercury;
 $markdown--image--radius: 8px;
+
+$modal--background: mix($color-white, $color-mercury);
+$modal--body--background: $color-white;
+$modal--background--opaque: rgba($modal--background, 0.85);
+$modal--background--opaque-strenght: rgba($modal--background, 0.95);
+$modal--background--blur: blur(4px);
+$modal--shadow: $solid-shadow;
+
+$input--border: 2px solid $color-mercury;
+$input--unfocus: $color-star-dust;
+$input--focus: $color-chicago;
 
 $piece--availability--sold-out: $color-mercury;
 $piece--dedails--border-top: 2px solid $color-mercury;

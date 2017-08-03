@@ -1,0 +1,19 @@
+@include block ('budget') {
+  display: flex;
+  margin-top: s(1);
+  width: 100%;
+
+  @include element ('column') {
+    opacity: 0.5;
+    transition: opacity $hover-ease;
+
+    @include modifier ('active') {
+      opacity: 1;
+    }
+  }
+
+  @include element ('image') {
+    height: auto;
+    width: 100%;
+  }
+}

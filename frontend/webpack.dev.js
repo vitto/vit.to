@@ -21,11 +21,15 @@ const basePath = '/'
 module.exports = function (env) {
   return {
     entry: {
-      'js/app': __js + '/main.js',
+      'js/app': [
+        __js + '/email.js',
+        __js + '/main.js'
+      ],
       'js/vendor': [
         __modules + '/jquery/dist/jquery.js',
         __modules + '/blazy/blazy.js',
         __modules + '/headroom.js/dist/headroom.js',
+        __modules + '/jquery-range/jquery.range.js',
         __modules + '/timeago.js/dist/timeago.js', // __modules + '/timeago.js/timeago.locales.min.js'
         __modules + '/zooming/build/zooming.js'
       ],
@@ -140,7 +144,6 @@ module.exports = function (env) {
         $: 'jquery',
         Blazy: 'blazy',
         jQuery: 'jquery',
-        // 'window.Headroom': 'headroom.js/dist/headroom.js',
         timeago: 'timeago.js',
         Zooming: 'zooming'
       }),
