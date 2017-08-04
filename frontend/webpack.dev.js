@@ -29,7 +29,7 @@ module.exports = function (env) {
         __modules + '/jquery/dist/jquery.js',
         __modules + '/blazy/blazy.js',
         __modules + '/headroom.js/dist/headroom.js',
-        __modules + '/jquery-range/jquery.range.js',
+        __modules + '/nouislider/distribute/nouislider.js',
         __modules + '/timeago.js/dist/timeago.js', // __modules + '/timeago.js/timeago.locales.min.js'
         __modules + '/zooming/build/zooming.js'
       ],
@@ -37,6 +37,7 @@ module.exports = function (env) {
         __sass + '/import.scss'
       ],
       'css/vendor-style': [
+        __modules + '/nouislider/distribute/nouislider.css',
         __modules + '/material-design-icons/iconfont/material-icons.css'
       ]
     },
@@ -117,6 +118,9 @@ module.exports = function (env) {
         }, {
           test: require.resolve('headroom.js'),
           use: 'imports-loader?this=>window,define=>false,exports=>false'
+        }, {
+          test: require.resolve('jquery-range/jquery.range.js'),
+          use: 'imports-loader?this=>window,define=>false,exports=>false'
         }
       ]
     },
@@ -144,6 +148,7 @@ module.exports = function (env) {
         $: 'jquery',
         Blazy: 'blazy',
         jQuery: 'jquery',
+        noUiSlider: 'nouislider',
         timeago: 'timeago.js',
         Zooming: 'zooming'
       }),

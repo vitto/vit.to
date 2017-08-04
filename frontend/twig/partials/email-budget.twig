@@ -1,4 +1,12 @@
 <div class="modal">
+  <div class="modal-footer">
+    <a href="{{ relativePath }}" class="modal-footer__link modal-footer__link--prev">
+      <img class="modal-footer__logo" src="{{ relativePath }}img/vittorio-vittori-logo.svg" alt="Vittorio Vittori">
+    </a>
+    <div class="modal-footer__text">
+      Indietro
+    </div>
+  </div>
   <form class="modal__body">
     <label class="input">
       <input class="input__element" type="text" name="from" placeholder="Nome Cognome">
@@ -9,10 +17,12 @@
       <i class="input__icon material-icons">mail</i>
     </label>
     <label class="input input--textarea">
-      <textarea class="input__element" name="description" placeholder="Descrizione"></textarea>
+      <textarea class="input__element" name="description" placeholder="Note"></textarea>
       <i class="input__icon material-icons">content_paste</i>
     </label>
-    <input type="hidden" id="budget" value="23">
+    <div id="budget-range" class="budget-range" data-price="600">
+      <div id="budget"></div>
+    </div>
     <div class="budget">
       <div class="budget__column">
         <img src="http://placehold.it/300x300" alt="" class="budget__image">

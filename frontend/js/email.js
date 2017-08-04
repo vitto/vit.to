@@ -1,16 +1,18 @@
 $(function () {
-  $('#budget').jRange({
-    from: -2.0,
-    to: 2.0,
-    step: 0.5,
-    scale: [-2.0, -1.0, 0.0, 1.0, 2.0],
-    format: '%s',
-    width: 300,
-    showLabels: true,
-    snap: true,
-    onstatechange: function (value) {
-      console.log(value)
+
+  var basePrice = $('#budget-range').data('price')
+
+  noUiSlider.create(document.getElementById('budget'), {
+    start: [ 100 ],
+    connect: true,
+    range: {
+      'min': 0,
+      'max': 200
     }
+  }).on('update', function (values, handle) {
+    var value = values[handle]
+    var percChange = Math.round(value - 100)
+    console.log(Math.round(basePrice * value / 100), percChange + '%')
   })
 
   var perc = Math.round(100*400/650);
