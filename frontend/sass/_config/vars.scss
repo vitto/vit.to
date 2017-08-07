@@ -9,6 +9,12 @@ $color-mercury: #e9e8e6;
 $color-star-dust: #a5a4a3;
 $color-gray: mix(#fff, #5b5a57, 35%);
 $color-chicago: #5b5a57;
+$color-picton-blue: #37b2e7;
+$color-cinnabar: #e74737;
+
+$color-info: $color-picton-blue;
+$color-error: $color-cinnabar;
+
 
 $solid-shadow: 0 0 0 1px rgba(0, 0, 0, 0.025), 0 0 4px rgba(0, 0, 0, 0.1);
 $hover-ease: 0.5s ease('out-expo');

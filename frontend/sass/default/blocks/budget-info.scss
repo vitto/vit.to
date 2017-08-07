@@ -1,0 +1,25 @@
+@include block ('budget-info') {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  @include element ('column') {
+    &:last-child {
+      text-align: right;
+    }
+  }
+
+  @include element ('title') {
+    font-weight: 600;
+  }
+
+  @include element ('value') {
+    border-radius: 4px;
+    padding: s(0.25) s(0.5);
+
+    @include modifier ('custom') {
+      background-color: $budget-info--text--background;
+    }
+  }
+}

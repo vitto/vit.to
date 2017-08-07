@@ -1,24 +1,85 @@
 $(function () {
 
+  var $form = $('.modal__body:nth-child(1)')
+  var $statusSent = $('.modal__body:nth-child(2)')
+  var $statusError = $('.modal__body:nth-child(3)')
+  var $budget = $('.modal-contents__column:nth-child(2)')
+  var $sendBudget = $('#send-budget-request')
+
+  $budget.addClass('modal-contents__column--disabled')
+  $sendBudget.addClass('button--disabled')
+
+  $('.button--try-budget, .button--try-budget-available').on('click', function (e) {
+    e.preventDefault()
+    $('.modal').addClass('modal--active')
+    $('.body').addClass('body--no-scroll')
+    $('input[name="from"]').focus()
+    $('.header-mobile.headroom--pinned').removeClass('headroom--pinned').addClass('headroom--unpinned')
+    $('.footer-mobile.headroom--pinned').removeClass('headroom--pinned').addClass('headroom--unpinned-bottom')
+  })
+
+  $('.modal__button--close, .modal-footer__link').on('click', function (e) {
+    e.preventDefault()
+    $('.modal').removeClass('modal--active')
+    $('.body').removeClass('body--no-scroll')
+    $('.header-mobile.headroom--unpinned').removeClass('headroom--unpinned').addClass('headroom--pinned')
+    $('.footer-mobile.headroom--unpinned-bottom').removeClass('headroom--unpinned-bottom').addClass('headroom--pinned')
+  })
+
+
+
+  $('#send-budget-request').on('click', function (e) {
+    e.preventDefault()
+    $form.addClass('modal__body--hidden')
+    $statusSent.removeClass('modal__body--hidden').addClass('fadeInLeft animated')
+    setTimeout(function () {
+      sendError();
+    }, 3000)
+    return false
+  })
+
+  function sendError () {
+    $statusSent.addClass('modal__body--hidden').removeClass('fadeInLeft animated')
+    $statusError.removeClass('modal__body--hidden').addClass('wobble animated')
+  }
+
   var basePrice = $('#budget-range').data('price')
 
   noUiSlider.create(document.getElementById('budget'), {
     start: [ 100 ],
     connect: true,
+    padding: 20,
     range: {
-      'min': 0,
-      'max': 200
+      'min': -10,
+      'max': 220
     }
   }).on('update', function (values, handle) {
     var value = values[handle]
     var percChange = Math.round(value - 100)
-    console.log(Math.round(basePrice * value / 100), percChange + '%')
+
+    if (percChange > 0) {
+      percChange = '+' + percChange + '%'
+    } else {
+      percChange = percChange + '%'
+    }
+
+    $('.noUi-handle').text(percChange)
+    $('#custom-budget').text(Math.round(basePrice * value / 100) + '€')
+
+    var child = 2
+    if (value <= 80) {
+      child = 1
+    } else if (value >= 140) {
+      child = 3
+    }
+
+    var $image = $('.budget__column:nth-child(' + child + ')')
+
+    if (!$image.hasClass('budget__column--active')) {
+      $('.budget__column').removeClass('budget__column--active')
+      $image.addClass('budget__column--active')
+    }
   })
-
-  var perc = Math.round(100*400/650);
-  var percLess = -(100 - perc) + '%';
-
-  console.log(percLess);
 
   var params = {
     reply_to: 'pizza@pizza.com',

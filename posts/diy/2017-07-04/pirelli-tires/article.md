@@ -3,6 +3,7 @@ title: Pirelli tires
 furniture: Coffee table
 date: 2017-07-04
 cover: cover.jpg
+price: 600
 view: diy.twig
 ---
 

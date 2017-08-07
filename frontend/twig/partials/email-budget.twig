@@ -1,46 +1,97 @@
 <div class="modal">
-  <div class="modal-footer">
-    <a href="{{ relativePath }}" class="modal-footer__link modal-footer__link--prev">
-      <img class="modal-footer__logo" src="{{ relativePath }}img/vittorio-vittori-logo.svg" alt="Vittorio Vittori">
-    </a>
-    <div class="modal-footer__text">
-      Indietro
-    </div>
-  </div>
-  <form class="modal__body">
-    <label class="input">
-      <input class="input__element" type="text" name="from" placeholder="Nome Cognome">
-      <i class="input__icon material-icons">face</i>
-    </label>
-    <label class="input">
-      <input class="input__element" type="email" name="reply_to" placeholder="tua@email.com">
-      <i class="input__icon material-icons">mail</i>
-    </label>
-    <label class="input input--textarea">
-      <textarea class="input__element" name="description" placeholder="Note"></textarea>
-      <i class="input__icon material-icons">content_paste</i>
-    </label>
-    <div id="budget-range" class="budget-range" data-price="600">
-      <div id="budget"></div>
-    </div>
-    <div class="budget">
-      <div class="budget__column">
-        <img src="http://placehold.it/300x300" alt="" class="budget__image">
+  <form class="modal__body modal__body--wide">
+    <div class="modal-contents">
+      <div class="modal-contents__column">
+        <h3 class="modal__title">
+          Richiedi pezzo con il tuo budget
+        </h3>
+        <label class="input">
+          <input class="input__element" type="text" name="from" placeholder="Nome Cognome">
+          <i class="input__icon material-icons">face</i>
+        </label>
+        <label class="input">
+          <input class="input__element" type="email" name="reply_to" placeholder="tua@email.com">
+          <i class="input__icon material-icons">mail</i>
+        </label>
+        <label class="input input--textarea">
+          <textarea class="input__element" name="description" placeholder="Note facoltative"></textarea>
+          <i class="input__icon material-icons">content_paste</i>
+        </label>
       </div>
-      <div class="budget__column budget__column--active">
-        <img src="http://placehold.it/300x300" alt="" class="budget__image">
+      <div class="modal-contents__column">
+        <h3 class="modal__title">
+          Budget
+        </h3>
+        <p class="modal__text">
+          Indica il budget che vuoi mettere a disposizione, ti contatterò per spiegarti cosa si può fare in base alle tue note e avere conferma per procedere.
+        </p>
+        <div id="budget-range" class="budget-range" data-price="{{ price }}">
+          <div id="budget"></div>
+        </div>
+        <div class="budget-info">
+          <div class="budget-info__column">
+            <span class="budget-info__title">Budget</span>
+            <span id="custom-budget" class="budget-info__value budget-info__value--custom">300€</span>
+          </div>
+          <div class="budget-info__column">
+            <span class="budget-info__title">Prezzo</span>
+            <span class="budget-info__value">{{ price }}€</span>
+          </div>
+        </div>
+        <div class="budget">
+          <div class="budget__column">
+            <img src="{{ relativePath }}img/budget--low.svg" alt="" class="budget__image">
+          </div>
+          <div class="budget__column budget__column--active">
+            <img src="{{ relativePath }}img/budget--base.svg" alt="" class="budget__image">
+          </div>
+          <div class="budget__column">
+            <img src="{{ relativePath }}img/budget--high.svg" alt="" class="budget__image">
+          </div>
+        </div>
+        <p class="modal__text">
+          La qualità del lavoro dipenderà dai tagli sul budget, se questi saranno troppo alti, potrebbe non essere possibile realizzare il pezzo.
+        </p>
       </div>
-      <div class="budget__column">
-        <img src="http://placehold.it/300x300" alt="" class="budget__image">
+    </div>
+    <div class="modal__footer">
+      <a href="#" class="button button--back modal__button modal__button--close">Chiudi</a>
+      <button id="send-budget-request" class="button button--send modal__button" type="submit" name="send">
+        <div class="button__infos">
+          Invia
+        </div>
+        <i class="button__icon material-icons">email</i>
+      </button>
+    </div>
+  </form>
+
+  <div class="modal__body modal__body--status modal__body--hidden">
+    <div class="send-status">
+      <i class="send-status__icon send-status__icon--info material-icons">send</i>
+      <div class="send-status__title">
+        Messaggio inviato
       </div>
     </div>
     <p class="modal__text">
-      La qualità del lavoro dipenderà dai tagli sul budget, se questi saranno troppo alti, potrebbe non essere possibile realizzare il pezzo.
+      Riceverai una copia del messaggio che hai inviato con i dettagli.<br>
+      Controllerò la posta dopo le 18:00 e cercherò di risponderti al più presto.
     </p>
+  </div>
 
-    <div class="modal__footer">
-      <a href="#" class="button button--back modal__button">Chiudi</a>
-      <a href="#" class="button button--send modal__button">Invia</a>
+  <div class="modal__body modal__body--status modal__body--hidden">
+    <div class="send-status">
+      <i class="send-status__icon send-status__icon--error material-icons">report_problem</i>
+      <div class="send-status__title">
+        Errore di invio
+      </div>
     </div>
-  </form>
+    <p class="modal__text">
+      Si è verificato un errore di invio del messaggio.<br>
+      Il sistema ha registrato il problema, spero di risolverlo a breve o che si tratti di un semplice disservizio.
+    </p>
+    <div class="modal__footer">
+      <a href="#" class="button button--fill button--back modal__button modal__button--close">Chiudi</a>
+    </div>
+  </div>
+
 </div>

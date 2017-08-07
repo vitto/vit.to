@@ -63,6 +63,17 @@ $modal--shadow: $solid-shadow;
 $input--border: 2px solid $color-mercury;
 $input--unfocus: $color-star-dust;
 $input--focus: $color-chicago;
+$input--focus-background: mix($color-white, $color-mercury);
+
+$noui--handle--background: $color-chicago;
+$noui--target--background: $color-mercury;
+$noui--handle--height: 32px;
+$noui--handle--width: 72px;
+$noui--handle--top: -12px;
+$noui--handle--color: $color-mercury;
+$noui--target--height: 8px;
+
+$budget-info--text--background: $color-mercury;
 
 $piece--availability--sold-out: $color-mercury;
 $piece--dedails--border-top: 2px solid $color-mercury;

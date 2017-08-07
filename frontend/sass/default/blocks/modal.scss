@@ -2,18 +2,40 @@
   align-items: center;
   backdrop-filter: $modal--background--blur;
   background-color: $modal--background--opaque;
+  background-image: theme('vittorio-vittori-logo.svg');
+  background-position: left s(3) bottom s(3);
+  background-repeat: no-repeat;
+  background-size: 57px auto;
   bottom: 0;
   display: flex;
   left: 0;
+  opacity: 0;
   overflow: auto;
   padding: 55px 0;
+  pointer-events: none;
   position: fixed;
   right: 0;
   top: 0;
+  transform: scale(1.25);
+  transition: opacity $hover-ease, transform $hover-ease, background-position $hover-ease;
   z-index: 1;
 
   @supports not (backdrop-filter: $modal--background--blur) {
     background-color: $modal--background--opaque-strenght;
+  }
+
+  @include media ('<tablet-small') {
+    padding: 0;
+  }
+
+  @include modifier ('active') {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+  }
+
+  @include modifier ('no-logo') {
+    background-position: left s(-3) bottom s(-3);
   }
 
   @include element ('body') {
@@ -22,19 +44,70 @@
     margin: auto;
     max-width: 500px;
     padding: s(2);
+
+    @include modifier ('hidden') {
+      display: none;
+    }
+
+    @include modifier ('wide') {
+      max-width: 900px;
+    }
+
+    @include modifier ('status') {
+      @include media ('<=tablet-small') {
+        margin-left: s(2);
+        margin-right: s(2);
+      }
+    }
   }
 
   @include element ('footer') {
     display: flex;
-    margin: s(2) s(-0.5) 0;
+    margin: s(2) s(-1) 0;
   }
 
   @include element ('button') {
     flex-grow: 1;
-    margin: 0 s(0.5);
+    margin: 0 s(1);
+    width: 50%;
   }
 
   @include element ('text') {
+    @extend %text;
     margin-top: s(1);
   }
+
+  @include element ('title') {
+    @extend %title;
+    margin-bottom: s(1);
+  }
+
+  @include element ('loader') {
+    display: none;
+    margin: auto;
+
+    @include modifier ('active') {
+      display: block;
+    }
+  }
+
+  @include element ('spinner') {
+    animation-duration: 0.75s;
+    animation-iteration-count: infinite;
+    animation-name: modal-spinner;
+    display: block;
+    height: auto;
+    margin: auto;
+    width: 57px;
+  }
+
+  @include element ('spinner-text') {
+    @extend %text;
+    margin-top: s(1);
+  }
+}
+
+@keyframes modal-spinner {
+  0% { transform: rotate(0) translate(0, 0); }
+  100% { transform: rotate(120deg) translate(-4px, 9px); }
 }

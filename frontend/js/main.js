@@ -22,5 +22,4 @@
     })
     footerHeadroom.init()
   }
-
 })()

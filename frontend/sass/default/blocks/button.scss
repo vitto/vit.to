@@ -4,13 +4,15 @@
 
   align-items: center;
   background-color: black;
+  border: 0;
   border-radius: $button--radius;
   color: white;
+  cursor: pointer;
   display: flex;
   height: s(2);
   justify-content: center;
   text-decoration: none;
-  transition: background-color $hover-ease, color $hover-ease;
+  transition: background-color $hover-ease, color $hover-ease, opacity $hover-ease;
   user-select: none;
 
   @include media ('<=tablet-large') {
@@ -21,6 +23,11 @@
     display: inline-flex;
     padding-left: s(1);
     padding-right: s(1);
+  }
+
+  @include modifier ('disabled') {
+    opacity: 0.2;
+    pointer-events: none;
   }
 
   @include modifier ('fill') {

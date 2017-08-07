@@ -37,6 +37,7 @@ module.exports = function (env) {
         __sass + '/import.scss'
       ],
       'css/vendor-style': [
+        __modules + '/animate.css/animate.css',
         __modules + '/nouislider/distribute/nouislider.css',
         __modules + '/material-design-icons/iconfont/material-icons.css'
       ]

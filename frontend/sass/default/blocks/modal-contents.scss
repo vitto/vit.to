@@ -1,0 +1,22 @@
+@include block ('modal-contents') {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: s(-1);
+  margin-right: s(-1);
+  width: auto;
+
+  @include element ('column') {
+    padding: s(1);
+    transition: opacity $hover-ease;
+    width: 50%;
+
+    @include media ('<=tablet-small') {
+      width: 100%;
+    }
+
+    @include modifier ('disabled') {
+      opacity: 0.2;
+      pointer-events: none;
+    }
+  }
+}

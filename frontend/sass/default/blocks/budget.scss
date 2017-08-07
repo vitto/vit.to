@@ -1,14 +1,33 @@
 @include block ('budget') {
-  display: flex;
   margin-top: s(1);
   width: 100%;
 
   @include element ('column') {
-    opacity: 0.5;
-    transition: opacity $hover-ease;
+    float: left;
+    width: 33.3333%;
 
-    @include modifier ('active') {
-      opacity: 1;
+    @supports (filter: blur(2px)) {
+      filter: blur(2px);
+      opacity: 0.35;
+      transform: scale(0.75);
+      transition: opacity $hover-ease, filter $hover-ease, transform $hover-ease;
+
+      @include modifier ('active') {
+        filter: blur(0);
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @supports not (filter: blur(2px)) {
+      opacity: 0.25;
+      transform: scale(0.75);
+      transition: opacity $hover-ease, transform $hover-ease;
+
+      @include modifier ('active') {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
   }
 

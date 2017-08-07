@@ -1,0 +1,24 @@
+@include block ('send-status') {
+
+  text-align: center;
+
+  @include element ('icon') {
+    display: inline-block;
+
+    @include modifier ('info') {
+      color: $color-info;
+    }
+
+    @include modifier ('error') {
+      color: $color-error;
+    }
+  }
+
+  @include element ('title') {
+    @extend %title;
+  }
+
+  @include element ('text') {
+    @extend %text;
+  }
+}
