@@ -64,6 +64,9 @@ $input--border: 2px solid $color-mercury;
 $input--unfocus: $color-star-dust;
 $input--focus: $color-chicago;
 $input--focus-background: mix($color-white, $color-mercury);
+$input--element--error-background: mix($color-error, $color-mercury, 25%);
+$input--error--color: $color-mercury;
+$input--error--background: $color-error;
 
 $noui--handle--background: $color-chicago;
 $noui--target--background: $color-mercury;

@@ -1,17 +1,23 @@
 <div class="modal">
-  <form class="modal__body modal__body--wide">
+  <form id="budget-form" class="modal__body modal__body--wide">
     <div class="modal-contents">
       <div class="modal-contents__column">
         <h3 class="modal__title">
           Richiedi pezzo con il tuo budget
         </h3>
         <label class="input">
-          <input class="input__element" type="text" name="from" placeholder="Nome Cognome">
+          <input id="input-name" class="input__element" type="text" name="from" placeholder="Nome Cognome">
           <i class="input__icon material-icons">face</i>
+          <p class="input__error">
+            Inserisci Nome e Cognome così che possa risponderti
+          </p>
         </label>
         <label class="input">
-          <input class="input__element" type="email" name="reply_to" placeholder="tua@email.com">
+          <input id="input-email" class="input__element" type="email" name="reply_to" placeholder="tua@email.com">
           <i class="input__icon material-icons">mail</i>
+          <p class="input__error">
+            Verifica che la e-mail sia valida
+          </p>
         </label>
         <label class="input input--textarea">
           <textarea class="input__element" name="description" placeholder="Note facoltative"></textarea>

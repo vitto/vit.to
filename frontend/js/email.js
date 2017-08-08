@@ -1,12 +1,9 @@
 $(function () {
-
   var $form = $('.modal__body:nth-child(1)')
   var $statusSent = $('.modal__body:nth-child(2)')
   var $statusError = $('.modal__body:nth-child(3)')
-  var $budget = $('.modal-contents__column:nth-child(2)')
   var $sendBudget = $('#send-budget-request')
 
-  $budget.addClass('modal-contents__column--disabled')
   $sendBudget.addClass('button--disabled')
 
   $('.button--try-budget, .button--try-budget-available').on('click', function (e) {
@@ -26,14 +23,12 @@ $(function () {
     $('.footer-mobile.headroom--unpinned-bottom').removeClass('headroom--unpinned-bottom').addClass('headroom--pinned')
   })
 
-
-
   $('#send-budget-request').on('click', function (e) {
     e.preventDefault()
     $form.addClass('modal__body--hidden')
     $statusSent.removeClass('modal__body--hidden').addClass('fadeInLeft animated')
     setTimeout(function () {
-      sendError();
+      sendError()
     }, 3000)
     return false
   })
@@ -78,6 +73,71 @@ $(function () {
     if (!$image.hasClass('budget__column--active')) {
       $('.budget__column').removeClass('budget__column--active')
       $image.addClass('budget__column--active')
+    }
+  })
+
+  var formIsValid = false
+  var nameIsValid = false
+  var emailIsValid = false
+
+  function checkFormValidity () {
+    formIsValid = nameIsValid
+    if (formIsValid) {
+      formIsValid = emailIsValid
+    }
+
+    if (formIsValid) {
+      $('#send-budget-request').removeClass('button--disabled')
+    } else {
+      $('#send-budget-request').addClass('button--disabled')
+    }
+  }
+
+  function checkValidName (value) {
+    var expression = /^[a-zA-Z]([-']?[a-zA-Z]+)*( [a-zA-Z]([-']?[a-zA-Z]+)*)+$/
+    nameIsValid = expression.test(value)
+    checkFormValidity()
+    return nameIsValid
+  }
+
+  function checkValidEmail (value) {
+    var expression = /\b[a-zA-Z0-9\u00C0-\u017F._%+-]+@[a-zA-Z0-9\u00C0-\u017F.-]+\.[a-zA-Z]{2,}\b/
+    emailIsValid = expression.test(value)
+    checkFormValidity()
+    return emailIsValid
+  }
+
+  $('#input-name').on('keydown', function () {
+    var $this = $(this)
+    setTimeout(function () {
+      if (checkValidName($this.val())) {
+        $this.removeClass('input__element--error')
+      }
+    }, 0)
+  })
+
+  $('#input-email').on('keydown', function () {
+    var $this = $(this)
+    setTimeout(function () {
+      if (checkValidEmail($this.val())) {
+        $this.removeClass('input__element--error')
+      }
+    }, 0)
+  })
+
+  $('#input-name').on('blur', function () {
+    if (!checkValidName($(this).val())) {
+      $(this).addClass('input__element--error')
+    } else {
+      $(this).removeClass('input__element--error')
+    }
+  })
+
+  $('#input-email').on('blur', function () {
+    if (!checkValidEmail($(this).val())) {
+      $(this).addClass('input__element--error')
+    } else {
+      $(this).removeClass('input__element--error')
     }
   })
 

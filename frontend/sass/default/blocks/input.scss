@@ -37,18 +37,57 @@
       outline: 0;
       padding: s(0.5) s(1.75) s(0.5) s(0.5);
 
+      &::placeholder {
+        color: $input--unfocus;
+      }
+
       & + .input__icon {
         color: $input--focus;
         right: s(0.5);
       }
     }
+
+    @include modifier ('error') {
+      background-color: $input--element--error-background;
+      border-bottom-color: transparent;
+      padding: s(0.5) s(1.75) s(0.5) s(0.5);
+
+      &:focus {
+        background-color: mix($input--focus-background, $input--element--error-background);
+        border-bottom-color: transparent;
+      }
+
+      &::placeholder {
+        color: mix($input--error--background, $input--element--error-background);
+      }
+
+      & + .input__icon {
+        color: $input--error--background;
+        right: s(0.5);
+
+        & + .input__error {
+          max-height: 34px;
+          padding: s(0.5);
+        }
+      }
+    }
+  }
+
+  @include element ('error') {
+    @extend %text;
+    background-color: $input--error--background;
+    color: $input--error--color;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 s(0.5);
+    transition: padding $hover-ease, max-height $hover-ease;
   }
 
   @include element ('icon') {
     color: $input--unfocus;
     position: absolute;
     right: 0;
-    top: 20%;
+    top: 10px;
     transition: color $hover-ease, right $hover-ease;
   }
 }

@@ -77,7 +77,8 @@
       "timeago",
       "Blazy",
       "Headroom",
-      "emailjs"
+      "emailjs",
+      "noUiSlider"
     ]
   }
 }
