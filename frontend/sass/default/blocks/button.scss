@@ -99,6 +99,19 @@
     }
   }
 
+  @include modifier ('close') {
+    background-color: $button--available--background;
+    color: $button--available--color;
+    height: auto;
+    justify-content: flex-start;
+    padding: s(0.375);
+
+    &:active {
+      background-color: $button--available--background--hover;
+      color: $button--available--color--hover;
+    }
+  }
+
   @include modifier ('available') {
     background-color: $button--available--background;
     color: $button--available--color;

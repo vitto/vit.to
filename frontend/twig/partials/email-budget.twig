@@ -2,9 +2,14 @@
   <form id="budget-form" class="modal__body modal__body--wide">
     <div class="modal-contents">
       <div class="modal-contents__column">
-        <h3 class="modal__title">
-          Richiedi pezzo con il tuo budget
-        </h3>
+        <div class="modal__nav">
+          <a href="{{ relativePath }}" class="button button--close button--inline modal__button--close modal__button--mobile">
+            <i class="button__icon material-icons">keyboard_backspace</i>
+          </a>
+          <h3 class="modal__title modal__title--nav">
+            Richiedi pezzo con il tuo budget
+          </h3>
+        </div>
         <label class="input">
           <input id="input-name" class="input__element" type="text" name="from" placeholder="Nome Cognome">
           <i class="input__icon material-icons">face</i>
@@ -40,7 +45,7 @@
             <span id="custom-budget" class="budget-info__value budget-info__value--custom">300€</span>
           </div>
           <div class="budget-info__column">
-            <span class="budget-info__title">Prezzo</span>
+            <span class="budget-info__title">Prezzo originale</span>
             <span class="budget-info__value">{{ price }}€</span>
           </div>
         </div>

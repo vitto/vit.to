@@ -1,0 +1,27 @@
+@include block ('row') {
+  display: flex;
+  margin-left: s(-1);
+  margin-right: s(-1);
+
+  @include modifier ('margin-top') {
+    margin-top: s(1);
+  }
+
+  @include element ('column') {
+    padding: s(1);
+    width: 50%;
+  }
+
+  @include element ('header') {
+    display: flex;
+  }
+
+  @include element ('title') {
+    margin-top: 0 !important;
+  }
+
+  @include element ('icon') {
+    color: $title-color;
+    margin-right: s(0.5);
+  }
+}

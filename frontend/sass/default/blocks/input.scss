@@ -66,9 +66,15 @@
         right: s(0.5);
 
         & + .input__error {
-          max-height: 34px;
+          max-height: 50px;
           padding: s(0.5);
         }
+      }
+    }
+
+    @include modifier ('valid') {
+      & + .input__icon {
+        color: $input--focus;
       }
     }
   }

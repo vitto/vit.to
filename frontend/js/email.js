@@ -1,36 +1,26 @@
 $(function () {
+
+  if ($('#budget').length === 0) {
+    return
+  }
+
   var $form = $('.modal__body:nth-child(1)')
   var $statusSent = $('.modal__body:nth-child(2)')
   var $statusError = $('.modal__body:nth-child(3)')
-  var $sendBudget = $('#send-budget-request')
-
-  $sendBudget.addClass('button--disabled')
+  // var $sendBudget = $('#send-budget-request')
+  // $sendBudget.addClass('button--disabled')
 
   $('.button--try-budget, .button--try-budget-available').on('click', function (e) {
     e.preventDefault()
     $('.modal').addClass('modal--active')
     $('.body').addClass('body--no-scroll')
     $('input[name="from"]').focus()
-    $('.header-mobile.headroom--pinned').removeClass('headroom--pinned').addClass('headroom--unpinned')
-    $('.footer-mobile.headroom--pinned').removeClass('headroom--pinned').addClass('headroom--unpinned-bottom')
   })
 
   $('.modal__button--close, .modal-footer__link').on('click', function (e) {
     e.preventDefault()
     $('.modal').removeClass('modal--active')
     $('.body').removeClass('body--no-scroll')
-    $('.header-mobile.headroom--unpinned').removeClass('headroom--unpinned').addClass('headroom--pinned')
-    $('.footer-mobile.headroom--unpinned-bottom').removeClass('headroom--unpinned-bottom').addClass('headroom--pinned')
-  })
-
-  $('#send-budget-request').on('click', function (e) {
-    e.preventDefault()
-    $form.addClass('modal__body--hidden')
-    $statusSent.removeClass('modal__body--hidden').addClass('fadeInLeft animated')
-    setTimeout(function () {
-      sendError()
-    }, 3000)
-    return false
   })
 
   function sendError () {
@@ -76,68 +66,95 @@ $(function () {
     }
   })
 
-  var formIsValid = false
+  var formIsPristine = true
   var nameIsValid = false
   var emailIsValid = false
-
-  function checkFormValidity () {
-    formIsValid = nameIsValid
-    if (formIsValid) {
-      formIsValid = emailIsValid
-    }
-
-    if (formIsValid) {
-      $('#send-budget-request').removeClass('button--disabled')
-    } else {
-      $('#send-budget-request').addClass('button--disabled')
-    }
-  }
+  var $inputName = $('#input-name')
+  var $inputEmail = $('#input-email')
 
   function checkValidName (value) {
     var expression = /^[a-zA-Z]([-']?[a-zA-Z]+)*( [a-zA-Z]([-']?[a-zA-Z]+)*)+$/
     nameIsValid = expression.test(value)
-    checkFormValidity()
     return nameIsValid
   }
 
   function checkValidEmail (value) {
     var expression = /\b[a-zA-Z0-9\u00C0-\u017F._%+-]+@[a-zA-Z0-9\u00C0-\u017F.-]+\.[a-zA-Z]{2,}\b/
     emailIsValid = expression.test(value)
-    checkFormValidity()
     return emailIsValid
   }
 
-  $('#input-name').on('keydown', function () {
+  $('#send-budget-request').on('click', function (e) {
+    e.preventDefault()
+    formIsPristine = false
+
+    if (!checkValidName($inputName.val())) {
+      $inputName.addClass('input__element--error')
+      $inputName.removeClass('input__element--valid')
+    } else {
+      $inputName.removeClass('input__element--error')
+      $inputName.addClass('input__element--valid')
+    }
+
+    if (!checkValidEmail($inputEmail.val())) {
+      $inputEmail.addClass('input__element--error')
+      $inputEmail.removeClass('input__element--valid')
+    } else {
+      $inputEmail.removeClass('input__element--error')
+      $inputEmail.addClass('input__element--valid')
+    }
+
+    if (checkValidName($inputName.val()) && checkValidEmail($inputEmail.val())) {
+      $form.addClass('modal__body--hidden')
+      $statusSent.removeClass('modal__body--hidden').addClass('fadeInLeft animated')
+      setTimeout(function () {
+        sendError()
+      }, 3000)
+    }
+    return false
+  })
+
+  $inputName.on('keydown', function () {
     var $this = $(this)
     setTimeout(function () {
       if (checkValidName($this.val())) {
         $this.removeClass('input__element--error')
+        $this.addClass('input__element--valid')
       }
     }, 0)
   })
 
-  $('#input-email').on('keydown', function () {
+  $inputEmail.on('keydown', function () {
     var $this = $(this)
     setTimeout(function () {
       if (checkValidEmail($this.val())) {
         $this.removeClass('input__element--error')
+        $this.addClass('input__element--valid')
       }
     }, 0)
   })
 
-  $('#input-name').on('blur', function () {
-    if (!checkValidName($(this).val())) {
-      $(this).addClass('input__element--error')
-    } else {
-      $(this).removeClass('input__element--error')
+  $inputName.on('blur', function () {
+    if (!formIsPristine) {
+      if (!checkValidName($(this).val())) {
+        $(this).addClass('input__element--error')
+        $(this).removeClass('input__element--valid')
+      } else {
+        $(this).removeClass('input__element--error')
+        $(this).addClass('input__element--valid')
+      }
     }
   })
 
-  $('#input-email').on('blur', function () {
-    if (!checkValidEmail($(this).val())) {
-      $(this).addClass('input__element--error')
-    } else {
-      $(this).removeClass('input__element--error')
+  $inputEmail.on('blur', function () {
+    if (!formIsPristine) {
+      if (!checkValidEmail($(this).val())) {
+        $(this).addClass('input__element--error')
+        $(this).removeClass('input__element--valid')
+      } else {
+        $(this).removeClass('input__element--error')
+        $(this).addClass('input__element--valid')
+      }
     }
   })
 

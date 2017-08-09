@@ -29,4 +29,17 @@
     height: 100vh;
     width: 100%;
   }
+
+  @include element ('contents') {
+    margin-left: $aside--min-width;
+    padding: s(2);
+
+    @include media ('<tablet-large') {
+      margin-left: 0;
+    }
+
+    @include media ('<=mobile-large') {
+      padding: s(1);
+    }
+  }
 }

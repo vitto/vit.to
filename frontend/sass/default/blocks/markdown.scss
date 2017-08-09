@@ -7,6 +7,27 @@
     padding-top: s(1);
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $title-color;
+    margin-bottom: s(0.5);
+    margin-top: s(2);
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  ul {
+    color: $article--text--color;
+    font-size: 18px;
+    font-weight: 300;
+  }
+
   p {
     color: $article--text--color;
     font-size: 18px;

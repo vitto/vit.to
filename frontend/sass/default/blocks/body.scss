@@ -10,4 +10,8 @@
   @include modifier ('no-scroll') {
     overflow: hidden;
   }
+
+  @include media ('<=tablet-small') {
+    background-color: $body--background--mobile;
+  }
 }

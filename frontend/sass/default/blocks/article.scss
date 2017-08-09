@@ -12,6 +12,7 @@
     }
 
     @include media ('<=tablet-small') {
+      margin: 0;
       padding-top: s(2.75);
     }
   }
