@@ -6,7 +6,7 @@ contact:
   venue: Produco questi lavori a Forlì,<br>Emilia-Romagna, Italy
   phone: +39 320 1852742
   email: vittorivittorio@gmail.com
-credits: Scarica il <a href="https://github.com/vitto/vit.to">codice sorgente</a> di questo sito<br>che ho progettato
+credits: Scarica il <a href="https://github.com/vitto/vit.to" target="_blank">codice sorgente</a><br>di questo sito
 ---
 
 ## Emozione prima di tutto

@@ -1,5 +1,12 @@
 <div class="modal">
-  <form id="budget-form" class="modal__body modal__body--wide">
+  <form id="budget-form" class="modal__body modal__body--wide"
+      data-emailjs-user-id="{{ metadata.service.email_js.user_id }}"
+      data-emailjs-service-id="{{ metadata.service.email_js.service_id }}"
+      data-emailjs-template-id="budget"
+      data-item-price="{{ price }}"
+      data-item-title="{{ title }}"
+      data-item-url="{{ metadata.home }}/{{ path }}"
+    >
     <div class="modal-contents">
       <div class="modal-contents__column">
         <div class="modal__nav">
@@ -25,7 +32,7 @@
           </p>
         </label>
         <label class="input input--textarea">
-          <textarea class="input__element" name="description" placeholder="Note facoltative"></textarea>
+          <textarea id="input-notes" class="input__element" name="description" placeholder="Note facoltative"></textarea>
           <i class="input__icon material-icons">content_paste</i>
         </label>
       </div>
@@ -36,7 +43,7 @@
         <p class="modal__text">
           Indica il budget che vuoi mettere a disposizione, ti contatterò per spiegarti cosa si può fare in base alle tue note e avere conferma per procedere.
         </p>
-        <div id="budget-range" class="budget-range" data-price="{{ price }}">
+        <div class="budget-range">
           <div id="budget"></div>
         </div>
         <div class="budget-info">

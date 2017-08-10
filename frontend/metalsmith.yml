@@ -6,6 +6,11 @@ metadata:
     email_js:
       user_id: user_eswCclJ3zfAWR2RR4qapH
       service_id: gmail
+  social:
+    facebook: https://www.facebook.com/vttrx
+    instagram: https://www.instagram.com/vttrx/
+    pinterest: https://it.pinterest.com/vttr/
+    twitter: https://twitter.com/vttrx
 clean: true
 source: source
 destination: build

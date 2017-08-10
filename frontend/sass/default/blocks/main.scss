@@ -31,8 +31,12 @@
   }
 
   @include element ('contents') {
-    margin-left: $aside--min-width;
+    margin-left: $aside--width;
     padding: s(2);
+
+    @include media ('<=desktop-small') {
+      margin-left: $aside--min-width;
+    }
 
     @include media ('<tablet-large') {
       margin-left: 0;

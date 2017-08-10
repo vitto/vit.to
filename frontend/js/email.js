@@ -1,17 +1,33 @@
 $(function () {
-
   if ($('#budget').length === 0) {
     return
   }
 
   var $form = $('.modal__body:nth-child(1)')
-  var $statusSent = $('.modal__body:nth-child(2)')
+  var $inputEmail = $('#input-email')
+  var $inputName = $('#input-name')
+  var $inputNotes = $('#input-notes')
   var $statusError = $('.modal__body:nth-child(3)')
-  // var $sendBudget = $('#send-budget-request')
-  // $sendBudget.addClass('button--disabled')
+  var $statusSent = $('.modal__body:nth-child(2)')
+  var itemPrice = $form.data('item-price')
+  var emailIsValid = false
+  var formIsPristine = true
+  var nameIsValid = false
+  var percChange = 0
+  var userBudget = $form.data('item-price')
+  var thrownError = false
+
+  function resetComposeEmail () {
+    $form.removeClass('modal__body--hidden')
+    $statusSent.addClass('modal__body--hidden').removeClass('fadeInLeft animated')
+    $statusError.addClass('modal__body--hidden').removeClass('wobble animated')
+  }
 
   $('.button--try-budget, .button--try-budget-available').on('click', function (e) {
     e.preventDefault()
+    if (!thrownError) {
+      resetComposeEmail()
+    }
     $('.modal').addClass('modal--active')
     $('.body').addClass('body--no-scroll')
     $('input[name="from"]').focus()
@@ -23,13 +39,6 @@ $(function () {
     $('.body').removeClass('body--no-scroll')
   })
 
-  function sendError () {
-    $statusSent.addClass('modal__body--hidden').removeClass('fadeInLeft animated')
-    $statusError.removeClass('modal__body--hidden').addClass('wobble animated')
-  }
-
-  var basePrice = $('#budget-range').data('price')
-
   noUiSlider.create(document.getElementById('budget'), {
     start: [ 100 ],
     connect: true,
@@ -40,7 +49,7 @@ $(function () {
     }
   }).on('update', function (values, handle) {
     var value = values[handle]
-    var percChange = Math.round(value - 100)
+    percChange = Math.round(value - 100)
 
     if (percChange > 0) {
       percChange = '+' + percChange + '%'
@@ -48,8 +57,10 @@ $(function () {
       percChange = percChange + '%'
     }
 
+    userBudget = Math.round(itemPrice * value / 100)
+
     $('.noUi-handle').text(percChange)
-    $('#custom-budget').text(Math.round(basePrice * value / 100) + '€')
+    $('#custom-budget').text(userBudget + '€')
 
     var child = 2
     if (value <= 80) {
@@ -65,12 +76,6 @@ $(function () {
       $image.addClass('budget__column--active')
     }
   })
-
-  var formIsPristine = true
-  var nameIsValid = false
-  var emailIsValid = false
-  var $inputName = $('#input-name')
-  var $inputEmail = $('#input-email')
 
   function checkValidName (value) {
     var expression = /^[a-zA-Z]([-']?[a-zA-Z]+)*( [a-zA-Z]([-']?[a-zA-Z]+)*)+$/
@@ -105,11 +110,7 @@ $(function () {
     }
 
     if (checkValidName($inputName.val()) && checkValidEmail($inputEmail.val())) {
-      $form.addClass('modal__body--hidden')
-      $statusSent.removeClass('modal__body--hidden').addClass('fadeInLeft animated')
-      setTimeout(function () {
-        sendError()
-      }, 3000)
+      send()
     }
     return false
   })
@@ -158,26 +159,51 @@ $(function () {
     }
   })
 
-  var params = {
-    reply_to: 'pizza@pizza.com',
-    to_name: 'James',
-    base_item_price: '650',
-    budget: '400',
-    message: 'This is awesome!',
-    base_item_name: '{{ title }}',
-    base_item_url: '{{home}}/{{ path }}'
+  function sendError () {
+    thrownError = true
+    $('.modal').addClass('modal--active')
+    $('.body').addClass('body--no-scroll')
+    $statusSent.addClass('modal__body--hidden').removeClass('fadeInLeft animated')
+    $statusError.removeClass('modal__body--hidden').addClass('wobble animated')
   }
 
-  function send (serviceId, templateId, params) {
+  function send () {
+    var messageDuration = 5000
+    var serviceId = $form.data('emailjs-service-id')
+    var templateId = $form.data('emailjs-template-id')
+
+    emailjs.init($form.data('emailjs-user-id'))
+
+    var params = {
+      base_item_name: $form.data('item-title'),
+      base_item_price: $form.data('item-price') + '€',
+      base_item_url: $form.data('item-url'),
+      user_budget: userBudget + '€',
+      user_email: $.trim($inputEmail.val()),
+      user_full_name: $.trim($inputName.val()),
+      user_name: $.trim($inputName.val()).split(' ')[0],
+      user_notes: $.trim($inputNotes.val()),
+      user_percent: percChange
+    }
+
+    if (percChange === '0%') {
+      params.user_percent = 'invariato'
+    }
+
+    $form.addClass('modal__body--hidden')
+    $statusSent.removeClass('modal__body--hidden').addClass('fadeInLeft animated')
+
+    setTimeout(function () {
+      $('.modal').removeClass('modal--active')
+      $('.body').removeClass('body--no-scroll')
+    }, messageDuration)
+
     emailjs.send(serviceId, templateId, params).then(
-      function (response) {
-        console.log('SUCCESS', response)
-      },
+      function (response) { },
       function (error) {
+        sendError()
         console.log('FAILED', error)
       }
     )
   }
-
-  // send('{{ metadata.service.email_js.service_id }}', 'budget', params);
 })
