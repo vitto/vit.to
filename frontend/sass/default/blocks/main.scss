@@ -21,6 +21,12 @@
     padding: 0;
   }
 
+  @include modifier ('padding-top') {
+    @include media ('<=tablet-large') {
+      padding-top: s(2);
+    }
+  }
+
   @include element ('picture') {
     background-image: theme('vittorio-vittori.jpg');
     background-position: 50% 0;

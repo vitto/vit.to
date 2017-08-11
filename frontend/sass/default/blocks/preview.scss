@@ -32,4 +32,9 @@
   @include element ('actions') {
     margin-top: s(1);
   }
+
+  @include element ('social') {
+    padding-top: s(1);
+    overflow: visible;
+  }
 }

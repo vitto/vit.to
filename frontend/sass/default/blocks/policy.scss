@@ -1,0 +1,49 @@
+@include block ('policy') {
+  width: 100%;
+
+  @include media ('<=tablet-small') {
+    margin-bottom: s(1);
+    padding-bottom: s(1);
+  }
+
+  @include modifier ('bordered') {
+    @include media ('<=tablet-small') {
+      border-bottom: $policy--border;
+    }
+  }
+
+  @include element ('header') {
+    align-items: center;
+    display: flex;
+  }
+
+  @include element ('contents') {
+    display: flex;
+    margin-left: s(-0.25);
+    margin-right: s(-0.25);
+
+    @include media ('<=mobile-large') {
+      flex-wrap: wrap;
+    }
+  }
+
+  @include element ('title') {
+    @extend %title;
+    font-size: 16px;
+  }
+
+  @include element ('icon') {
+    color: $title-color;
+    margin-right: s(0.5);
+  }
+
+  @include element ('text') {
+    @extend %text;
+    margin: s(0.5) s(0.25) 0;
+    width: 50%;
+
+    @include media ('<=mobile-large') {
+      width: 100%;
+    }
+  }
+}

@@ -66,6 +66,7 @@
     "frontsize": "^4.0.3",
     "headroom.js": "^0.9.4",
     "jquery": "^3.2.1",
+    "js-cookie": "^2.1.4",
     "material-design-icons": "^3.0.1",
     "nouislider": "^10.1.0",
     "timeago.js": "^3.0.2",
@@ -74,11 +75,12 @@
   "standard": {
     "globals": [
       "$",
-      "timeago",
       "Blazy",
-      "Headroom",
+      "Cookies",
       "emailjs",
-      "noUiSlider"
+      "Headroom",
+      "noUiSlider",
+      "timeago"
     ]
   }
 }

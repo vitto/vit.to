@@ -3,6 +3,18 @@
   margin-left: s(-1);
   margin-right: s(-1);
 
+  @include media ('<=mobile-large') {
+    flex-direction: column;
+  }
+
+  @include modifier ('vertical') {
+    flex-direction: column;
+
+    @include element ('column') {
+      width: 100%;
+    }
+  }
+
   @include modifier ('margin-top') {
     margin-top: s(1);
   }
@@ -10,14 +22,46 @@
   @include element ('column') {
     padding: s(1);
     width: 50%;
+
+    @include media ('<=mobile-large') {
+      width: 100%;
+    }
   }
 
   @include element ('header') {
     display: flex;
+
+    @include modifier ('mobile-vertical') {
+      @include media ('<=tablet-small') {
+        flex-direction: column;
+
+        @include element ('title') {
+          margin-bottom: s(1);
+        }
+      }
+    }
+
+    @include media ('<=tablet-small') {
+      border-top: $row--border;
+      padding-top: s(1.5);
+    }
   }
 
   @include element ('title') {
+    @extend %title;
+    font-size: 18px;
     margin-top: 0 !important;
+
+    @include modifier ('service') {
+      font-weight: 600;
+      margin-top: s(0.5);
+    }
+  }
+
+  @include element ('text') {
+    @extend %text;
+    font-size: 14px !important;
+    margin-top: s(0.5);
   }
 
   @include element ('icon') {

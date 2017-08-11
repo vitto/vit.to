@@ -1,81 +1,18 @@
 $(function () {
-  if ($('#budget').length === 0) {
+  if ($('#message').length === 0) {
     return
   }
 
-  var $form = $('.modal__body:nth-child(1)')
+  var $form = $('#message')
   var $inputEmail = $('#input-email')
   var $inputName = $('#input-name')
   var $inputNotes = $('#input-notes')
-  var $statusError = $('.modal__body:nth-child(3)')
-  var $statusSent = $('.modal__body:nth-child(2)')
-  var itemPrice = $form.data('item-price')
+  var $inputBudget = $('#input-budget')
+  var $statusError = $('.modal__body:nth-child(2)')
+  var $statusSent = $('.modal__body:nth-child(1)')
   var emailIsValid = false
   var formIsPristine = true
   var nameIsValid = false
-  var percChange = 0
-  var userBudget = $form.data('item-price')
-  var thrownError = false
-
-  function resetComposeEmail () {
-    $form.removeClass('modal__body--hidden')
-    $statusSent.addClass('modal__body--hidden').removeClass('fadeInLeft animated')
-    $statusError.addClass('modal__body--hidden').removeClass('wobble animated')
-  }
-
-  $('.button--try-budget, .button--try-budget-available').on('click', function (e) {
-    e.preventDefault()
-    if (!thrownError) {
-      resetComposeEmail()
-    }
-    $('.modal').addClass('modal--active')
-    $('.body').addClass('body--no-scroll')
-    $('input[name="from"]').focus()
-  })
-
-  $('.modal__button--close, .modal-footer__link').on('click', function (e) {
-    e.preventDefault()
-    $('.modal').removeClass('modal--active')
-    $('.body').removeClass('body--no-scroll')
-  })
-
-  noUiSlider.create(document.getElementById('budget'), {
-    start: [ 100 ],
-    connect: true,
-    padding: 20,
-    range: {
-      'min': -10,
-      'max': 220
-    }
-  }).on('update', function (values, handle) {
-    var value = values[handle]
-    percChange = Math.round(value - 100)
-
-    if (percChange > 0) {
-      percChange = '+' + percChange + '%'
-    } else {
-      percChange = percChange + '%'
-    }
-
-    userBudget = Math.round(itemPrice * value / 100)
-
-    $('.noUi-handle').text(percChange)
-    $('#custom-budget').text(userBudget + '€')
-
-    var child = 2
-    if (value <= 80) {
-      child = 1
-    } else if (value >= 140) {
-      child = 3
-    }
-
-    var $image = $('.budget__column:nth-child(' + child + ')')
-
-    if (!$image.hasClass('budget__column--active')) {
-      $('.budget__column').removeClass('budget__column--active')
-      $image.addClass('budget__column--active')
-    }
-  })
 
   function checkValidName (value) {
     var expression = /^[a-zA-Z]([-']?[a-zA-Z]+)*( [a-zA-Z]([-']?[a-zA-Z]+)*)+$/
@@ -89,7 +26,7 @@ $(function () {
     return emailIsValid
   }
 
-  $('#send-budget-request').on('click', function (e) {
+  $('#send-message').on('click', function (e) {
     e.preventDefault()
     formIsPristine = false
 
@@ -159,10 +96,13 @@ $(function () {
     }
   })
 
+  function resetComposeEmail () {
+    $statusSent.addClass('modal__body--hidden').removeClass('fadeInLeft animated')
+    $statusError.addClass('modal__body--hidden').removeClass('wobble animated')
+  }
+
   function sendError () {
-    thrownError = true
     $('.modal').addClass('modal--active')
-    $('.body').addClass('body--no-scroll')
     $statusSent.addClass('modal__body--hidden').removeClass('fadeInLeft animated')
     $statusError.removeClass('modal__body--hidden').addClass('wobble animated')
   }
@@ -174,32 +114,32 @@ $(function () {
 
     emailjs.init($form.data('emailjs-user-id'))
 
+    resetComposeEmail()
+    $('.modal').addClass('modal--active')
+    $statusSent.removeClass('modal__body--hidden').addClass('fadeInLeft animated')
+
     var params = {
       base_item_name: $form.data('item-title'),
       base_item_price: $form.data('item-price') + '€',
       base_item_url: $form.data('item-url'),
-      user_budget: userBudget + '€',
+      user_budget: $.trim($inputBudget.val()),
       user_email: $.trim($inputEmail.val()),
       user_full_name: $.trim($inputName.val()),
       user_name: $.trim($inputName.val()).split(' ')[0],
-      user_notes: $.trim($inputNotes.val()),
-      user_percent: percChange
+      user_notes: $.trim($inputNotes.val())
     }
-
-    if (percChange === '0%') {
-      params.user_percent = 'invariato'
-    }
-
-    $form.addClass('modal__body--hidden')
-    $statusSent.removeClass('modal__body--hidden').addClass('fadeInLeft animated')
 
     setTimeout(function () {
       $('.modal').removeClass('modal--active')
-      $('.body').removeClass('body--no-scroll')
     }, messageDuration)
 
     emailjs.send(serviceId, templateId, params).then(
-      function (response) { },
+      function (response) {
+        $inputBudget.val('')
+        $inputEmail.val('')
+        $inputName.val('')
+        $inputNotes.val('')
+      },
       function (error) {
         sendError()
         console.log('FAILED', error)

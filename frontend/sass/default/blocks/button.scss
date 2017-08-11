@@ -19,6 +19,10 @@
     font-size: 11px;
   }
 
+  @include modifier ('hidden') {
+    display: none;
+  }
+
   @include modifier ('inline') {
     display: inline-flex;
     padding-left: s(1);
@@ -69,6 +73,24 @@
   }
 
   @include modifier ('try-budget') {
+    background-color: $button--try-budget--background;
+    color: $button--try-budget--color;
+    height: auto;
+    justify-content: flex-start;
+    padding: s(0.375) s(0.5);
+    white-space: normal;
+
+    &:hover {
+      background-color: $button--try-budget--background--hover;
+      color: $button--try-budget--color--hover;
+
+      @include element ('comment') {
+        color: $button--try-budget--color--hover;
+      }
+    }
+  }
+
+  @include modifier ('chat') {
     background-color: $button--try-budget--background;
     color: $button--try-budget--color;
     height: auto;
@@ -138,6 +160,24 @@
   }
 
   @include modifier ('try-budget-available') {
+    background-color: $button--try-budget-available--background;
+    color: $button--try-budget-available--color;
+    height: auto;
+    justify-content: flex-start;
+    padding: s(0.375) s(0.5);
+    white-space: normal;
+
+    &:hover {
+      background-color: $button--try-budget-available--background--hover;
+      color: $button--try-budget-available--color--hover;
+
+      @include element ('comment') {
+        color: $button--try-budget-available--color--hover;
+      }
+    }
+  }
+
+  @include modifier ('chat-available') {
     background-color: $button--try-budget-available--background;
     color: $button--try-budget-available--color;
     height: auto;

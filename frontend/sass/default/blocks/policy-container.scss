@@ -1,0 +1,39 @@
+@include block ('policy-container') {
+  display: none;
+
+  @include modifier ('visible') {
+    display: block;
+  }
+
+  @include modifier ('padded') {
+    padding: s(2) 0;
+
+    @include media ('<=tablet-large') {
+      margin-bottom: s(-2);
+      padding: s(5) s(2) 0;
+    }
+  }
+
+  @include modifier ('about') {
+    margin-left: $aside--width;
+    padding: s(2);
+
+    @include media ('<=desktop-small') {
+      margin-left: $aside--min-width;
+    }
+
+    @include media ('<=tablet-large') {
+      margin-bottom: 0;
+    }
+
+    @include media ('<tablet-large') {
+      margin-left: 0;
+      padding: s(4.5) s(2) s(1.5);
+    }
+
+    @include media ('<=tablet-small') {
+      margin-bottom: s(-0.5);
+      padding-bottom: 0;
+    }
+  }
+}

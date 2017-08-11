@@ -22,14 +22,17 @@ module.exports = function (env) {
   return {
     entry: {
       'js/app': [
-        __js + '/email.js',
-        __js + '/main.js'
+        __js + '/email-budget.js',
+        __js + '/email-message.js',
+        __js + '/main.js',
+        __js + '/policy.js'
       ],
       'js/vendor': [
         __modules + '/jquery/dist/jquery.js',
         __modules + '/blazy/blazy.js',
         __modules + '/headroom.js/dist/headroom.js',
         __modules + '/nouislider/distribute/nouislider.js',
+        __modules + '/js-cookie/src/js.cookie.js',
         __modules + '/timeago.js/dist/timeago.js', // __modules + '/timeago.js/timeago.locales.min.js'
         __modules + '/zooming/build/zooming.js'
       ],
@@ -150,6 +153,7 @@ module.exports = function (env) {
         Blazy: 'blazy',
         jQuery: 'jquery',
         noUiSlider: 'nouislider',
+        Cookies: 'js-cookie/src/js.cookie.js',
         timeago: 'timeago.js',
         Zooming: 'zooming'
       }),

@@ -26,12 +26,28 @@
     width: 100%;
   }
 
+  @include modifier ('about') {
+    background-color: $craft--hover;
+
+    @include media ('<=tablet-small') {
+      background-color: $body--background;
+      margin-left: s(-2);
+      margin-right: s(-2);
+      width: auto;
+    }
+
+    @include media ('<=mobile-large') {
+      margin-left: s(-1);
+      margin-right: s(-1);
+      width: auto;
+    }
+  }
+
   @include element ('title') {
     @extend %title;
   }
 
   @include element ('row') {
-    align-items: center;
     display: flex;
     margin-left: s(-0.75);
     margin-right: s(-0.75);

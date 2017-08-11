@@ -9,12 +9,17 @@
     </aside>
     <main class="main">
       <section class="crafts">
+        <div id="policy-message" class="crafts__item crafts__item--policy policy-container">
+          {% include 'partials/policy.twig' with { bordered: true } %}
+        </div>
         {% for item in metadata.collections.diy %}
           <a class="crafts__item" href="{{ item.path }}">
             {% include 'partials/piece.twig' with { item: item } %}
           </a>
         {% endfor %}
-        {% include 'partials/crafts__call.twig' %}
+        <div class="crafts__call">
+          {% include 'partials/crafts__call.twig' %}
+        </div>
       </section>
     </main>
     {% include 'partials/assets.twig' %}

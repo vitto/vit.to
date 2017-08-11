@@ -7,6 +7,13 @@
     padding-top: s(1);
   }
 
+  @include modifier ('no-border') {
+    @include media ('<=mobile-large') {
+      border-top: 0;
+      padding-top: 0;
+    }
+  }
+
   h1,
   h2,
   h3,

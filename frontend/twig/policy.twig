@@ -35,16 +35,11 @@
       {% endif %}
       {% include 'partials/aside__footer.twig' %}
     </aside>
-    <main class="main main--about">
-      <div id="policy-message" class="policy-container policy-container--about">
-        {% include 'partials/policy.twig' %}
-      </div>
-      <div class="main__picture"></div>
+    <main class="main main--about main--padding-top">
       <div class="main__contents">
-        <article class="markdown">
+        <article class="markdown markdown--no-border">
           {{ contents }}
         </article>
-        {% include 'partials/crafts__call.twig' with { isAbout: true } %}
       </div>
     </main>
     {% include 'partials/assets.twig' %}

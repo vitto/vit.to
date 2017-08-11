@@ -55,16 +55,6 @@
     & + & {
       margin-top: s(0.5);
     }
-
-    a {
-      @extend %underline-hidden;
-      color: $title-color;
-      text-decoration: none;
-
-      &:hover {
-        @extend %underline-hidden-visible;
-      }
-    }
   }
 
   @include element ('icon') {

@@ -6,7 +6,7 @@
   width: 100%;
 
   @include element ('picture') {
-    align-items: center;
+    align-items: flex-end;
     background-color: transparent;
     display: flex;
     flex-grow: 1;

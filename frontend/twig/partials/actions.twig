@@ -1,6 +1,6 @@
 {% if sold_out == false %}
   <div class="actions {% if onFooter %} actions--footer {% endif %} actions--available">
-    <a class="actions__item actions__item--limit button button--available" href="{{ store }}" target="_blank">
+    <a class="actions__item button button--available" href="{{ store }}" target="_blank">
       <i class="button__icon material-icons">shopping_cart</i>
       <span class="button__infos">
         <div class="button__title">
@@ -11,7 +11,7 @@
         </div>
       </span>
     </a>
-    <a class="actions__item button button--try-budget-available" href="#">
+    <a class="actions__item actions__item--fill button button--try-budget-available {% if onFooter %} button--hidden {% endif %}" href="#">
       <i class="button__icon material-icons">email</i>
       <span class="button__infos">
         <div class="button__text">
@@ -19,10 +19,20 @@
         </div>
       </span>
     </a>
+    {% if metadata.social.messenger %}
+      <a class="actions__item actions__item--short button button--chat-available" href="{{ metadata.social.messenger }}" target="_blank">
+        <i class="button__icon material-icons">chat</i>
+        <span class="button__infos">
+          <div class="button__text">
+            Scrivimi via chat
+          </div>
+        </span>
+      </a>
+    {% endif %}
   </div>
 {% else %}
   <div class="actions {% if onFooter %} actions--footer {% endif %}">
-    <a class="actions__item actions__item--limit button button--sold-out" href="{{ store }}" target="_blank">
+    <a class="actions__item button button--sold-out" href="{{ store }}" target="_blank">
       <i class="button__icon material-icons">remove_shopping_cart</i>
       <span class="button__infos">
         <div class="button__title">
@@ -33,7 +43,7 @@
         </div>
       </span>
     </a>
-    <a class="actions__item button button--try-budget" href="#">
+    <a class="actions__item actions__item--fill button button--try-budget {% if onFooter %} button--hidden {% endif %}" href="#">
       <i class="button__icon material-icons">email</i>
       <span class="button__infos">
         <div class="button__text">
@@ -41,5 +51,15 @@
         </div>
       </span>
     </a>
+    {% if metadata.social.messenger %}
+      <a class="actions__item actions__item--short button button--chat" href="{{ metadata.social.messenger }}" target="_blank">
+        <i class="button__icon material-icons">chat</i>
+        <span class="button__infos">
+          <div class="button__text">
+            Scrivimi via chat
+          </div>
+        </span>
+      </a>
+    {% endif %}
   </div>
 {% endif %}

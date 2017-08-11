@@ -3,6 +3,7 @@
   align-items: center;
   display: flex;
   margin-top: s(1);
+  min-height: 57px;
   width: 100%;
 
   @include element ('link') {

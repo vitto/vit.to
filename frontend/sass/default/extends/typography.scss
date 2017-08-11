@@ -20,6 +20,16 @@
   &::first-letter {
     text-transform: uppercase;
   }
+
+  a {
+    @extend %underline-hidden;
+    color: $title-color;
+    text-decoration: none;
+
+    &:hover {
+      @extend %underline-hidden-visible;
+    }
+  }
 }
 
 %underline-hidden {

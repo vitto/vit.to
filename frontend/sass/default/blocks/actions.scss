@@ -17,9 +17,14 @@
   }
 
   @include element ('item') {
+
     flex-grow: 2;
 
-    @include modifier ('limit') {
+    @include modifier ('fill') {
+      flex-grow: 3;
+    }
+
+    @include modifier ('short') {
       flex-grow: 1;
     }
   }
