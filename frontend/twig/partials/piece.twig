@@ -1,13 +1,13 @@
 <article class="piece">
   <div class="piece__picture">
-    <img class="piece__image b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="{{ global.images.white[i] }}" alt="">
+    <img class="piece__image b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="{{ item.path }}/preview.jpg" alt="">
   </div>
   <div class="piece__details">
     <h2 class="piece__title">
-      {{ global.faker.lorem.words(3) }}
+      {{ item.title }}
     </h2>
     <div class="piece__infos">
-      {% set isAvailable = global.faker.random.boolean %}
+      {% set isAvailable = item.sold_out == false %}
       {% if isAvailable %}
         <i class="piece__icon material-icons">shopping_cart</i>
       {% else %}
@@ -15,7 +15,7 @@
       {% endif %}
       <div class="piece__description">
         <h4 class="piece__furniture">
-          {{ global.faker.lorem.words(2) }}
+          {{ item.furniture }}
         </h4>
         {% if isAvailable %}
           <span class="piece__availability">Disponibile</span>
@@ -23,7 +23,6 @@
           <span class="piece__availability piece__availability--sold-out">Esaurito</span>
         {% endif %}
       </div>
-
     </div>
   </div>
 </article>

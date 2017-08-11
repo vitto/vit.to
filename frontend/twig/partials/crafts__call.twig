@@ -1,3 +1,47 @@
 <div class="crafts__call">
-  Call to action per richiedere un pezzo specifico
+  <div class="crafts-call">
+    <h4 class="crafts-call__title">
+      Richiedi un pezzo
+    </h4>
+    <div class="crafts-call__row">
+      <div class="crafts-call__row-column">
+        <label class="input">
+          <input id="input-name" class="input__element input__element--call" type="text" name="from" placeholder="Nome Cognome">
+          <i class="input__icon material-icons">face</i>
+          <p class="input__error">
+            Inserisci Nome e Cognome così che possa risponderti
+          </p>
+        </label>
+      </div>
+      <div class="crafts-call__row-column">
+        <label class="input">
+          <input id="input-email" class="input__element input__element--call" type="email" name="reply_to" placeholder="tua@email.com">
+          <i class="input__icon material-icons">mail</i>
+          <p class="input__error">
+            Verifica che la e-mail sia valida
+          </p>
+        </label>
+      </div>
+    </div>
+    <label class="input">
+      <input id="input-budget" class="input__element input__element--call" type="text" name="budget" placeholder="100€ (facoltativo)">
+      <i class="input__icon material-icons">attach_money</i>
+    </label>
+    <label class="input input--textarea">
+      <textarea id="input-notes" class="input__element input__element--call" name="description" placeholder="Note (facoltative)"></textarea>
+      <i class="input__icon material-icons">content_paste</i>
+    </label>
+    <footer class="crafts-call__footer">
+      <p class="crafts-call__text">
+        Ti piacerebbe commissionarmi un lavoro?<br>
+        Risponderò illustrandoti qualche soluzione.
+      </p>
+      <div id="send-item-request" class="button button--send button--fill crafts-call__button">
+        <div class="button__infos">
+          Invia
+        </div>
+        <i class="button__icon material-icons">email</i>
+      </div>
+    </footer>
+  </div>
 </div>

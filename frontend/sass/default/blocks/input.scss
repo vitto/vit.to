@@ -77,6 +77,15 @@
         color: $input--focus;
       }
     }
+
+    @include modifier ('call') {
+      @include media ('<=tablet-small') {
+        &:focus {
+          background-color: $craft--hover;
+          border-bottom-color: $input--focus;
+        }
+      }
+    }
   }
 
   @include element ('error') {

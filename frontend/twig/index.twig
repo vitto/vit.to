@@ -9,9 +9,9 @@
     </aside>
     <main class="main">
       <section class="crafts">
-        {% for i in 0..16 %}
-          <a class="crafts__item" href="/diy/2017-07-04/pirelli-tires">
-            {% include 'partials/piece.twig' %}
+        {% for item in metadata.collections.diy %}
+          <a class="crafts__item" href="{{ item.path }}">
+            {% include 'partials/piece.twig' with { item: item } %}
           </a>
         {% endfor %}
         {% include 'partials/crafts__call.twig' %}

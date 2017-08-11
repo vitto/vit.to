@@ -73,6 +73,12 @@
     margin: auto;
     max-width: 768px;
 
+    @include media ('<=tablet-small') {
+      padding-bottom: s(1.5);
+      padding-left: s(1.5);
+      padding-right: s(1.5);
+    }
+
     @include media ('<=mobile-large') {
       padding-left: s(1);
       padding-right: s(1);

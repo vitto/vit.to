@@ -35,36 +35,37 @@
   padding-bottom: s(1.5);
   padding-top: s(1.5);
 
+  @include media ('<tablet-large') {
+    padding-top: s(3);
+  }
+
+  @include media ('<=tablet-small') {
+    margin: 0;
+    padding-bottom: 0;
+    width: 100%;
+  }
+
   @include media ('<=mobile-large') {
     margin: 0;
+    padding-bottom: 0;
     padding-top: s(3);
   }
 
   @include element ('call') {
-    align-items: center;
     display: flex;
-    padding: s(1.5);
-    width: 33.3333%;
+    flex-grow: 1;
+    padding: 0 s(1.5);
 
-    @include media ('<=desktop-small') {
-      width: 50%;
+    @include media ('<tablet-large') {
+      padding: s(1.5);
     }
 
-    @include media ('<=mobile-large') {
+    @include media ('<=tablet-small') {
+      padding-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
       width: 100%;
     }
-
-    // @include media ('<=tablet-large') {
-    //   &:active {
-    //     @include interact;
-    //   }
-    // }
-    //
-    // @include media ('>tablet-large') {
-    //   &:hover {
-    //     @include interact;
-    //   }
-    // }
   }
 
   @include element ('item') {

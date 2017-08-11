@@ -11,7 +11,7 @@
     padding: 0 s(1.5);
   }
 
-  @include media ('<=mobile-large') {
+  @include media ('<=tablet-small') {
     padding: 0;
   }
 
@@ -32,6 +32,7 @@
 
   @include element ('contents') {
     margin-left: $aside--width;
+    min-height: 100vh;
     padding: s(2);
 
     @include media ('<=desktop-small') {

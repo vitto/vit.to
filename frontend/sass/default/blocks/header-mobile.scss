@@ -13,11 +13,12 @@
 
   @include media ('<tablet-large') {
     display: flex;
-  }
-
-  @include media ('<tablet-small') {
     padding: s(0.5);
   }
+
+  // @include media ('<tablet-small') {
+  //   padding: s(0.5);
+  // }
 
   @include element ('logo') {
     height: 55px;
@@ -25,14 +26,10 @@
     top: 3px;
     width: auto;
 
-    @include media ('<tablet-small') {
+    @include media ('<tablet-large') {
       height: 32px;
       top: 3px;
     }
-  }
-
-  @include element ('home') {
-
   }
 
   @include element ('nav') {

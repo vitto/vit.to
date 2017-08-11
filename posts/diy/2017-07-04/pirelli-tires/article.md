@@ -2,8 +2,10 @@
 title: Pirelli tires
 furniture: Coffee table
 date: 2017-07-04
-cover: cover.jpg
-price: 600
+price: 610
+sold_out: true
+collection: diy
+store: http://etsy.com/itemurl
 view: diy.twig
 ---
 
@@ -17,4 +19,4 @@ By some week, I’ve put a pair of tires in my warehouse I thought to use in som
 
 [
   ![This is the cover](tires-with-dirty.jpg)
-](cover.jpg)
+](tires-with-dirty.jpg)
