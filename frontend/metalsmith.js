@@ -16,13 +16,11 @@ renderer.image = function (href, title, text) {
   var titleAttr = ''
   var altAttr = ''
 
-  if (typeof title !== 'undefined') {
-    titleAttr = ` title="${title}"`
-  }
-
   if (typeof text !== 'undefined') {
     altAttr = ` alt="${text}"`
+    titleAttr = ` title="${text}"`
   }
+
   return `<img data-src="${href}" data-action="zoom"${titleAttr}${altAttr}>`
 }
 // console.log(marked('![This is the cover](tires-with-dirty.jpg)', { renderer: renderer }));
