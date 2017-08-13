@@ -16,24 +16,24 @@ Quando vivo un ambiente, mi piace sentirmi a casa, se sapessi di avere oggetti c
 <div class="row row--margin-top">
   <div class="row__column">
     <div class="row__header">
-      <i class="row__icon material-icons">format_paint</i>
+      <i class="row__icon material-icons">color_lens</i>
       <h3 class="row__title">
         Cura per i dettagli
       </h3>
     </div>
-    <p>
+    <p class="row__text">
       Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
   </div>
 
   <div class="row__column">
     <div class="row__header">
-      <i class="row__icon material-icons">nature_people</i>
+      <i class="row__icon material-icons">local_florist</i>
       <h3 class="row__title">
         Trattamenti ecologici
       </h3>
     </div>
-    <p>
+    <p class="row__text">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     </p>
   </div>
@@ -42,24 +42,24 @@ Quando vivo un ambiente, mi piace sentirmi a casa, se sapessi di avere oggetti c
 <div class="row row--margin-top">
   <div class="row__column">
     <div class="row__header">
-      <i class="row__icon material-icons">wb_incandescent</i>
+      <i class="row__icon material-icons">stars</i>
       <h3 class="row__title">
         Pezzi unici
       </h3>
     </div>
-    <p>
+    <p class="row__text">
       Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
   </div>
 
   <div class="row__column">
     <div class="row__header">
-      <i class="row__icon material-icons">monetization_on</i>
+      <i class="row__icon material-icons">account_balance_wallet</i>
       <h3 class="row__title">
         Hai un budget? Chiedi.
       </h3>
     </div>
-    <p>
+    <p class="row__text">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     </p>
   </div>
