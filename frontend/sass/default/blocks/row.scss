@@ -60,8 +60,7 @@
 
   @include element ('text') {
     @extend %text;
-    font-size: 14px !important;
-    margin-top: s(0.5);
+    font-size: 16px !important;
   }
 
   @include element ('icon') {
