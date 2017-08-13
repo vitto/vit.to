@@ -2,11 +2,15 @@
   backdrop-filter: $aside--background--blur;
   background-color: $aside--background--opaque;
   bottom: 0;
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   padding: s(0.5);
   position: absolute;
   width: 100%;
+
+  @include media ('<tablet-large') {
+    display: flex;
+  }
 
   @include element ('column') {
     padding: s(0.5);

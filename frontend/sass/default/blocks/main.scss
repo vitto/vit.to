@@ -33,8 +33,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    position: relative;
     width: 100%;
+
+    @include media ('<tablet-large') {
+      position: relative;
+    }
   }
 
   @include element ('contents') {
