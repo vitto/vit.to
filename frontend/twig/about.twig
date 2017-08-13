@@ -41,10 +41,10 @@
       </div>
       <div class="main__picture"></div>
       <div class="main__contents">
-        <article class="markdown">
+        <article class="markdown markdown--no-border">
           {{ contents }}
         </article>
-        {% include 'partials/crafts__call.twig' with { isAbout: true } %}
+        {% include 'partials/email-message.twig' with { isAbout: true } %}
       </div>
     </main>
     {% include 'partials/assets.twig' %}
