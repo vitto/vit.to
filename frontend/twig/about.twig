@@ -39,7 +39,34 @@
       <div id="policy-message" class="policy-container policy-container--about">
         {% include 'partials/policy.twig' %}
       </div>
-      <div class="main__picture"></div>
+      <div class="main__picture">
+        <div class="about-infos">
+          {% if bio %}
+            <div class="about-infos__column">
+              <h2 class="about-infos__title">Bio</h2>
+              <p class="about-infos__text">{{ bio }}</p>
+            </div>
+          {% endif %}
+
+          {% if contact %}
+            <div class="about-infos__column">
+              <h2 class="about-infos__title">Contact</h2>
+              <p class="about-infos__text">{{ contact.venue }}</p>
+              <p class="about-infos__text">{{ contact.phone }}</p>
+              <p class="about-infos__text">
+                <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>
+              </p>
+            </div>
+          {% endif %}
+
+          {% if credits %}
+            <div class="about-infos__column about-infos__column--fill">
+              <i class="about-infos__icon material-icons">file_download</i>
+              <p class="about-infos__text">{{ credits }}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
       <div class="main__contents">
         <article class="markdown markdown--no-border">
           {{ contents }}
