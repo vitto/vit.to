@@ -34,11 +34,15 @@
               </span>
             </li>
             <li class="article__info">
-              <i class="article__icon material-icons">access_time</i>
+              <i class="article__icon material-icons">watch_later</i>
               {% set printDate = date|date('l j F Y') %}
               <time class="article__detail timeago" datetime="{{ date }}" title="{{ printDate }}">
                 {{ printDate }}
               </time>
+            </li>
+            <li class="article__info">
+              <i class="article__icon material-icons">visibility</i>
+              <span>Lettura da 5 min</span>
             </li>
           </ul>
 

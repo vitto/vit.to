@@ -54,4 +54,10 @@
     //   border-radius: 0;
     // }
   }
+
+  hr {
+    border: 0;
+    border-top: $markdown--border-top;
+    margin: s(2) 0;
+  }
 }
