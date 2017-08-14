@@ -25,6 +25,8 @@ module.exports = function (env) {
         __modules + '/jquery/dist/jquery.js',
         __modules + '/blazy/blazy.js',
         __modules + '/headroom.js/dist/headroom.js',
+        __modules + '/nouislider/distribute/nouislider.js',
+        __modules + '/js-cookie/src/js.cookie.js',
         __modules + '/timeago.js/dist/timeago.js', // __modules + '/timeago.js/timeago.locales.min.js'
         __modules + '/zooming/build/zooming.js'
       ],
@@ -111,6 +113,9 @@ module.exports = function (env) {
         }, {
           test: require.resolve('headroom.js'),
           use: 'imports-loader?this=>window,define=>false,exports=>false'
+        }, {
+          test: require.resolve('jquery-range/jquery.range.js'),
+          use: 'imports-loader?this=>window,define=>false,exports=>false'
         }
       ]
     },
@@ -142,7 +147,8 @@ module.exports = function (env) {
         $: 'jquery',
         Blazy: 'blazy',
         jQuery: 'jquery',
-        // 'window.Headroom': 'headroom.js/dist/headroom.js',
+        noUiSlider: 'nouislider',
+        Cookies: 'js-cookie/src/js.cookie.js',
         timeago: 'timeago.js',
         Zooming: 'zooming'
       }),
