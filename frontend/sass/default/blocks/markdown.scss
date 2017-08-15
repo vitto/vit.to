@@ -46,13 +46,10 @@
   }
 
   img {
+    @extend %image;
     border-radius: $markdown--image--radius;
     height: auto;
     width: 100%;
-
-    // &.b-loaded {
-    //   border-radius: 0;
-    // }
   }
 
   hr {

@@ -116,35 +116,4 @@
     line-height: 1;
     margin-bottom: s(1);
   }
-
-  // @include element ('loader') {
-  //   display: none;
-  //   margin: auto;
-  //
-  //   @include modifier ('active') {
-  //     display: block;
-  //   }
-  // }
-  //
-  // @include element ('spinner') {
-  //   animation-duration: 0.75s;
-  //   animation-iteration-count: infinite;
-  //   animation-name: modal-spinner;
-  //   display: block;
-  //   height: auto;
-  //   margin: auto;
-  //   width: 57px;
-  // }
-  //
-  // @include element ('spinner-text') {
-  //   @extend %text;
-  //   margin-top: s(1);
-  // }
-
-
 }
-
-// @keyframes modal-spinner {
-//   0% { transform: rotate(0) translate(0, 0); }
-//   100% { transform: rotate(120deg) translate(-4px, 9px); }
-// }
