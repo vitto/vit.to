@@ -33,7 +33,8 @@ module.exports = function (env) {
         __modules + '/headroom.js/dist/headroom.js',
         __modules + '/nouislider/distribute/nouislider.js',
         __modules + '/js-cookie/src/js.cookie.js',
-        __modules + '/timeago.js/dist/timeago.js', // __modules + '/timeago.js/timeago.locales.min.js'
+        __modules + '/reading-time/lib/reading-time.js',
+        __modules + '/timeago.js/dist/timeago.js',
         __modules + '/zooming/build/zooming.js'
       ],
       'css/style': [
@@ -155,6 +156,7 @@ module.exports = function (env) {
         noUiSlider: 'nouislider',
         Cookies: 'js-cookie/src/js.cookie.js',
         timeago: 'timeago.js',
+        readingTime: 'reading-time/lib/reading-time.js',
         Zooming: 'zooming'
       }),
       new BrowserSyncPlugin({

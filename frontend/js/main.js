@@ -1,11 +1,18 @@
-(function () {
+$(function () {
   var bLazy = new Blazy({
     selector: 'img'
   })
 
-  var timeagoInstance = timeago()
+  var timeagoInstance = timeago(null, 'it')
   var nodes = document.querySelectorAll('.timeago')
-  timeagoInstance.render(nodes, 'it_IT')
+  timeagoInstance.render(nodes, 'it')
+
+  var readingElement = document.querySelector('.reading-time')
+  if (readingElement !== null) {
+    var article = $('.markdown').text()
+    var stats = readingTime(article)
+    $('.reading-time').text(stats.text)
+  }
 
   var header = document.querySelector('.header-mobile')
   if (header !== null) {
@@ -31,4 +38,4 @@
     })
     footerHeadroom.init()
   }
-})()
+})
