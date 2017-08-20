@@ -9,7 +9,22 @@ view: policy.twig
 <div class="row row--margin-top row--vertical">
   <div class="row__column">
     <div class="row__header row__header--mobile-vertical">
-      <i class="row__icon material-icons">format_paint</i>
+      <i class="row__icon material-icons">chat</i>
+      <h4 class="row__title">
+        Commento dei contenuti
+      </h4>
+    </div>
+    <strong class="row__title row__title--service">
+      Disqus
+    </strong>
+    <p class="row__text">
+      Dati Personali: Cookie, Dati di Utilizzo e varie tipologie di Dati secondo quanto specificato dalla privacy policy del servizio
+    </p>
+  </div>
+
+  <div class="row__column">
+    <div class="row__header row__header--mobile-vertical">
+      <i class="row__icon material-icons">mic</i>
       <h4 class="row__title">
         Heat mapping e registrazione sessioni
       </h4>
@@ -24,7 +39,7 @@ view: policy.twig
 
   <div class="row__column">
     <div class="row__header row__header--mobile-vertical">
-      <i class="row__icon material-icons">nature_people</i>
+      <i class="row__icon material-icons">supervisor_account</i>
       <h4 class="row__title">
         Interazione con social network e piattaforme esterne
       </h4>
@@ -41,7 +56,7 @@ view: policy.twig
 <div class="row row--vertical">
   <div class="row__column">
     <div class="row__header row__header--mobile-vertical">
-      <i class="row__icon material-icons">monetization_on</i>
+      <i class="row__icon material-icons">equalizer</i>
       <h4 class="row__title">
         Statistica
       </h4>

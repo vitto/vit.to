@@ -160,3 +160,19 @@ Per far si che il tavolino lo si possa utilizzare anche come contenitore è nece
 Per farlo ho utilizzato una semplice pinza fermacarte assieme ad un pezzo di guaina proveniente da un filo elettrico che evita alla pinza di scivolare sull’acciaio.
 
 ![Presa per piatto ultimata](applicazione-gomma-su-pinze-per-carta.jpg)
+
+#### Montaggio ultimato
+
+Tadaaan! Ecco il tavolino ultimato, è venuto un bel lavoro e spero che a Spek e Sanah (Lorenzo e Sarah) piacerà!
+
+![Risultato finale](montaggio-tavolino-risultato-finale.jpg)
+
+Prima di consegnarlo ho deciso di fare un test da me in sala per la prova del fuoco sul parquet, la gomma non dovrebbe macchiare ma non si sa mai, il pavimento è trattato con dei prodotti naturali, questo lo rende meno chimico ma è anche più esposto a questo genere di rischi.
+
+![Contenitore](pneumatico-contenitore-porta-oggetti.jpg)
+
+#### Prove generali
+
+La prova parquet è passata senza problemi e il contenitore funziona perfettamente, mi sento pronto a consegnare il regalo ai miei amici!
+
+Quale sarà il verdetto finale??

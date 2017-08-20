@@ -65,7 +65,6 @@
     height: auto;
     justify-content: flex-start;
     padding: s(0.375) s(0.5);
-    pointer-events: none;
 
     &:hover {
       background-color: $button--sold-out--background--hover;
@@ -94,6 +93,7 @@
   @include modifier ('chat') {
     background-color: $button--try-budget--background;
     color: $button--try-budget--color;
+    flex-grow: 0;
     height: auto;
     justify-content: flex-start;
     padding: s(0.375) s(0.5);
@@ -106,6 +106,10 @@
       @include element ('comment') {
         color: $button--try-budget--color--hover;
       }
+    }
+
+    @include media ('<=mobile-small') {
+      flex-grow: 2;
     }
   }
 

@@ -1,5 +1,12 @@
+{% if onFooter and metadata.enable_store == false %}
+  {% set hideButton = false %}
+{% else %}
+  {% set hideButton = onFooter %}
+{% endif %}
+
 {% if sold_out == false %}
   <div class="actions {% if onFooter %} actions--footer {% endif %} actions--available">
+    {% if metadata.enable_store == true %}
     <a class="actions__item button button--available" href="{{ store }}" target="_blank">
       <i class="button__icon material-icons">shopping_cart</i>
       <span class="button__infos">
@@ -11,7 +18,8 @@
         </div>
       </span>
     </a>
-    <a class="actions__item actions__item--fill button button--try-budget-available {% if onFooter %} button--hidden {% endif %}" href="#">
+    {% endif %}
+    <a class="actions__item actions__item--fill button button--try-budget-available {% if hideButton %} button--hidden {% endif %}" href="#">
       <i class="button__icon material-icons">email</i>
       <span class="button__infos">
         <div class="button__text">
@@ -32,18 +40,20 @@
   </div>
 {% else %}
   <div class="actions {% if onFooter %} actions--footer {% endif %}">
-    <a class="actions__item button button--sold-out" href="{{ store }}" target="_blank">
+    {% if metadata.enable_store == true %}
+    <a class="actions__item button button--sold-out action--try-budget" href="{{ store }}" target="_blank">
       <i class="button__icon material-icons">remove_shopping_cart</i>
       <span class="button__infos">
         <div class="button__title">
-          Esaurito
+          Venduto
         </div>
         <div class="button__price">
           {{ price }}€
         </div>
       </span>
     </a>
-    <a class="actions__item actions__item--fill button button--try-budget {% if onFooter %} button--hidden {% endif %}" href="#">
+    {% endif %}
+    <a class="actions__item actions__item--fill button button--try-budget {% if hideButton %} button--hidden {% endif %}" href="#">
       <i class="button__icon material-icons">email</i>
       <span class="button__infos">
         <div class="button__text">

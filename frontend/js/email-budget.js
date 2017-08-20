@@ -23,7 +23,7 @@ $(function () {
     $statusError.addClass('modal__body--hidden').removeClass('wobble animated')
   }
 
-  $('.button--try-budget, .button--try-budget-available').on('click', function (e) {
+  $('.button--try-budget, .button--try-budget-available, .action--try-budget').on('click', function (e) {
     e.preventDefault()
     if (!thrownError) {
       resetComposeEmail()

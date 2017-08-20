@@ -53,6 +53,10 @@
       margin-left: 0;
     }
 
+    @include media ('<=tablet-small') {
+      padding-bottom: 0;
+    }
+
     @include media ('<=mobile-large') {
       padding: s(1) s(1) 0;
     }

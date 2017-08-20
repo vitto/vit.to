@@ -26,11 +26,11 @@
     color: $title-color;
     font-size: 36px;
     font-weight: 700;
-    margin: s(3) 0 0;
+    margin: s(3) 0 s(1.5);
 
     @include media ('<=mobile-large') {
-      font-size: 24px;
-      margin: s(1.5) 0 0;
+      font-size: 32px;
+      margin: s(1.5) 0 s(.75);
     }
   }
 

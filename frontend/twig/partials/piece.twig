@@ -8,19 +8,23 @@
     </h2>
     <div class="piece__infos">
       {% set isAvailable = item.sold_out == false %}
-      {% if isAvailable %}
-        <i class="piece__icon material-icons">shopping_cart</i>
-      {% else %}
-        <i class="piece__icon piece__icon--sold-out material-icons">remove_shopping_cart</i>
+      {% if metadata.enable_store %}
+        {% if isAvailable %}
+          <i class="piece__icon material-icons">shopping_cart</i>
+        {% else %}
+          <i class="piece__icon piece__icon--sold-out material-icons">remove_shopping_cart</i>
+        {% endif %}
       {% endif %}
       <div class="piece__description">
         <h4 class="piece__furniture">
           {{ item.furniture }}
         </h4>
-        {% if isAvailable %}
-          <span class="piece__availability">Disponibile</span>
-        {% else %}
-          <span class="piece__availability piece__availability--sold-out">Esaurito</span>
+        {% if metadata.enable_store %}
+          {% if isAvailable %}
+            <span class="piece__availability">In vendita</span>
+          {% else %}
+            <span class="piece__availability piece__availability--sold-out">Venduto</span>
+          {% endif %}
         {% endif %}
       </div>
     </div>
