@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="it">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="maximum-scale=1,width=device-width,initial-scale=1,user-scalable=0">
+  <title>
+    Pirelli tires 
+  </title>
+  <link async rel="stylesheet" href="../../css/vendor-style.css?v=d7b1a914-d7d9-4e05-94a4-2faaca7dafa1">
+  <link rel="stylesheet" href="../../css/style.css?v=fb61f4de-d82b-4fb3-a277-f88f5fc620b4">
+  <meta name="theme-color" content="#faf9f7">
+<link rel="mask-icon" color="#faf9f7" href="../../img/safari-mask-icon.svg">
+<link href="../../img/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="../../img/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="../../img/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="../../img/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="../../img/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="../../img/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="../../img/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="../../img/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="../../img/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="../../img/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="../../img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="../../img/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="../../img/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="../../img/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png">
+<meta content="#faf9f7" name="msapplication-TileColor">
+<meta content="../../img/mstile-144x144.png" name="msapplication-TileImage">
+  
+  <meta property="article:published_time" content="Tue Aug 22 2017 21:57:15 GMT+0200 (CEST)">
+<meta property="article:publisher" content="https://www.facebook.com/vttrx">
+  <meta property="article:section" content="diy">
+
+<meta property="fb:app_id" content="1234567890">
+<meta property="fb:pages" content="1234567890">
+
+<meta property="og:description" content="hello">
+<meta property="og:image" content="http://placehold.it/1200x630">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="Vittorio Vittori, DIY luxury crafts maker">
+<meta property="og:title" content="Pirelli tires">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://vit.to/diy/pirelli-tires">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@vttrx">
+<meta name="twitter:description" content="hello">
+<meta name="twitter:domain" content="Vittorio Vittori, DIY luxury crafts maker">
+<meta name="twitter:image:src" content="http://placehold.it/1200x630">
+<meta name="twitter:site" content="@vttrx">
+<meta name="twitter:title" content="Pirelli tires">
+</head>
+  <body class="body">
+    <div class="modal">
+  <form id="budget-form" class="modal__body modal__body--wide"
+      data-emailjs-user-id="user_eswCclJ3zfAWR2RR4qapH"
+      data-emailjs-service-id="gmail"
+      data-emailjs-template-id="budget"
+      data-item-price="610"
+      data-item-title="Pirelli tires"
+      data-item-url="http://vit.to/diy/pirelli-tires"
+    >
+    <div class="modal-contents">
+      <div class="modal-contents__column">
+        <div class="modal__nav">
+          <a href="../../" class="button button--close button--inline modal__button--close modal__button--mobile">
+            <i class="button__icon material-icons">keyboard_backspace</i>
+          </a>
+          <h3 class="modal__title modal__title--nav">
+            Richiedi pezzo con il tuo budget
+          </h3>
+        </div>
+        <label class="input">
+          <input id="input-name" class="input__element" type="text" name="from" placeholder="Nome Cognome">
+          <i class="input__icon material-icons">face</i>
+          <p class="input__error">
+            Inserisci Nome e Cognome così che possa risponderti
+          </p>
+        </label>
+        <label class="input">
+          <input id="input-email" class="input__element" type="email" name="reply_to" placeholder="tua@email.com">
+          <i class="input__icon material-icons">mail</i>
+          <p class="input__error">
+            Verifica che la e-mail sia valida
+          </p>
+        </label>
+        <label class="input input--textarea">
+          <textarea id="input-notes" class="input__element" name="description" placeholder="Note (facoltative)"></textarea>
+          <i class="input__icon material-icons">content_paste</i>
+        </label>
+      </div>
+      <div class="modal-contents__column">
+        <h3 class="modal__title">
+          Budget
+        </h3>
+        <p class="modal__text">
+          Indica il budget che vuoi mettere a disposizione, ti contatterò per spiegarti cosa si può fare in base alle tue note e avere conferma per procedere.
+        </p>
+        <div class="budget-range">
+          <div id="budget"></div>
+        </div>
+        <div class="budget-info">
+          <div class="budget-info__column">
+            <span class="budget-info__title">Budget</span>
+            <span id="custom-budget" class="budget-info__value budget-info__value--custom">300€</span>
+          </div>
+          <div class="budget-info__column">
+            <span class="budget-info__title">Prezzo originale</span>
+            <span class="budget-info__value">610€</span>
+          </div>
+        </div>
+        <div class="budget">
+          <div class="budget__column">
+            <img src="../../img/budget--low.svg" alt="" class="budget__image">
+          </div>
+          <div class="budget__column budget__column--active">
+            <img src="../../img/budget--base.svg" alt="" class="budget__image">
+          </div>
+          <div class="budget__column">
+            <img src="../../img/budget--high.svg" alt="" class="budget__image">
+          </div>
+        </div>
+        <p class="modal__text">
+          La qualità del lavoro dipenderà dai tagli sul budget, se questi saranno troppo alti, potrebbe non essere possibile realizzare il pezzo.
+        </p>
+      </div>
+    </div>
+    <div class="modal__footer">
+      <a href="#" class="button button--back modal__button modal__button--close">Chiudi</a>
+      <div id="send-budget-request" class="button button--send modal__button">
+        <i class="button__icon material-icons">email</i>
+        <div class="button__infos">
+          Invia
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <div class="modal__body modal__body--status modal__body--hidden">
+    <div class="send-status">
+      <i class="send-status__icon send-status__icon--info material-icons">send</i>
+      <div class="send-status__title">
+        Messaggio inviato
+      </div>
+    </div>
+    <p class="modal__text">
+      Riceverai una copia del messaggio che hai inviato con i dettagli.<br>
+      Controllerò la posta dopo le 18:00 e cercherò di risponderti al più presto.
+    </p>
+  </div>
+
+  <div class="modal__body modal__body--status modal__body--hidden">
+    <div class="send-status">
+      <i class="send-status__icon send-status__icon--error material-icons">report_problem</i>
+      <div class="send-status__title">
+        Errore di invio
+      </div>
+    </div>
+    <p class="modal__text">
+      Si è verificato un errore di invio del messaggio.<br>
+      Il sistema ha registrato il problema, spero di risolverlo a breve o che si tratti di un semplice disservizio.
+    </p>
+    <div class="modal__footer">
+      <a href="#" class="button button--fill button--back modal__button modal__button--close">Chiudi</a>
+    </div>
+  </div>
+
+</div>
+    <header class="header-mobile">
+  <div class="header-mobile__nav">
+          <a href="../../" class="button button--home button--inline">
+        <i class="button__icon material-icons">keyboard_backspace</i>
+      </a>
+      </div>
+  <a href="../../" class="header-mobile__home">
+    <img class="header-mobile__logo" src="../../img/vittorio-vittori-logo.svg" alt="Vittorio Vittori">
+  </a>
+  <div class="header-mobile__nav">
+          <a href="../../about" class="button button--back button--inline">About</a>
+      </div>
+</header>
+    <footer class="footer-mobile">
+    
+  <div class="actions  actions--footer ">
+        <a class="actions__item actions__item--fill button button--try-budget " href="#">
+      <i class="button__icon material-icons">email</i>
+      <span class="button__infos">
+        <div class="button__text">
+          Richiedi un oggetto simile basandoti sul tuo budget
+        </div>
+      </span>
+    </a>
+          <a class="actions__item actions__item--short button button--chat" href="https://www.messenger.com/t/vttrx" target="_blank">
+        <i class="button__icon material-icons">chat</i>
+        <span class="button__infos">
+          <div class="button__text">
+            Scrivimi via chat
+          </div>
+        </span>
+      </a>
+      </div>
+</footer>
+    <aside class="aside">
+      <div class="aside__header">
+        <header class="header">
+  <h1 class="header__title">Vittorio Vittori</h1>
+  <h2 class="header__phrase">DIY luxury crafts</h2>
+</header>
+        <div class="aside__buttons">
+  <a href="../../" class="button button--back">Indietro</a>
+</div>
+      </div>
+      <section class="preview">
+  <img class="preview__picture" src="preview.jpg">
+  <hr class="preview__hr">
+  <h2 class="preview__title">
+    Pirelli tires
+  </h2>
+  <div class="preview__furniture">
+    Coffee table
+  </div>
+  <div class="preview__actions">
+      
+  <div class="actions ">
+        <a class="actions__item actions__item--fill button button--try-budget " href="#">
+      <i class="button__icon material-icons">email</i>
+      <span class="button__infos">
+        <div class="button__text">
+          Richiedi un oggetto simile basandoti sul tuo budget
+        </div>
+      </span>
+    </a>
+          <a class="actions__item actions__item--short button button--chat" href="https://www.messenger.com/t/vttrx" target="_blank">
+        <i class="button__icon material-icons">chat</i>
+        <span class="button__infos">
+          <div class="button__text">
+            Scrivimi via chat
+          </div>
+        </span>
+      </a>
+      </div>
+  </div>
+  <div class="preview__social">
+    <div class="addthis_inline_share_toolbox"></div>
+  </div>
+</section>
+      <footer class="footer">
+      <a href="../../about" class="footer__link footer__link--next">
+      <img class="footer__logo" src="../../img/vittorio-vittori-logo.svg" alt="Vittorio Vittori">
+    </a>
+    <div class="footer__text">
+      About
+    </div>
+  </footer>
+    </aside>
+    <main class="main">
+      <article class="article">
+        <div id="policy-message" class="policy-container policy-container--padded">
+          <div class="policy ">
+  <div class="policy__header">
+    <i class="policy__icon material-icons">info</i>
+    <h4 class="policy__title">Informativa</h4>
+  </div>
+  <div class="policy__contents">
+    <p class="policy__text">
+      Questo sito o gli strumenti terzi da questo utilizzati si avvalgono di cookie necessari al funzionamento ed utili alle finalità illustrate nella cookie policy. Se vuoi saperne di più o negare il consenso a tutti o ad alcuni cookie, consulta la <a href="../../cookie-policy">cookie policy</a>.
+    </p>
+    <p class="policy__text">
+      Scorrendo questa pagina, cliccando su un link o proseguendo la navigazione in altra maniera, acconsenti all’uso dei cookie e questo messaggio non comparirà più su questo dispositivo, fino a quando non cancellerai i cookies legati a questo sito.
+    </p>
+  </div>
+</div>
+        </div>
+        <header class="article__header">
+          <img src="cover.jpg" class="article__image">
+        </header>
+
+        <div class="article__contents">
+          <h1 class="article__title">
+            Pirelli tires
+          </h1>
+          <ul class="article__infos">
+            <li class="article__info">
+              <i class="article__icon material-icons">weekend</i>
+              <span class="article__detail">
+                Coffee table
+              </span>
+            </li>
+            <li class="article__info">
+              <i class="article__icon material-icons">watch_later</i>
+                            <time class="article__detail timeago" datetime="Tue Aug 22 2017 21:57:15 GMT+0200 (CEST)" title="Tuesday 22 August 2017">
+                Tuesday 22 August 2017
+              </time>
+            </li>
+            <li class="article__info">
+              <i class="article__icon material-icons">local_library</i>
+              <span class="reading-time"></span>
+            </li>
+          </ul>
+
+          <div class="article__actions article__actions--upper">
+              
+  <div class="actions ">
+        <a class="actions__item actions__item--fill button button--try-budget " href="#">
+      <i class="button__icon material-icons">email</i>
+      <span class="button__infos">
+        <div class="button__text">
+          Richiedi un oggetto simile basandoti sul tuo budget
+        </div>
+      </span>
+    </a>
+          <a class="actions__item actions__item--short button button--chat" href="https://www.messenger.com/t/vttrx" target="_blank">
+        <i class="button__icon material-icons">chat</i>
+        <span class="button__infos">
+          <div class="button__text">
+            Scrivimi via chat
+          </div>
+        </span>
+      </a>
+      </div>
+          </div>
+
+          <div class="markdown">
+            <p>Lorenzo e Sarah, due miei cari amici, sono da poco andati ad abitare assieme in una bella casa di 3 piani che è in gran parte già arredata, hanno in mente di cambiare gradualmente l’arredamento che non li rispecchia pienamente.</p>
+<p>Qualche giorno fa mi hanno invitato a vedere l’appartamento che mi ha davvero stupito in quanto a dimensioni, è un appartamento pieno di aree differenti tra loro che si possono destinare in tanti modi diversi.</p>
+<p>Entrambi sono interessati allo stile DIY, ho pensato quindi di dargli una spintarella sul genere dell’arredamento di casa realizzando un tavolino per la sala, una delle prime aree che vogliono cambiare.</p>
+<p>Da qualche settimana avevo dei pneumatici in magazzino che avevo in mente di recuperare per fare un piccolo tavolino da mettere vicino al divano di casa, ho deciso di utilizzarli per loro.</p>
+<p><a href="tires-with-dirty.jpg">
+  <img data-src="tires-with-dirty.jpg" data-action="zoom" title="Tavolino sala con pneumatici Pirelli" alt="Tavolino sala con pneumatici Pirelli">
+</a></p>
+<p>Le ruote me le ha procurate un altro mio caro amico, Gianni, sapendo che ero interessato a realizzare qualcosa di simile è stato così gentile da ricordarsene e si è preso pure lo sbattimento di andarle a recuperare per me.</p>
+<h4 id="pulizia-dei-pneumatici">Pulizia dei pneumatici</h4>
+<p>Più che in altri casi, i pneumatici devono essere puliti alla perfezione perché a contatto con l’asfalto e le polveri sottili degli scarichi di tutte le automobili.</p>
+<p>Parte del residuo lasciato sulle dita è sicuramente dovuto alla presenza nelle mescole del nerofumo (polvere di carbonio), motivo per cui i pneumatici sono neri.</p>
+<p>Quando li ho toccati con le dita ho sospettato che non si trattasse solo di residui di pneumatico, ma anche di polveri di gas di scarico depositate sull’asfalto, visto che deve essere un regalo, è il caso di fare un bel lavoro al fine di non consegnare un oggetto potenzialmente tossico!</p>
+<p><img data-src="tires-dirty-with-hand-example.jpg" data-action="zoom" title="Tavolino sala con pneumatici Pirelli" alt="Tavolino sala con pneumatici Pirelli"></p>
+<h4 id="lavaggio-dei-pneumatici">Lavaggio dei pneumatici</h4>
+<p>Per cominciare, ho optato per una pulizia specifica per rimuovere il grosso senza utilizzare del sapone. Con una spazzola ho dato una passata decisa a tutta la superficie del pneumatico, sia internamente che esternamente, paradossalmente il grosso dello sporco era proprio all’interno.</p>
+<p><img data-src="cleaning-wheels-with-soap.jpg" data-action="zoom" title="Lavando gli pneumatici con il sapone" alt="Lavando gli pneumatici con il sapone"></p>
+<p>Successivamente ho dato un’ altra passata con un sapone qualsiasi, nel mio caso ho utilizzato un sapone per le mani.</p>
+<p><img data-src="cleaning-wheels-with-water.jpg" data-action="zoom" title="Lavando gli pneumatici con acqua" alt="Lavando gli pneumatici con acqua"></p>
+<p>Per evitare di appoggiare i pneumatici al pavimento sporco da bagnati, li ho appesi con dei ganci che mio papà ha montato.</p>
+<p><img data-src="pneumatics-drying.jpg" data-action="zoom" title="Asciugatura pneumatici" alt="Asciugatura pneumatici"></p>
+<p>fortunatamente il soffitto del magazzino dove lavoro ha molte tubazioni che posso sfruttare per appenderci oggetti non troppo pensanti.</p>
+<h4 id="un-tocco-in-pi-">Un tocco in più</h4>
+<p>Una volta asciutti, i pneumatici hanno nuova vita, ora è possibile vedere che sono usati solo da vicino, il suo possessore precedente ha dimenticato di girare le ruote che ora hanno un lato estremamente consumato ed uno praticamente nuovo, il lato che metterò più a vista.</p>
+<p><img data-src="writings-on-pneumatic.jpg" data-action="zoom" title="Scritte sugli pneumatici" alt="Scritte sugli pneumatici"></p>
+<p>Ho pensato di dare un tocco aggiuntivo ai pneumatici colorando le scritte di bianco, come i pneumatici sportivi. Lorenzo ama la grafica e i loghi in generale, sono sicuro che questa modifica all’originale sarà gradita.</p>
+<h4 id="decorazione-del-lettering">Decorazione del lettering</h4>
+<p>Questa è la parte più complessa del lavoro, rendere le scritte bianche è un problema perché non so come si comportano i colori sul pneumatico, non vorrei consegnare qualcosa che perde il colore al solo contatto. Ho preferito stare sul sicuro dando una mano di aggrappante di gesso, per poi darne un altra di colore acrilico bianco titanio.</p>
+<p><img data-src="coloring-pneumatics-writings.jpg" data-action="zoom" title="Colorando i testi sugli pneumatici" alt="Colorando i testi sugli pneumatici"></p>
+<h4 id="precauzioni-di-applicazione">Precauzioni di applicazione</h4>
+<p>È fondamentale usare un pennello piatto a pelo morbido e pochissimo prodotto sia di colore che di aggrappante, il dislivello tra il lettering e il fondo di gomma è meno di 1mm, sbagliare è quasi inevitabile, fortunatamente mi è successo solo in qualche area!</p>
+<p><img data-src="colored-pneumatics-writings-with-acrylic-white-color.jpg" data-action="zoom" title="Pneumatici colorati con colore bianco acrilico" alt="Pneumatici colorati con colore bianco acrilico"></p>
+<p><img data-src="final-result-of-coloring-writings-on-pneumatics.jpg" data-action="zoom" title="Pneumatici colorati con colore bianco acrilico" alt="Pneumatici colorati con colore bianco acrilico"></p>
+<h4 id="funzionalit-">Funzionalità</h4>
+<p>Quando riciclo un oggetto non penso solo ad estrarlo dal suo contesto al fine di riutilizzarlo, il mio desiderio è quello di elevarlo a qualcosa bello e funzionale allo stesso tempo.</p>
+<p>Trattandosi di un tavolino da sala e di un paio di pneumatici ho deciso di montare un disco di acciaio spazzolato in superficie che fungerà da cerchione, da coperchio e che permette al suo utilizzatore di poterci appoggiare i piedi senza la paura di ammaccarlo o graffiarlo.</p>
+<p>Ho deciso di mettere un altro disco tra i due pneumatici in modo che si possano depositare oggetti al suo interno alzando quello superiore che fungerà anche da coperchio.</p>
+<p>Il comfort prima di tutto!</p>
+<h4 id="perforazione-precisa">Perforazione precisa</h4>
+<p>Ora sopraggiunge la questione di come montare i pneumatici tra loro, alla fine ho deciso di imbullonarli a tre bulloni, che dovrebbero tranquillamente bastare al mio obiettivo.</p>
+<p><img data-src="drilling-pneumatics-scheme.png" data-action="zoom" title="Schema di perforazione degli pneumatici" alt="Schema di perforazione degli pneumatici"></p>
+<p>Il problema della perforazione sta nel fatto che il trapano non può perforare verticalmente entrambi i pneumatici impilati, ho pensato quindi di segnare i fori con una pallina di colore acrilico di un solo pneumatico per andare poi a sovrapporli, così facendo posso perforare i pneumatici uno dopo l’altro senza sbagliare la posizione dei buchi.</p>
+<p><img data-src="white-dots-for-drilling-pneumatics.jpg" data-action="zoom" title="Riferimenti bianchi per performazione degli pneumatici" alt="Riferimenti bianchi per performazione degli pneumatici"></p>
+<h4 id="perforazione-precisa">Perforazione precisa</h4>
+<p>Risolto il problema tecnico della perforazione, posso continuare il lavoro senza problemi. Questa azione produrrà un forte attrito sul pneumatico che emanerà fumo, puzza di gomma bruciata e molti residui di gomma che saranno poi da pulire, assicuratevi di non fare il lavoro nel posto sbagliato!</p>
+<p><img data-src="drilling-pneumatics.jpg" data-action="zoom" title="Performazione degli pneumatici con trapano" alt="Performazione degli pneumatici con trapano"></p>
+<h4 id="smalto-per-lucidatura">Smalto per lucidatura</h4>
+<p>Eccomi arrivato alle rifiniture, dopo essermi consultato un po’ in giro, ho acquistato uno smalto trasparente opaco spray da applicare ai pneumatici per renderli brillanti senza esagerare con l’effetto lucido. In questo caso ho utilizzato un prodotto chiamato Drip Smalto Acrilico Spray trasparente opaco, che si è rivelato adatto al mio scopo.</p>
+<p><img data-src="applying-the-opaque-spray-enamel.jpg" data-action="zoom" title="Applicando lo smalto opaco spray" alt="Applicando lo smalto opaco spray"></p>
+<p>L’effetto ottenuto si è rivelato nettamente migliore di quello che mi aspettavo, lo smalto ha reso la superficie più liscia e asciutta, togliendo l’effetto gommoso aderente, oltre ad aver reso gli pneumatici più brillanti pur mantenendoli opachi.</p>
+<p><img data-src="drip-linea-colore-smalto-spray-acrilico.jpg" data-action="zoom" title="Drip linea colore smalto spray acrilico" alt="Drip linea colore smalto spray acrilico"></p>
+<h4 id="preparazione-dei-piani-per-il-tavolino">Preparazione dei piani per il tavolino</h4>
+<p>Come scrivevo prima, per me un oggetto ha un senso quando è funzionale al proprio utilizzo, pensando di voler realizzare un tavolino da mettere davanti ad un divano, questo deve poter sopportare graffi di chiavi, monete, telecomandi o joypad, eppure essere accogliente al punto che uno possa appoggiarci i piedi sopra senza avere paura di usurare, graffiare o sporcarsi.</p>
+<p><img data-src="dischi-di-acciaio-non-lavorato-tagliati-al-laser.jpg" data-action="zoom" title="Dischi di acciaio non lavorato tagliati al laser" alt="Dischi di acciaio non lavorato tagliati al laser"></p>
+<p>Per questo ho scelto di montare due piani di acciaio, una volta che avrò spazzolato la superficie saranno a prova di graffio e abbastanza resistenti alle ditate.</p>
+<h4 id="sgrassatura-iniziale">Sgrassatura iniziale</h4>
+<p>Durante le fasi di taglio della lamina di acciaio, questa viene trasportata utilizzando delle ventose che aderiscono alla superficie grazie ad un olio con il quale vengono unte.</p>
+<p><img data-src="pulizia-oli-con-solvente.jpg" data-action="zoom" title="Pulizia della superficie dagli oli delle ventose" alt="Pulizia della superficie dagli oli delle ventose"></p>
+<p>Una volta consegnati, questi piatti di acciaio vanno puliti con del solvente per portare via tutto l’olio prima di procedere, altrimenti questo si andrebbe ad insinuare nei micro graffi della spazzolatura e in generale, ungerebbero.</p>
+<h4 id="spazzolatura">Spazzolatura</h4>
+<p>Spazzolare una superficie di acciaio significa graffiarla con moto circolare tramite una paglietta abrasiva che renderà la superficie opaca e anti-graffio, perché più di così non si graffia!</p>
+<p><img data-src="spazzolatura-acciaio-con-paglietta-abrasiva.jpg" data-action="zoom" title="Spazzolatura della superficie con paglietta abrasiva" alt="Spazzolatura della superficie con paglietta abrasiva"></p>
+<p>Questa azione non è neanche così faticosa, basta fare un paio di giri con due mani e si raggiunge il risultato desiderato.</p>
+<p><img data-src="residui-superficie-acciaio.jpg" data-action="zoom" title="Residui di acciaio sulla superficie spazzolata" alt="Residui di acciaio sulla superficie spazzolata"></p>
+<h4 id="pulizia-delle-superficie">Pulizia delle superficie</h4>
+<p>Il problema nasce dai residui di acciaio, si presentano come una polvere finissima, difficile da rimuovere e capace di macchiare al tatto.
+Per pulire la superficie ho dovuto dare 5-6 mani di diluente prima delle quali la superficie macchiava senza problemi sia le dita che la carta. È stato più faticoso pulire col solvente che spazzolare la superficie!</p>
+<p><img data-src="pulizia-acciaio-spazzolato-applicazione-solvente.jpg" data-action="zoom" title="Pulizia della superficie con solvente" alt="Pulizia della superficie con solvente"></p>
+<h4 id="montaggio-del-tavolino">Montaggio del tavolino</h4>
+<p>Sono arrivato al montaggio dei piatti di acciaio, una volta avvitato tutto, il lavoro è praticamente finito e il piatto centrale sarà bloccato tra i due pneumatici agganciati tra loro dai tre bulloni.</p>
+<p><img data-src="montaggio-piano-contenitivo-intermedio.jpg" data-action="zoom" title="Montaggio piano contenitivo" alt="Montaggio piano contenitivo"></p>
+<p>Ho voluto realizzare un tavolino completamente smontabile per permettere ai miei amici di cambiare i due piatti in caso di necessità.</p>
+<h4 id="presa-per-apertura-coperchio">Presa per apertura coperchio</h4>
+<p>Per far si che il tavolino lo si possa utilizzare anche come contenitore è necessaria una presa che permetta al suo utilizzatore di tirare su il coperchio.</p>
+<p><img data-src="preparazione-pinza-per-carta-a-presa-per-apertura-piano-acciaio.jpg" data-action="zoom" title="Pinza fermacarte e filo elettrico" alt="Pinza fermacarte e filo elettrico"></p>
+<p>Per farlo ho utilizzato una semplice pinza fermacarte assieme ad un pezzo di guaina proveniente da un filo elettrico che evita alla pinza di scivolare sull’acciaio.</p>
+<p><img data-src="applicazione-gomma-su-pinze-per-carta.jpg" data-action="zoom" title="Presa per piatto ultimata" alt="Presa per piatto ultimata"></p>
+<h4 id="montaggio-ultimato">Montaggio ultimato</h4>
+<p>Tadaaan! Ecco il tavolino ultimato, è venuto un bel lavoro e spero che a Spek e Sanah (Lorenzo e Sarah) piacerà!</p>
+<p><img data-src="montaggio-tavolino-risultato-finale.jpg" data-action="zoom" title="Risultato finale" alt="Risultato finale"></p>
+<p>Prima di consegnarlo ho deciso di fare un test da me in sala per la prova del fuoco sul parquet, la gomma non dovrebbe macchiare ma non si sa mai, il pavimento è trattato con dei prodotti naturali, questo lo rende meno chimico ma è anche più esposto a questo genere di rischi.</p>
+<p><img data-src="pneumatico-contenitore-porta-oggetti.jpg" data-action="zoom" title="Contenitore" alt="Contenitore"></p>
+<h4 id="prove-generali">Prove generali</h4>
+<p>La prova parquet è passata senza problemi e il contenitore funziona perfettamente, mi sento pronto a consegnare il regalo ai miei amici!</p>
+<p>Quale sarà il verdetto finale??</p>
+
+          </div>
+
+          <div class="article__actions">
+              
+  <div class="actions ">
+        <a class="actions__item actions__item--fill button button--try-budget " href="#">
+      <i class="button__icon material-icons">email</i>
+      <span class="button__infos">
+        <div class="button__text">
+          Richiedi un oggetto simile basandoti sul tuo budget
+        </div>
+      </span>
+    </a>
+          <a class="actions__item actions__item--short button button--chat" href="https://www.messenger.com/t/vttrx" target="_blank">
+        <i class="button__icon material-icons">chat</i>
+        <span class="button__infos">
+          <div class="button__text">
+            Scrivimi via chat
+          </div>
+        </span>
+      </a>
+      </div>
+          </div>
+        </div>
+      </article>
+      <section class="cookie-policy">
+  <p class="cookie-policy__text">
+    Tutto il materiale presente sono rilavorazioni creative di materiale recuperato da Vittorio Vittori © 2016-2017, tutti i diritti riservati, tutti i marchi riprodotti sono dei relativi proprietari.<br>
+    Per informazioni sull'utilizzo dei dati nel al sito, leggi la <a href="../../cookie-policy">privacy policy</a>.
+  </p>
+</section>
+    </main>
+    <script src="../../js/vendor.js?v=e22a4344-60b2-4804-8fab-4b65cb76ba40" charset="utf-8"></script>
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script async src="../../js/app.js?v=df15d222-925e-4728-a209-91407c4d2c59" charset="utf-8"></script>
+
+  <!-- Google Analytics Tracking Code for http://vit.to -->
+  <script async>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-15600084-7', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+  <!-- Hotjar Tracking Code for http://vit.to -->
+  <script async>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:558880,hjsv:5};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+  <script async type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5970f4878b849aee"></script>
+  </body>
+</html>
