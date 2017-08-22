@@ -25,7 +25,7 @@ source: source
 destination: build
 collections:
   diy:
-    pattern: ../posts/*.md
+    pattern: ../posts/diy/*.md
     sortBy: 'date'
 markdown:
   smartypants: true
@@ -33,8 +33,13 @@ markdown:
   tables: true
 permalinks:
   relative: false
-  pattern: 'diy/:title'
-  date: YYYY-MM-DD
+  linksets:
+    -
+      match:
+        collection: diy
+      relative: false
+      pattern: 'diy/:title'
+      date: YYYY-MM-DD
 twig:
   directory: twig
   view: base.twig
