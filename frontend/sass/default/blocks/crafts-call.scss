@@ -1,16 +1,9 @@
 @include block ('crafts-call') {
+  background-color: $craft--hover;
   border-radius: $craft--radius;
   padding: s(1.5);
   transition: background-color $hover-ease;
   width: 100%;
-
-  &:hover {
-    background-color: $craft--hover;
-  }
-
-  @include media ('<=desktop-small') {
-    background-color: $craft--hover;
-  }
 
   @include media ('<=tablet-small') {
     background-color: $body--background;

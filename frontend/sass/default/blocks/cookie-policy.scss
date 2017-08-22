@@ -1,0 +1,16 @@
+@include block ('cookie-policy') {
+  margin: auto;
+  max-width: $article--body--width;
+  padding: s(1) s(1) s(2);
+  text-align: center;
+
+  @include media ('<tablet-large') {
+    border-top: $cookie-policy--border;
+    padding: s(1);
+  }
+
+  @include element ('text') {
+    @extend %text;
+    display: block;
+  }
+}

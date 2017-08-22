@@ -1,5 +1,6 @@
 ---
 title: Cookie policy
+date: 2017-08-22T21:58:01+02:00
 view: policy.twig
 ---
 

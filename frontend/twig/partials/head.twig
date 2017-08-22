@@ -3,9 +3,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="maximum-scale=1,width=device-width,initial-scale=1,user-scalable=0">
   <title>
-    {{ title }} @ vitto
+    {{ title }} {{ title_append }}
   </title>
   <link async rel="stylesheet" href="{{ relativePath }}css/vendor-style.css?v={{ global.faker.random.uuid }}">
   <link rel="stylesheet" href="{{ relativePath }}css/style.css?v={{ global.faker.random.uuid }}">
   {% include 'head__favicons.twig' %}
+  {% include 'head__social.twig' %}
 </head>

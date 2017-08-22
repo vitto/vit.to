@@ -1,6 +1,7 @@
 ---
 title: About
 view: about.twig
+date: 2017-08-22T21:58:12+02:00
 bio: Ciao, sono Vittorio, creo pezzi unici di arte DIY con l'intenzione di renderli belli, funzionali e sicuri.
 contact:
   venue: Produco a Forlì, Emilia-Romagna, Italy

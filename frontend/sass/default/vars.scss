@@ -2,7 +2,10 @@ $title-color: $color-chicago;
 $text-color--hover: $color-chicago;
 $text-color: $color-gray;
 
+$border: 2px solid $color-mercury;
+
 $article--text--color: mix($color-chicago, $color-gray);
+$article--body--width: 768px;
 
 $actions--available--background: rgba($color-chicago, 0.1);
 $actions--background: $color-chicago;
@@ -47,11 +50,13 @@ $button--try-budget-available--color: $text-color;
 $craft--hover: $color-white;
 $craft--radius: 4px;
 
+$cookie-policy--border: $border;
+
 $header--background: $color-white;
 $header--phrase--color: $text-color;
 $header--shadow: $solid-shadow;
 
-$markdown--border-top: 2px solid $color-mercury;
+$markdown--border-top: $border;
 $markdown--image--radius: 8px;
 
 $modal--background: mix($color-white, $color-mercury);
@@ -61,7 +66,7 @@ $modal--background--opaque-strenght: rgba($modal--background, 0.95);
 $modal--background--blur: blur(4px);
 $modal--shadow: $solid-shadow;
 
-$input--border: 2px solid $color-mercury;
+$input--border: $border;
 $input--unfocus: $color-star-dust;
 $input--focus: $color-chicago;
 $input--focus-background: mix($color-white, $color-mercury);
@@ -78,15 +83,15 @@ $noui--handle--color: $color-mercury;
 $noui--target--height: 8px;
 
 $policy--background: $color-white;
-$policy--border: 2px solid $color-mercury;
+$policy--border: $border;
 
 $img--placeholder--background: rgba($color-chicago, 0.1);
 
-$row--border: 2px solid $color-mercury;
+$row--border: $border;
 
 $budget-info--text--background: $color-mercury;
 
 $piece--availability--sold-out: $color-mercury;
-$piece--dedails--border-top: 2px solid $color-mercury;
+$piece--dedails--border-top: $border;
 
 $selection--background: $color-mercury;

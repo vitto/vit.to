@@ -1,4 +1,8 @@
 metadata:
+  title: Vittorio Vittori, DIY luxury crafts maker
+  title_append: '@ vit.to'
+  lang: it
+  locale: it_IT
   home: http://vit.to
   repo: https://github.com/vitto/vit.to
   background: '#faf9f7'
@@ -6,6 +10,8 @@ metadata:
     email_js:
       user_id: user_eswCclJ3zfAWR2RR4qapH
       service_id: gmail
+  username:
+    twitter: '@vttrx'
   social:
     facebook: https://www.facebook.com/vttrx
     instagram: https://www.instagram.com/vttrx/
@@ -27,7 +33,7 @@ markdown:
   tables: true
 permalinks:
   relative: false
-  pattern: 'diy/:date/:title'
+  pattern: 'diy/:title'
   date: YYYY-MM-DD
 twig:
   directory: twig
@@ -41,3 +47,8 @@ sitemap:
   omitIndex: true
   urlProperty: canonical
   privateProperty: private
+robots:
+  useragent: '*'
+  disallow:
+    - /
+  sitemap: http://vit.to/sitemap.xml

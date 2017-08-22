@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ metadata.lang }}">
   {% include 'partials/head.twig' %}
   <body class="body">
     {% include 'partials/header-mobile.twig' %}
@@ -73,6 +73,7 @@
         </article>
         {% include 'partials/email-message.twig' with { isAbout: true } %}
       </div>
+      {% include 'partials/cookie-policy.twig' %}
     </main>
     {% include 'partials/assets.twig' %}
   </body>

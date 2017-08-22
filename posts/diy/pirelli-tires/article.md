@@ -1,7 +1,7 @@
 ---
 title: Pirelli tires
 furniture: Coffee table
-date: 2017-07-04
+date: 2017-08-22T21:57:15+02:00
 price: 610
 sold_out: true
 collection: diy
