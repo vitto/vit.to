@@ -81,16 +81,16 @@ module.exports = function (env) {
             publicPath: publicPath
           }
         }, {
-          test: /\.woff$/,
-          loader: 'url-loader?mimetype=application/font-woff',
+          test: /\.eot$/,
+          loader: 'url-loader?mimetype=application/font-eot',
           options: {
             limit: 65000,
             name: './fonts/[name].[ext]',
             publicPath: publicPath
           }
         }, {
-          test: /\.eot$/,
-          loader: 'url-loader?mimetype=application/font-eot',
+          test: /\.woff$/,
+          loader: 'url-loader?mimetype=application/font-woff',
           options: {
             limit: 65000,
             name: './fonts/[name].[ext]',

@@ -20,14 +20,20 @@ const basePath = '/'
 module.exports = function (env) {
   return {
     entry: {
-      'js/app': __js + '/main.js',
+      'js/app': [
+        __js + '/email-budget.js',
+        __js + '/email-message.js',
+        __js + '/main.js',
+        __js + '/policy.js'
+      ],
       'js/vendor': [
         __modules + '/jquery/dist/jquery.js',
         __modules + '/blazy/blazy.js',
         __modules + '/headroom.js/dist/headroom.js',
         __modules + '/nouislider/distribute/nouislider.js',
         __modules + '/js-cookie/src/js.cookie.js',
-        __modules + '/timeago.js/dist/timeago.js', // __modules + '/timeago.js/timeago.locales.min.js'
+        __modules + '/reading-time/lib/reading-time.js',
+        __modules + '/timeago.js/dist/timeago.js',
         __modules + '/zooming/build/zooming.js'
       ],
       'css/style': [
@@ -150,6 +156,7 @@ module.exports = function (env) {
         noUiSlider: 'nouislider',
         Cookies: 'js-cookie/src/js.cookie.js',
         timeago: 'timeago.js',
+        readingTime: 'reading-time/lib/reading-time.js',
         Zooming: 'zooming'
       }),
       new ManifestPlugin({
