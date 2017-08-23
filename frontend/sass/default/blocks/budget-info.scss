@@ -11,6 +11,10 @@
     &:last-child {
       text-align: right;
     }
+
+    @include media ('<mobile-large') {
+      width: 100%;
+    }
   }
 
   @include element ('title') {

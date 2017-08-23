@@ -1,6 +1,10 @@
 <!doctype html>
 <html lang="{{ metadata.lang }}">
-  {% include 'partials/head.twig' %}
+  {% include 'partials/head.twig' with {
+    title: metadata.title,
+    date: m.metadata.lastmod
+    }
+  %}
   <body class="body">
     {% include 'partials/header-mobile.twig' %}
     <aside class="aside">
