@@ -17,7 +17,7 @@ The watcher will also let you to test pages via HTTP: http://localhost:8000/
 Deploy the `dist` folder into the `gh-pages` branch
 
 ```
-npm run deploy
+npm run build && npm run deploy
 ```
 
 The deploy script is based on this gist:
