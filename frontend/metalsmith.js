@@ -35,6 +35,7 @@ m.twig.global = {
 }
 m.markdown.renderer = renderer
 m.metadata.lastmod = moment().format()
+m.metadata.last_edit_year = moment().format('YYYY')
 m.sitemap.lastmod = moment().format('YYYY-MM-DD')
 
 metalsmith(__dirname)

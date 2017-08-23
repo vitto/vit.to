@@ -1,11 +1,12 @@
 metadata:
-  title: Vittorio Vittori, DIY luxury crafts maker
-  title_append: '@ vit.to'
+  background: '#faf9f7'
+  first_edit_year: 2011
+  home: http://vit.to
   lang: it
   locale: it_IT
-  home: http://vit.to
   repo: https://github.com/vitto/vit.to
-  background: '#faf9f7'
+  title_append: '@ vit.to'
+  title: Vittorio Vittori, DIY luxury crafts maker
   service:
     email_js:
       user_id: user_eswCclJ3zfAWR2RR4qapH

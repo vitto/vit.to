@@ -38,4 +38,12 @@ $(function () {
     })
     footerHeadroom.init()
   }
+
+  var $policyYear = $('#cookie-policy__year')
+  if ($policyYear.length > 0) {
+    var thisYear = new Date().getFullYear()
+    if ($policyYear.text() !== thisYear.toString()) {
+      $policyYear.text(thisYear)
+    }
+  }
 })
