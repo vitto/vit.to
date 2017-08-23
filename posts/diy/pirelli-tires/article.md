@@ -86,8 +86,9 @@ Il comfort prima di tutto!
 
 Ora sopraggiunge la questione di come montare i pneumatici tra loro, alla fine ho deciso di imbullonarli a tre bulloni, che dovrebbero tranquillamente bastare al mio obiettivo.
 
-
-![Schema di perforazione degli pneumatici](drilling-pneumatics-scheme.png)
+[
+  ![Tavolino sala con pneumatici Pirelli](drilling-pneumatics-scheme.jpg)
+](drilling-pneumatics-scheme--large.jpg)
 
 Il problema della perforazione sta nel fatto che il trapano non può perforare verticalmente entrambi i pneumatici impilati, ho pensato quindi di segnare i fori con una pallina di colore acrilico di un solo pneumatico per andare poi a sovrapporli, così facendo posso perforare i pneumatici uno dopo l’altro senza sbagliare la posizione dei buchi.
 
