@@ -53,19 +53,11 @@
 
   @include element ('call') {
     display: flex;
-    flex-grow: 1;
-    padding: 0 s(1.5);
-
-    @include media ('<=desktop-small') {
-      margin-left: s(-1.5);
-      margin-right: s(-1.5);
-      margin-top: s(2);
-      width: auto;
-    }
+    margin-top: s(1.5);
+    width: 100%;
 
     @include media ('<tablet-large') {
-      margin-left: 0;
-      margin-right: 0;
+      margin-top: 0;
       padding: s(1.5);
     }
 
