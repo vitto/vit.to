@@ -6,11 +6,12 @@
   "scripts": {
     "twig": "cd frontend && node metalsmith.js",
     "clean": "rm -rf frontend/build/* || true && rm -rf frontend/source/* || true && rm -rf frontend/assets/* || true",
-    "build": "npm run clean && cd frontend && ../node_modules/.bin/webpack --progress --profile --colors --env=prod",
+    "build": "npm run clean && cd frontend && ../node_modules/.bin/webpack --progress --profile --colors --env=prod && npm run pre-deploy",
     "source": "cd frontend && mkdir source || true && cp -R assets/* source && cp -R ../posts/* source",
     "watch": "npm run clean && cd frontend && ../node_modules/.bin/webpack --progress --profile --colors --env=dev",
     "serve": "cd frontend/build && python -m SimpleHTTPServer 8000",
-    "deploy": "rm -rf dist/* && cp -a frontend/build/. dist/ && cp CNAME dist/. && git subtree push --prefix dist origin gh-pages"
+    "pre-deploy": "rm -rf dist/* && cp -a frontend/build/. dist/ && cp CNAME dist/.",
+    "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",
