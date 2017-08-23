@@ -8,5 +8,7 @@
   "/fonts/MaterialIcons-Regular.eot": "/./fonts/MaterialIcons-Regular.eot",
   "/fonts/MaterialIcons-Regular.ttf": "/./fonts/MaterialIcons-Regular.ttf",
   "/js/app.js": "/js/app.js",
-  "/js/vendor.js": "/js/vendor.js"
+  "/js/app.js/app.map": "/js/app.map",
+  "/js/vendor.js": "/js/vendor.js",
+  "/js/vendor.js/vendor.map": "/js/vendor.map"
 }
