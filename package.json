@@ -11,7 +11,7 @@
     "watch": "npm run clean && cd frontend && ../node_modules/.bin/webpack --progress --profile --colors --env=dev",
     "serve": "cd frontend/build && python -m SimpleHTTPServer 8000",
     "pre-deploy": "rm -rf dist/* && cp -a frontend/build/. dist/ && cp CNAME dist/.",
-    "deploy": "git commit -m 'Update contents' && git subtree push --prefix dist origin gh-pages"
+    "deploy": "git add dist/ && git commit -m 'Update contents' && git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",
