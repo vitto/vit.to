@@ -7,11 +7,15 @@ $(function () {
   var nodes = document.querySelectorAll('.timeago')
   timeagoInstance.render(nodes, 'it')
 
-  var readingElement = document.querySelector('.reading-time')
-  if (readingElement !== null) {
+  var $readingTime = $('.reading-time')
+  if ($readingTime.length > 0) {
     var article = $('.markdown').text()
-    var stats = readingTime(article)
-    $('.reading-time').text(stats.text)
+    if (article.length === 0) {
+      $readingTime.closest('.article__info').remove()
+    } else {
+      var stats = readingTime(article)
+      $readingTime.text(stats.text)
+    }
   }
 
   var header = document.querySelector('.header-mobile')
