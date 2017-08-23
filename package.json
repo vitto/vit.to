@@ -4,14 +4,15 @@
   "description": "A metalsmith based website of my personal homepage",
   "main": "index.js",
   "scripts": {
-    "twig": "cd frontend && node metalsmith.js",
-    "clean": "rm -rf frontend/build/* || true && rm -rf frontend/source/* || true && rm -rf frontend/assets/* || true",
     "build": "npm run clean && cd frontend && ../node_modules/.bin/webpack --progress --profile --colors --env=prod && npm run pre-deploy",
-    "source": "cd frontend && mkdir source || true && cp -R assets/* source && cp -R ../posts/* source",
-    "watch": "npm run clean && cd frontend && ../node_modules/.bin/webpack --progress --profile --colors --env=dev",
-    "serve": "cd frontend/build && python -m SimpleHTTPServer 8000",
+    "clean": "rm -rf frontend/build/* || true && rm -rf frontend/source/* || true && rm -rf frontend/assets/* || true",
+    "deploy": "git add dist/ && git commit -m 'Update contents' && git subtree push --prefix dist origin gh-pages",
+    "go": "npm run build && npm run deploy && git push",
     "pre-deploy": "rm -rf dist/* && cp -a frontend/build/. dist/ && cp CNAME dist/.",
-    "deploy": "git add dist/ && git commit -m 'Update contents' && git subtree push --prefix dist origin gh-pages"
+    "serve": "cd frontend/build && python -m SimpleHTTPServer 8000",
+    "source": "cd frontend && mkdir source || true && cp -R assets/* source && cp -R ../posts/* source",
+    "twig": "cd frontend && node metalsmith.js",
+    "watch": "npm run clean && cd frontend && ../node_modules/.bin/webpack --progress --profile --colors --env=dev"
   },
   "repository": {
     "type": "git",
