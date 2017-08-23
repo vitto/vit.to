@@ -3,9 +3,8 @@ $(function () {
     selector: 'img'
   })
 
-  var timeagoInstance = timeago(null, 'it')
-  var nodes = document.querySelectorAll('.timeago')
-  timeagoInstance.render(nodes, 'it')
+  var $timeAgo = $('.timeago')
+  $timeAgo.text(timeago(null).format($timeAgo.text()))
 
   var $readingTime = $('.reading-time')
   if ($readingTime.length > 0) {
