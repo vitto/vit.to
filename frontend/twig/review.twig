@@ -2,15 +2,14 @@
 <html lang="{{ metadata.lang }}">
   {% include 'partials/head.twig' %}
   <body class="body">
-    {% include 'partials/diy/email-budget.twig' %}
     {% include 'partials/header-mobile.twig' %}
-    {% include 'partials/diy/footer-mobile.twig' %}
+    {% include 'partials/games/footer-mobile.twig' %}
     <aside class="aside">
       <div class="aside__header">
         {% include 'partials/aside__header.twig' %}
         {% include 'partials/aside__buttons.twig' %}
       </div>
-      {% include 'partials/diy/aside__preview.twig' %}
+      {% include 'partials/games/aside__preview.twig' %}
       {% include 'partials/aside__footer.twig' %}
     </aside>
     <main class="main">
@@ -28,9 +27,9 @@
           </h1>
           <ul class="article__infos">
             <li class="article__info">
-              <i class="article__icon material-icons">weekend</i>
+              <i class="article__icon material-icons">videogame_asset</i>
               <span class="article__detail">
-                {{ furniture }}
+                {{ manufacturer }} {{ platform }}
               </span>
             </li>
             <li class="article__info">
@@ -46,16 +45,8 @@
             </li>
           </ul>
 
-          <div class="article__actions article__actions--upper">
-            {% include 'partials/diy/actions.twig' with { 'verbose': 'true' } %}
-          </div>
-
           <div class="markdown">
             {{ contents }}
-          </div>
-
-          <div class="article__actions">
-            {% include 'partials/diy/actions.twig' with { 'verbose': 'true' } %}
           </div>
         </div>
       </article>

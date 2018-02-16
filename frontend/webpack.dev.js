@@ -25,7 +25,8 @@ module.exports = function (env) {
         __js + '/email-budget.js',
         __js + '/email-message.js',
         __js + '/main.js',
-        __js + '/policy.js'
+        __js + '/policy.js',
+        __js + '/chart.js'
       ],
       'js/vendor': [
         __modules + '/jquery/dist/jquery.js',
@@ -35,6 +36,7 @@ module.exports = function (env) {
         __modules + '/js-cookie/src/js.cookie.js',
         __modules + '/reading-time/lib/reading-time.js',
         __modules + '/timeago.js/dist/timeago.js',
+        __modules + '/chart.js/dist/Chart.bundle.js',
         __modules + '/zooming/build/zooming.js'
       ],
       'css/style': [
@@ -153,6 +155,7 @@ module.exports = function (env) {
         $: 'jquery',
         Blazy: 'blazy',
         jQuery: 'jquery',
+        Chart: 'chart.js',
         noUiSlider: 'nouislider',
         Cookies: 'js-cookie/src/js.cookie.js',
         timeago: 'timeago.js',

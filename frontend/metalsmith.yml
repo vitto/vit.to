@@ -28,6 +28,9 @@ collections:
   diy:
     pattern: ../posts/diy/*.md
     sortBy: 'date'
+  games:
+    pattern: ../posts/games/*.md
+    sortBy: 'date'
 markdown:
   smartypants: true
   gfm: true
@@ -40,6 +43,12 @@ permalinks:
         collection: diy
       relative: false
       pattern: 'diy/:title'
+      date: YYYY-MM-DD
+    -
+      match:
+        collection: games
+      relative: false
+      pattern: 'games/:manufacturer/:platform/:title'
       date: YYYY-MM-DD
 twig:
   directory: twig

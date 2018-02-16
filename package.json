@@ -66,6 +66,7 @@
   "dependencies": {
     "animate.css": "^3.5.2",
     "blazy": "^1.8.2",
+    "chart.js": "^2.7.1",
     "frontsize": "^4.0.3",
     "headroom.js": "^0.9.4",
     "jquery": "^3.2.1",
