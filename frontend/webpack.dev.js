@@ -12,41 +12,19 @@ const WebpackShellPlugin = require('webpack-shell-plugin')
 
 const __dist = path.join(__dirname, '/assets')
 const __images = path.join(__dirname, '/sass/default/img')
-const __js = path.join(__dirname, '/js')
 const __modules = path.join(__dirname, '/../node_modules')
-const __sass = path.join(__dirname, '/sass/default')
 const publicPath = path.join(__dirname, '../')
 const basePath = '/'
+
+const dependencies = require('./dependencies')
 
 module.exports = function (env) {
   return {
     entry: {
-      'js/app': [
-        __js + '/email-budget.js',
-        __js + '/email-message.js',
-        __js + '/main.js',
-        __js + '/policy.js',
-        __js + '/chart.js'
-      ],
-      'js/vendor': [
-        __modules + '/jquery/dist/jquery.js',
-        __modules + '/blazy/blazy.js',
-        __modules + '/headroom.js/dist/headroom.js',
-        __modules + '/nouislider/distribute/nouislider.js',
-        __modules + '/js-cookie/src/js.cookie.js',
-        __modules + '/reading-time/lib/reading-time.js',
-        __modules + '/timeago.js/dist/timeago.js',
-        __modules + '/chart.js/dist/Chart.bundle.js',
-        __modules + '/zooming/build/zooming.js'
-      ],
-      'css/style': [
-        __sass + '/import.scss'
-      ],
-      'css/vendor-style': [
-        __modules + '/animate.css/animate.css',
-        __modules + '/nouislider/distribute/nouislider.css',
-        __modules + '/material-design-icons/iconfont/material-icons.css'
-      ]
+      'js/app': dependencies.js.app,
+      'js/vendor': dependencies.js.vendor,
+      'css/style': dependencies.css.theme,
+      'css/vendor-style': dependencies.css.vendor
     },
     output: {
       path: __dist,
@@ -151,17 +129,7 @@ module.exports = function (env) {
           'npm run twig'
         ]
       }),
-      new webpack.ProvidePlugin({
-        $: 'jquery',
-        Blazy: 'blazy',
-        jQuery: 'jquery',
-        Chart: 'chart.js',
-        noUiSlider: 'nouislider',
-        Cookies: 'js-cookie/src/js.cookie.js',
-        timeago: 'timeago.js',
-        readingTime: 'reading-time/lib/reading-time.js',
-        Zooming: 'zooming'
-      }),
+      new webpack.ProvidePlugin(dependencies.js.provider),
       new BrowserSyncPlugin({
         host: 'localhost',
         port: 8000,
