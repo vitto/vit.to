@@ -45,13 +45,48 @@
             </li>
           </ul>
 
+          <hr class="hr">
+
           <div class="markdown">
             {{ contents }}
           </div>
+
+          <hr class="hr">
+
+          <canvas id="review-chart" width="100%" height="300"></canvas>
+
         </div>
       </article>
       {% include 'partials/cookie-policy.twig' %}
     </main>
+
     {% include 'partials/assets.twig' %}
+
+    <script type="text/javascript">
+      var ctx = document.getElementById('review-chart')
+      var review = {{ review | json_encode() }}
+      var labels = []
+      var votes = []
+
+      for (var i = 0; i < review.length; i += 1) {
+        labels.push(review[i].name)
+        votes.push(review[i].vote)
+      }
+
+      var data = {
+          labels: labels,
+          datasets: [{
+              data: votes
+          }]
+      }
+
+      console.log(Chart.defaults.radar)
+
+      var radarChart = new Chart(ctx, {
+          type: 'radar',
+          data: data,
+          options: Chart.defaults.radar
+      })
+    </script>
   </body>
 </html>

@@ -1,0 +1,5 @@
+@include block ('hr') {
+  border: 0;
+  border-bottom: $border;
+  margin: s(2) 0;
+}

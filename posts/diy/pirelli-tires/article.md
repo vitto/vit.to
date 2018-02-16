@@ -1,11 +1,11 @@
 ---
-title: Pirelli tires
-furniture: Coffee table
+collection: diy
 date: 2017-08-22T21:57:15+02:00
+furniture: Coffee table
 price: 610
 sold_out: true
-collection: diy
 store: http://etsy.com/itemurl
+title: Pirelli tires
 view: diy.twig
 ---
 

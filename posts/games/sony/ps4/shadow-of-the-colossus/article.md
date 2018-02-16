@@ -1,12 +1,12 @@
 ---
-title: Shadow of the Colossus
-date: 2018-02-15T23:10
 collection: games
-platform: PS4
+date: 2018-02-15T23:10
 manufacturer: Sony
+platform: PS4
+title: Shadow of the Colossus
 view: review.twig
 
-reivew:
+review:
   -
     name: Telecamera
     vote: 6
