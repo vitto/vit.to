@@ -126,7 +126,7 @@ module.exports = function (env) {
       new WebpackShellPlugin({
         onBuildExit: [
           'npm run source',
-          'npm run twig'
+          'npm run twig-no-drafts'
         ]
       }),
       new webpack.ProvidePlugin(dependencies.js.provider),

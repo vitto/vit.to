@@ -1,0 +1,54 @@
+@include block ('post') {
+
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @include element ('picture') {
+    align-items: flex-end;
+    background-color: transparent;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+    overflow: hidden;
+    position: relative;
+  }
+
+  @include element ('image') {
+    height: auto;
+    width: 100%;
+  }
+
+  @include element ('title') {
+    @extend %title;
+    display: inline-block;
+  }
+
+  @include element ('text') {
+    @extend %text;
+    display: block;
+    transition: color $hover-ease;
+  }
+
+  @include element ('details') {
+    border-top: $post--dedails--border-top;
+    padding-bottom: s(1);
+    padding-top: s(1);
+    transition: border-color $hover-ease;
+  }
+
+  @include element ('icon') {
+    margin-right: s(0.25);
+    transition: color $hover-ease;
+  }
+
+  @include element ('infos') {
+    align-items: center;
+    display: flex;
+  }
+
+  @include element ('vote') {
+    margin-left: s(0.25);
+  }
+}

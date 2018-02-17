@@ -1,8 +1,8 @@
 @include block ('policy-container') {
-  display: none;
+  display: none !important;
 
   @include modifier ('visible') {
-    display: block;
+    display: block !important;
   }
 
   @include modifier ('padded') {

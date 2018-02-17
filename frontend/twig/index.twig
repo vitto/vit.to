@@ -12,21 +12,21 @@
       {% include 'partials/aside__footer.twig' %}
     </aside>
     <main class="main">
-      <section class="crafts">
-        <div id="policy-message" class="crafts__item crafts__item--policy policy-container">
+      <section class="posts">
+        <div id="policy-message" class="posts__item posts__item--policy policy-container">
           {% include 'partials/policy.twig' with { bordered: true } %}
         </div>
-        {% for item in metadata.collections.games %}
-          <a class="crafts__item" href="{{ item.path }}">
-            {% include 'partials/games/piece.twig' with { item: item } %}
+        {% for item in metadata.collections.reviews %}
+          <a class="posts__item" href="{{ item.path }}">
+            {% include 'partials/reviews/post.twig' with { item: item } %}
           </a>
         {% endfor %}
         {% for item in metadata.collections.diy %}
-          <a class="crafts__item" href="{{ item.path }}">
-            {% include 'partials/diy/piece.twig' with { item: item } %}
+          <a class="posts__item" href="{{ item.path }}">
+            {% include 'partials/diy/post.twig' with { item: item } %}
           </a>
         {% endfor %}
-        <div class="crafts__call">
+        <div class="posts__call">
           {% include 'partials/email-message.twig' %}
         </div>
       </section>

@@ -2,12 +2,14 @@
 title: About
 view: about.twig
 date: 2017-08-22T21:58:12+02:00
-bio: Ciao, sono Vittorio, creo pezzi unici di arte DIY con l'intenzione di renderli belli, funzionali e sicuri.
+bio: >
+  Ciao, sono Vittorio, creo pezzi unici di arte DIY con l'intenzione di renderli belli, funzionali e sicuri.<br><br>
+  Sono appassionato di video giochi e pubblico le mie recensioni su questo sito per motivarmi a giocarne pochi e fino in fondo.
 contact:
-  venue: Produco a Forlì, Emilia-Romagna, Italy
+  venue: Lavoro come sviluppatore frontend e interaction designer a ideato srl, Cesena, Emilia-Romagna, Italy
   phone: +39 320 1852742
   email: vittorivittorio@gmail.com
-credits: Scarica il <a href="https://github.com/vitto/vit.to" target="_blank">codice sorgente</a>di questo sito
+credits: Scarica il <a href="https://github.com/vitto/vit.to" target="_blank">codice sorgente</a> di questo sito
 ---
 
 ## Emozione prima di tutto

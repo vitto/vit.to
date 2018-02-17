@@ -1,0 +1,53 @@
+@include block ('publish-status') {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: opacity-blink;
+  background-color: $color-star-dust;
+  border-radius: $radius-normal;
+  color: $color-white;
+  font-size: 8px;
+  padding: s(0.125) s(0.25);
+  position: absolute;
+  right: s(1);
+  text-transform: uppercase;
+  top: s(1);
+
+  @include modifier ('article') {
+    animation-name: pulse;
+    background-color: $color-chicago;
+    font-size: inherit;
+    position: static;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.25;
+  }
+
+  100% {
+    opacity: 0.25;
+  }
+}
+
+@keyframes opacity-blink {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

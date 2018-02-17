@@ -3,13 +3,13 @@
   {% include 'partials/head.twig' %}
   <body class="body">
     {% include 'partials/header-mobile.twig' %}
-    {% include 'partials/games/footer-mobile.twig' %}
+    {% include 'partials/reviews/footer-mobile.twig' %}
     <aside class="aside">
       <div class="aside__header">
         {% include 'partials/aside__header.twig' %}
         {% include 'partials/aside__buttons.twig' %}
       </div>
-      {% include 'partials/games/aside__preview.twig' %}
+      {% include 'partials/reviews/aside__preview.twig' %}
       {% include 'partials/aside__footer.twig' %}
     </aside>
     <main class="main">
@@ -26,6 +26,13 @@
             {{ title }}
           </h1>
           <ul class="article__infos">
+            {% if draft is defined %}
+              <li class="article__info">
+                <div class="publish-status publish-status--article">
+                  Draft
+                </div>
+              </li>
+            {% endif %}
             <li class="article__info">
               <i class="article__icon material-icons">videogame_asset</i>
               <span class="article__detail">
@@ -126,7 +133,7 @@
                   {{ finalVote }}
                 </div>
                 <div class="review-vote__total">
-                  / 100
+                  su 100
                   <div class="review-badge review-badge--{{ reviewVerdict }}">
                     <i class="material-icons review-badge__icon">{{ reviewVerdictIcon }}</i>
                     {{ reviewVerdictPhrase }}
@@ -139,13 +146,13 @@
                   <div class="pros-vs-cons__title">
                     Pros
                   </div>
-                  {% include 'partials/games/review-pros.twig' with { 'review': review, 'pros': pros } %}
+                  {% include 'partials/reviews/review-pros.twig' with { 'review': review, 'pros': pros } %}
                 </div>
                 <div class="pros-vs-cons__column">
                   <div class="pros-vs-cons__title">
                     Cons
                   </div>
-                    {% include 'partials/games/review-cons.twig' with { 'review': review, 'cons': cons } %}
+                    {% include 'partials/reviews/review-cons.twig' with { 'review': review, 'cons': cons } %}
                 </div>
               </div>
             </div>
@@ -158,6 +165,6 @@
 
     {% include 'partials/assets.twig' %}
 
-    {% include 'partials/games/chart.twig' %}
+    {% include 'partials/reviews/chart.twig' %}
   </body>
 </html>

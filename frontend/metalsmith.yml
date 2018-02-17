@@ -29,8 +29,8 @@ collections:
     pattern: ../posts/diy/*.md
     sortBy: 'date'
     reverse: true
-  games:
-    pattern: ../posts/games/**/*.md
+  reviews:
+    pattern: ../posts/reviews/**/*.md
     sortBy: 'date'
     reverse: true
 markdown:
@@ -48,9 +48,9 @@ permalinks:
       date: YYYY-MM-DD
     -
       match:
-        collection: games
+        collection: reviews
       relative: false
-      pattern: 'games/:manufacturer/:platform/:title'
+      pattern: 'reviews/:manufacturer/:platform/:title'
       date: YYYY-MM-DD
 twig:
   directory: twig

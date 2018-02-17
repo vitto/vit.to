@@ -7,7 +7,6 @@ $(function () {
   var $inputEmail = $('#input-email')
   var $inputName = $('#input-name')
   var $inputNotes = $('#input-notes')
-  var $inputBudget = $('#input-budget')
   var $statusError = $('.modal__body:nth-child(2)')
   var $statusSent = $('.modal__body:nth-child(1)')
   var emailIsValid = false
@@ -122,7 +121,6 @@ $(function () {
       base_item_name: $form.data('item-title'),
       base_item_price: $form.data('item-price') + '€',
       base_item_url: $form.data('item-url'),
-      user_budget: $.trim($inputBudget.val()),
       user_email: $.trim($inputEmail.val()),
       user_full_name: $.trim($inputName.val()),
       user_name: $.trim($inputName.val()).split(' ')[0],
@@ -135,7 +133,6 @@ $(function () {
 
     emailjs.send(serviceId, templateId, params).then(
       function (response) {
-        $inputBudget.val('')
         $inputEmail.val('')
         $inputName.val('')
         $inputNotes.val('')

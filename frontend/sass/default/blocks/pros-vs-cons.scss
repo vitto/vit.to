@@ -4,9 +4,17 @@
   display: flex;
   margin-top: s(1);
 
+  @include media ('<tablet-small') {
+    flex-wrap: wrap;
+  }
+
   @include element ('column') {
     flex-basis: 0;
     flex-grow: 1;
+
+    @include media ('<tablet-small') {
+      flex-basis: auto;
+    }
   }
 
   @include element ('title') {

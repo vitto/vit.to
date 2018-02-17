@@ -1,0 +1,40 @@
+<article class="post">
+  <div class="post__picture">
+    {% if item.draft is defined %}
+      <div class="publish-status">
+        Draft
+      </div>
+    {% endif %}
+    <img class="post__image b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="{{ item.path }}/retail.jpg" alt="">
+  </div>
+  <div class="post__details">
+    <h2 class="post__title">
+      {{ item.title }}
+    </h2>
+    <div class="post__infos">
+      <i class="post__icon material-icons">videogame_asset</i>
+      <h4 class="post__text">
+        {{ item.manufacturer }} {{ item.platform }}
+      </h4>
+      <div class="post__vote">
+        {% set finalVote = 0 %}
+        {% for review in item.review %}
+        {% set finalVote = finalVote + review.vote %}
+        {% endfor %}
+        {% set finalVote = (finalVote / item.review|length)|round %}
+
+        {% if finalVote >= 90 %}
+          {% set reviewVerdict = 'positive' %}
+        {% elseif finalVote < 70 %}
+          {% set reviewVerdict = 'negative' %}
+        {% else %}
+          {% set reviewVerdict = 'average' %}
+        {% endif %}
+
+        <div class="post-vote post-vote--{{ reviewVerdict }}">
+          {{ finalVote }}
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

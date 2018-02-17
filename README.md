@@ -4,20 +4,20 @@ Test my website at https://vitto.github.io/vit.to/ or http://vit.to
 
 ### Develop
 
-To watch code during development
+To watch code during development:
 
 ```
-npm run watch
+npm run dev
 ```
 
 The watcher will also let you to test pages via HTTP: http://localhost:8000/
 
 ### Deploy
 
-Deploy the `dist` folder into the `gh-pages` branch
+Deploy the `dist` folder into the `gh-pages` branch:
 
 ```
-npm run build && npm run deploy
+npm run prod && npm run deploy
 ```
 
 The deploy script is based on this gist:
