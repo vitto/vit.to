@@ -1,4 +1,5 @@
 @include block ('markdown') {
+
   margin-bottom: s(1);
   margin-top: s(1);
 
@@ -64,6 +65,17 @@
     border: 0;
     border-top: $markdown--border-top;
     margin: s(2) 0;
+  }
+
+  a {
+    @extend %underline;
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      @extend %underline-visible;
+      color: $color-chicago;
+    }
   }
 
   @include media ('<tablet-small') {

@@ -9,17 +9,10 @@
         {% include 'partials/aside__buttons.twig' %}
       </div>
 
-      {% if bio %}
-        <div class="aside__info">
-          <h2 class="aside__title">Bio</h2>
-          <p class="aside__text">{{ bio }}</p>
-        </div>
-      {% endif %}
-
       {% if contact %}
         <div class="aside__info">
           <h2 class="aside__title">Contact</h2>
-          <p class="aside__text">{{ contact.venue }}</p>
+          <p class="aside__text">{{ contact.text }}</p>
           <p class="aside__text">{{ contact.phone }}</p>
           <p class="aside__text">
             <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>

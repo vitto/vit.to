@@ -59,16 +59,43 @@
   }
 }
 
+$link-underline: mix($color-chicago, $color-desert-storm, 25%);
+
+%underline {
+  display: inline-block;
+  text-shadow: 1px 1px 0 $color-desert-storm, -1px 1px 0 $color-desert-storm, 0 1px 0 $color-desert-storm;
+
+  &::after {
+    animation-duration: 0.75s;
+    animation-iteration-count: infinite;
+    animation-name: none;
+    background-color: $link-underline;
+    border-radius: 2px;
+    content: '';
+    display: block;
+    height: 2px;
+    margin-top: -3px;
+    transition: background-color 0.5s ease('out-expo');
+  }
+}
+
+%underline-visible {
+  &::after {
+    animation-name: underline-blink;
+  }
+}
+
 @keyframes underline-blink {
+
   0% {
-    background-color: $color-mercury;
+    background-color: $link-underline;
   }
 
   50% {
-    background-color: mix($color-mercury, $text-color, 75%);
+    background-color: $color-chicago;
   }
 
   100% {
-    background-color: $color-mercury;
+    background-color: $link-underline;
   }
 }

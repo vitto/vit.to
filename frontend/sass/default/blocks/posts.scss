@@ -80,6 +80,12 @@
     transition: background-color $hover-ease;
     width: 33.3333%;
 
+    &:link {
+      .post__vote {
+        display: none;
+      }
+    }
+
     @include media ('<=desktop-small') {
       width: 50%;
     }
