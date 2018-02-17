@@ -1,0 +1,19 @@
+@include block ('review-chart') {
+
+  $background: $color-white;
+  $background-mobile: $color-desert-storm;
+
+  align-items: center;
+  background-color: $background;
+  border-radius: $radius-high 0 $radius-high $radius-high;
+  padding: s(1);
+  width: 100%;
+
+  @include media ('<=tablet-small') {
+    background-color: $background-mobile;
+  }
+
+  @include media ('<tablet-small') {
+    background-color: $background;
+  }
+}

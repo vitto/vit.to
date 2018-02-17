@@ -1,0 +1,16 @@
+@include block ('pros-vs-cons') {
+
+  $title-color: $color-chicago;
+  display: flex;
+  margin-top: s(1);
+
+  @include element ('column') {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+
+  @include element ('title') {
+    color: $title-color;
+    font-weight: 600;
+  }
+}

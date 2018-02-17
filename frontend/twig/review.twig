@@ -47,13 +47,109 @@
 
           <hr class="hr">
 
-          <div class="markdown">
+          <div class="markdown markdown--no-border">
             {{ contents }}
           </div>
 
           <hr class="hr">
 
-          <canvas id="review-chart" width="100%" height="300"></canvas>
+          <div class="review">
+            <div class="review__chart">
+              <div class="review-chart">
+                <canvas id="review-chart" width="100%" height="auto"></canvas>
+              </div>
+            </div>
+            <div class="review__votes">
+              {% set finalVote = 0 %}
+              {% for item in review %}
+                {% set finalVote = finalVote + item.vote %}
+              {% endfor %}
+              {% set finalVote = (finalVote / review|length)|round %}
+
+              {% if finalVote >= 90 %}
+                {% set reviewVerdict = 'positive' %}
+              {% elseif finalVote < 70 %}
+                {% set reviewVerdict = 'negative' %}
+              {% else %}
+                {% set reviewVerdict = 'average' %}
+              {% endif %}
+
+              {% if finalVote >= 95 %}
+                {% set reviewVerdictIcon = 'school' %}
+              {% elseif finalVote >= 90 %}
+                {% set reviewVerdictIcon = 'favorite' %}
+              {% elseif finalVote >= 80 %}
+                {% set reviewVerdictIcon = 'star' %}
+              {% elseif finalVote >= 70 %}
+                {% set reviewVerdictIcon = 'thumb_up' %}
+              {% elseif finalVote >= 60 %}
+                {% set reviewVerdictIcon = 'sentiment_neutral' %}
+              {% elseif finalVote >= 40 %}
+                {% set reviewVerdictIcon = 'thumb_down' %}
+              {% elseif finalVote >= 20 %}
+                {% set reviewVerdictIcon = 'do_not_disturb' %}
+              {% else %}
+                {% set reviewVerdictIcon = 'pan_tool' %}
+              {% endif %}
+
+              {% if finalVote >= 95 %}
+                {% set reviewVerdictPhrase = 'Capolavoro' %}
+              {% elseif finalVote >= 90 %}
+                {% set reviewVerdictPhrase = 'Bellissimo' %}
+              {% elseif finalVote >= 85 %}
+                {% set reviewVerdictPhrase = 'Ottimo' %}
+              {% elseif finalVote >= 80 %}
+                {% set reviewVerdictPhrase = 'Bello' %}
+              {% elseif finalVote >= 70 %}
+                {% set reviewVerdictPhrase = 'Non male' %}
+              {% elseif finalVote >= 60 %}
+                {% set reviewVerdictPhrase = 'Carino' %}
+              {% elseif finalVote >= 50 %}
+                {% set reviewVerdictPhrase = 'Niente di che' %}
+              {% elseif finalVote >= 40 %}
+                {% set reviewVerdictPhrase = 'Brutto' %}
+              {% elseif finalVote >= 30 %}
+                {% set reviewVerdictPhrase = 'Orribile' %}
+              {% elseif finalVote >= 20 %}
+                {% set reviewVerdictPhrase = 'Osceno' %}
+              {% elseif finalVote >= 10 %}
+                {% set reviewVerdictPhrase = 'Fa cagare' %}
+              {% else %}
+                {% set reviewVerdictPhrase = 'Fa cagarissimo' %}
+              {% endif %}
+
+              <div class="review-vote review-vote--{{ reviewVerdict }}">
+                <div class="review-vote__title">
+                  Verdetto
+                </div>
+                <div class="review-vote__value">
+                  {{ finalVote }}
+                </div>
+                <div class="review-vote__total">
+                  / 100
+                  <div class="review-badge review-badge--{{ reviewVerdict }}">
+                    <i class="material-icons review-badge__icon">{{ reviewVerdictIcon }}</i>
+                    {{ reviewVerdictPhrase }}
+                  </div>
+                </div>
+              </div>
+
+              <div class="pros-vs-cons">
+                <div class="pros-vs-cons__column">
+                  <div class="pros-vs-cons__title">
+                    Pros
+                  </div>
+                  {% include 'partials/games/review-pros.twig' with { 'review': review, 'pros': pros } %}
+                </div>
+                <div class="pros-vs-cons__column">
+                  <div class="pros-vs-cons__title">
+                    Cons
+                  </div>
+                    {% include 'partials/games/review-cons.twig' with { 'review': review, 'cons': cons } %}
+                </div>
+              </div>
+            </div>
+          </div>
 
         </div>
       </article>
@@ -62,31 +158,6 @@
 
     {% include 'partials/assets.twig' %}
 
-    <script type="text/javascript">
-      var ctx = document.getElementById('review-chart')
-      var review = {{ review | json_encode() }}
-      var labels = []
-      var votes = []
-
-      for (var i = 0; i < review.length; i += 1) {
-        labels.push(review[i].name)
-        votes.push(review[i].vote)
-      }
-
-      var data = {
-          labels: labels,
-          datasets: [{
-              data: votes
-          }]
-      }
-
-      console.log(Chart.defaults.radar)
-
-      var radarChart = new Chart(ctx, {
-          type: 'radar',
-          data: data,
-          options: Chart.defaults.radar
-      })
-    </script>
+    {% include 'partials/games/chart.twig' %}
   </body>
 </html>

@@ -16,14 +16,14 @@
         <div id="policy-message" class="crafts__item crafts__item--policy policy-container">
           {% include 'partials/policy.twig' with { bordered: true } %}
         </div>
-        {% for item in metadata.collections.diy %}
-          <a class="crafts__item" href="{{ item.path }}">
-            {% include 'partials/diy/piece.twig' with { item: item } %}
-          </a>
-        {% endfor %}
         {% for item in metadata.collections.games %}
           <a class="crafts__item" href="{{ item.path }}">
             {% include 'partials/games/piece.twig' with { item: item } %}
+          </a>
+        {% endfor %}
+        {% for item in metadata.collections.diy %}
+          <a class="crafts__item" href="{{ item.path }}">
+            {% include 'partials/diy/piece.twig' with { item: item } %}
           </a>
         {% endfor %}
         <div class="crafts__call">

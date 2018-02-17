@@ -1,0 +1,31 @@
+@include block ('list') {
+
+  $pros: $color-feijoa;
+  $cons: $color-burning-sand;
+
+  margin: s(1) 0;
+  padding: 0;
+
+  @include element ('item') {
+    align-items: start;
+    display: flex;
+    list-style-type: none;
+  }
+
+  @include element ('icon') {
+    margin-right: s(0.25);
+
+    @include modifier ('pros') {
+      color: $pros;
+    }
+
+    @include modifier ('cons') {
+      color: $cons;
+    }
+  }
+
+  @include element ('text') {
+    font-size: 14px;
+    margin-top: 3px;
+  }
+}

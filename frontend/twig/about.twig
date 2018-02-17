@@ -72,8 +72,8 @@
           {{ contents }}
         </article>
         {% include 'partials/email-message.twig' with { isAbout: true } %}
+        {% include 'partials/cookie-policy.twig' %}
       </div>
-      {% include 'partials/cookie-policy.twig' %}
     </main>
     {% include 'partials/assets.twig' %}
   </body>

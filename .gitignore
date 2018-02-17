@@ -3,3 +3,4 @@ frontend/source
 frontend/build
 frontend/assets
 *.log.*
+*.log

@@ -28,9 +28,11 @@ collections:
   diy:
     pattern: ../posts/diy/*.md
     sortBy: 'date'
+    reverse: true
   games:
-    pattern: ../posts/games/*.md
+    pattern: ../posts/games/**/*.md
     sortBy: 'date'
+    reverse: true
 markdown:
   smartypants: true
   gfm: true

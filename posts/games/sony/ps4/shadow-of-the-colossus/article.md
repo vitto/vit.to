@@ -8,20 +8,32 @@ view: review.twig
 
 review:
   -
-    name: Telecamera
-    vote: 6
-  -
-    name: Controlli
-    vote: 5
+    name: Atmosfera
+    vote: 95
   -
     name: Effetti visivi
-    vote: 10
-  -
-    name: Atmosfera
-    vote: 10
+    vote: 90
   -
     name: Animazioni
-    vote: 9
+    vote: 90
+  -
+    name: Level design
+    vote: 85
+  -
+    name: Filmati
+    vote: 80
+  -
+    name: Storia
+    vote: 80
+  -
+    name: Telecamera
+    vote: 60
+  -
+    name: Controlli
+    vote: 60
+
+cons:
+  - Il contesto della trama parte un po' debole
 
 ---
 

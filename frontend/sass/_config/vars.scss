@@ -3,18 +3,25 @@ $font-family-sans: -apple-system, BlinkMacSystemFont, helvetica, arial, sans-ser
 $font-family-serif: georgia, 'times new roman', times, serif;
 $font-family-monospace: menlo, monaco, 'courier new', monospace;
 
-$color-white: #fff;
-$color-desert-storm: hsl(40, 23%, 95%);
-$color-mercury: #e9e8e6;
-$color-star-dust: #a5a4a3;
+$color-white: rgb(255, 255, 255);
+$color-desert-storm: rgb(245, 243, 239);
+$color-mercury: rgb(233, 232, 230);
+$color-star-dust: rgb(164, 164, 163);
 $color-gray: mix(#fff, #5b5a57, 35%);
-$color-chicago: #5b5a57;
-$color-picton-blue: #37b2e7;
-$color-cinnabar: #e74737;
+$color-chicago: rgb(91, 90, 86);
+$color-picton-blue: rgb(55, 178, 231);
+$color-cinnabar: rgb(231, 71, 55);
+$color-ripe-lemon: rgb(242, 213, 19);
+$color-christi: rgb(115, 187, 62);
+$color-feijoa: rgb(157, 204, 123);
+$color-burning-sand: rgb(235, 160, 129);
+$color-coral: rgb(247, 117, 63);
 
 $color-info: $color-picton-blue;
 $color-error: $color-cinnabar;
 
-
 $solid-shadow: 0 0 0 1px rgba(0, 0, 0, 0.025), 0 0 4px rgba(0, 0, 0, 0.1);
 $hover-ease: 0.5s ease('out-expo');
+
+$radius-high: 8px;
+$radius-normal: 4px;

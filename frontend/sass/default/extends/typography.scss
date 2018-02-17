@@ -17,6 +17,10 @@
   font-size: 12px;
   font-weight: 200;
 
+  @include media ('<=tablet-large') {
+    font-weight: 400;
+  }
+
   &::first-letter {
     text-transform: uppercase;
   }

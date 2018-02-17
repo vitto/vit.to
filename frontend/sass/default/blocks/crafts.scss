@@ -70,7 +70,7 @@
   }
 
   @include element ('item') {
-    align-items: stretch;
+    align-items: flex-start;
     border-radius: $craft--radius;
     color: inherit;
     cursor: pointer;

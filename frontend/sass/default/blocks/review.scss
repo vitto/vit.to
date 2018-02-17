@@ -1,0 +1,28 @@
+@include block ('review') {
+  display: flex;
+  margin: 0 s(-0.5) s(2);
+  width: auto;
+
+  @include element ('chart') {
+    display: flex;
+    padding: s(0.5);
+    width: 50%;
+  }
+
+  @include element ('votes') {
+    padding: s(0.5);
+    width: 50%;
+  }
+
+  @include media ('<tablet-small') {
+    flex-wrap: wrap;
+
+    @include element ('chart') {
+      width: 100%;
+    }
+
+    @include element ('votes') {
+      width: 100%;
+    }
+  }
+}

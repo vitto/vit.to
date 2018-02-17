@@ -1,0 +1,50 @@
+@include block ('review-vote') {
+
+  background-color: $color-chicago;
+  border-radius: 0 $radius-high $radius-high 0;
+  display: flex;
+  margin-left: s(-1);
+
+  @include media ('<=tablet-small') {
+    border-radius: $radius-high;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  @include modifier ('positive') {
+    @include element ('value') {
+      color: $color-feijoa;
+    }
+  }
+
+  @include modifier ('average') {
+    @include element ('value') {
+      color: $color-ripe-lemon;
+    }
+  }
+
+  @include modifier ('negative') {
+    @include element ('value') {
+      color: $color-coral;
+    }
+  }
+
+  @include element ('title') {
+    padding: s(0.5);
+  }
+
+  @include element ('value') {
+    color: $text-color;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+    padding: s(0.5) 0;
+  }
+
+  @include element ('total') {
+    color: $text-color;
+    font-size: 16px;
+    font-weight: 700;
+    padding: s(0.5) s(0.25);
+  }
+}
