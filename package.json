@@ -75,6 +75,7 @@
     "js-cookie": "^2.1.4",
     "material-design-icons": "^3.0.1",
     "metalsmith-drafts": "0.0.1",
+    "metalsmith-excerpts": "^1.2.0",
     "nouislider": "^10.1.0",
     "reading-time": "^1.1.0",
     "timeago.js": "^3.0.2",

@@ -5,8 +5,8 @@ metadata:
   lang: it
   locale: it_IT
   repo: https://github.com/vitto/vit.to
-  title_append: '@ vit.to'
-  title: Vittorio Vittori, DIY luxury crafts maker
+  title: Vittorio Vittori
+  description: Interaction desginer, frontend developer
   service:
     email_js:
       user_id: user_eswCclJ3zfAWR2RR4qapH

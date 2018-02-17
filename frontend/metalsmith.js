@@ -1,5 +1,6 @@
 const collections = require('metalsmith-collections')
 const drafts = require('metalsmith-drafts');
+const excerpts = require('metalsmith-excerpts');
 const faker = require('faker')
 const fs = require('fs')
 const markdown = require('metalsmith-markdown')
@@ -55,6 +56,7 @@ if (showDrafts) {
   .clean(m.clean)
   .use(collections(m.collections))
   .use(markdown(m.markdown))
+  .use(excerpts())
   .use(permalinks(m.permalinks))
   .use(twig(m.twig))
   .use(sitemap(m.sitemap))
@@ -72,6 +74,7 @@ if (showDrafts) {
   .use(drafts())
   .use(collections(m.collections))
   .use(markdown(m.markdown))
+  .use(excerpts())
   .use(permalinks(m.permalinks))
   .use(twig(m.twig))
   .use(sitemap(m.sitemap))
