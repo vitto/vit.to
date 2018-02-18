@@ -51,6 +51,13 @@
     align-items: center;
     display: flex;
     margin-right: s(1);
+
+    @include modifier ('speech') {
+      @include media ('<tablet-small') {
+        margin-top: s(0.5);
+        width: 100%;
+      }
+    }
   }
 
   @include element ('icon') {

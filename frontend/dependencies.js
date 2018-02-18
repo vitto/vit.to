@@ -19,6 +19,7 @@ module.exports = {
       path.join(__js, '/email-budget.js'),
       path.join(__js, '/email-message.js'),
       path.join(__js, '/main.js'),
+      path.join(__js, '/read.js'),
       path.join(__js, '/policy.js')
     ],
     vendor: [

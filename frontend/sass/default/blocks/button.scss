@@ -59,6 +59,38 @@
     }
   }
 
+  @include modifier ('speech') {
+    background-color: $button--available--background;
+    color: $button--available--color;
+    height: 30px;
+
+    &:hover {
+      background-color: $button--available--background--hover;
+      color: $button--available--color--hover;
+    }
+
+    @include element ('icon') {
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+
+  @include modifier ('is-reading') {
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: pulse-reverse;
+
+    @include element ('icon') {
+      display: none;
+
+      &:nth-child(2) {
+        display: inline-block;
+        margin-right: s(0.5);
+      }
+    }
+  }
+
   @include modifier ('sold-out') {
     background-color: $button--sold-out--background;
     color: $button--sold-out--color;

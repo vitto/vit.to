@@ -47,9 +47,19 @@
     color: $article--text--color;
     font-size: 18px;
     font-weight: 300;
+    line-height: 1.45;
 
     & + p {
       margin-top: s(1);
+    }
+
+    a:first-child:last-child {
+      display: block;
+      width: 100%;
+
+      &::after {
+        display: none;
+      }
     }
 
   }

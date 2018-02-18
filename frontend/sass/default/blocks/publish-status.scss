@@ -20,35 +20,3 @@
     position: static;
   }
 }
-
-@keyframes pulse {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.25;
-  }
-
-  100% {
-    opacity: 0.25;
-  }
-}
-
-@keyframes opacity-blink {
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  75% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}

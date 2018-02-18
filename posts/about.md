@@ -3,7 +3,7 @@ title: About
 view: about.twig
 date: 2017-08-22T21:58:12+02:00
 contact:
-  text: Se sei interessato/a ad avere maggiori informazioni, non esitare a contattarmi
+  text: Se ti interessa avere qualche informazione in più, non esitare a contattarmi
   phone: +39 320 1852742
   email: vittorivittorio@gmail.com
 credits: Scarica il <a href="https://github.com/vitto/vit.to" target="_blank">codice sorgente</a> di questo sito

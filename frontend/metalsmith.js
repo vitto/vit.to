@@ -12,6 +12,7 @@ const robots = require('metalsmith-robots')
 const sitemap = require('metalsmith-sitemap')
 const twig = require('metalsmith-twig')
 const yaml = require('js-yaml')
+const pureText = require('metalsmith-pure-text');
 
 var renderer = new marked.Renderer()
 
@@ -57,6 +58,10 @@ if (showDrafts) {
   .use(collections(m.collections))
   .use(markdown(m.markdown))
   .use(excerpts())
+//   .use(pureText({
+//   pattern: ['**/*.html'],
+//   preserveLineBreaks: true
+// }))
   .use(permalinks(m.permalinks))
   .use(twig(m.twig))
   .use(sitemap(m.sitemap))
