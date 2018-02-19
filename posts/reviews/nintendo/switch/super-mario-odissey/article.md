@@ -15,10 +15,10 @@ review:
     name: Animazioni
     vote: 100
   -
-    name: Atmosfera
-    vote: 95
-  -
     name: Gameplay
+    vote: 100
+  -
+    name: Direzione
     vote: 95
   -
     name: Effetti visivi
@@ -28,12 +28,18 @@ review:
     vote: 95
   -
     name: Musiche
-    vote: 90
-  # -
-  #   name: Storia
-  #   vote: 85
+    vote: 95
+  -
+    name: Esplorazione
+    vote: 95
+  -
+    name: Storia
+    vote: 85
 
 pros:
+  - Cura certosina di ogni minimo dettaglio
+  - Design dell'interfaccia
+  - Incredibile varietà nel gameplay
   - Interfaccia impeccabile
 
 ---

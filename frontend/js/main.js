@@ -49,4 +49,6 @@ $(function () {
       $policyYear.text(thisYear)
     }
   }
+
+  $('a > img').parent().addClass('zoom-image')
 })

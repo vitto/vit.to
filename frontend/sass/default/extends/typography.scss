@@ -63,7 +63,7 @@ $link-underline: mix($color-chicago, $color-desert-storm, 25%);
 
 %underline {
   display: inline-block;
-  text-shadow: 1px 1px 0 $color-desert-storm, -1px 1px 0 $color-desert-storm, 0 1px 0 $color-desert-storm;
+  text-shadow: 1px 1px 0 $color-desert-storm, 0 1px 0 $color-desert-storm, -1px 1px 0 $color-desert-storm;
 
   &::after {
     animation-duration: 0.75s;

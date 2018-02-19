@@ -34,7 +34,7 @@ review:
   #   vote: 85
 
 pros:
-  - Interfaccia impeccabile
+  - Graficamente all'altezza di Super Mario Odissey
 
 ---
 

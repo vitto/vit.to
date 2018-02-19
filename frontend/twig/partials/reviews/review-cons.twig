@@ -14,10 +14,10 @@
   {% endif %}
 
   {% for item in review %}
-      {% if item.vote < 70 %}
+      {% if item.vote <= 75 %}
         {% set hasCons = true %}
         <li class="list__item">
-          {% if item.vote > 50 %}
+          {% if item.vote >= 70 %}
             <i class="material-icons list__icon list__icon--cons">clear</i>
           {% else %}
             <i class="material-icons list__icon list__icon--cons">warning</i>

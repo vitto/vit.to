@@ -1,4 +1,12 @@
 $(function () {
+  return;
+  if (typeof window.speechSynthesis === 'undefined') {
+    $('.button--speech').addClass('button--disabled');
+    return;
+  }
+
+  window.speechSynthesis.cancel()
+
   if ($('.markdown').length === 1) {
     var originalText = $('.button--speech .button__text').text()
     var pauseText = $('.button--speech').data('pause')
@@ -7,16 +15,15 @@ $(function () {
 
     var  t;
     speech.onstart = function (event) {
-        t = event.timeStamp;
+      t = event.timeStamp;
     }
 
     speech.onend = function (event) {
-        t = event.timeStamp-t;
-        $('.button--speech').removeClass('button--is-reading')
-        $('.button--speech').find('.button__text').text(originalText)
+      t = event.timeStamp-t;
+      $('.button--speech').removeClass('button--is-reading')
+      $('.button--speech').find('.button__text').text(originalText)
     }
 
-    window.speechSynthesis.cancel()
     window.speechSynthesis.speak(speech)
     window.speechSynthesis.pause()
 
@@ -31,7 +38,5 @@ $(function () {
         window.speechSynthesis.pause()
       }
     })
-  } else {
-    $('.button--speech').addClass('button--disabled');
   }
 })

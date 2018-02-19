@@ -13,6 +13,8 @@ credits: Scarica il <a href="https://github.com/vitto/vit.to" target="_blank">co
 
 Ciao, mi chiamo Vittorio, lavoro come interaction designer e sviluppatore frontend a [ideato srl](http://www.ideato.it), un'azienda che sviluppa piattaforme online con sede a Cesena, in Emilia-Romagna, Italia.
 
+Ho realizzato questo sito con lo scopo di realizzare ciò che ho appreso in questo periodo di attività.
+
 <div class="row row--margin-top">
 
   <div class="row__column">

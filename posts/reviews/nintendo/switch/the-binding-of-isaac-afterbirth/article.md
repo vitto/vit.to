@@ -21,7 +21,7 @@ review:
     name: Level design
     vote: 85
   -
-    name: Direzione artistica
+    name: Direzione
     vote: 85
   -
     name: Musiche

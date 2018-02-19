@@ -15,7 +15,7 @@ review:
     name: Animazioni
     vote: 100
   -
-    name: Atmosfera
+    name: Direzione
     vote: 95
   -
     name: Gameplay

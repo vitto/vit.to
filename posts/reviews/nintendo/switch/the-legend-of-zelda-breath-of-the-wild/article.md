@@ -18,7 +18,7 @@ review:
     name: Segreti
     vote: 100
   -
-    name: Atmosfera
+    name: Direzione
     vote: 100
   -
     name: Level design
@@ -60,7 +60,7 @@ Fin dai primi istanti si ha la sensazione di essere all'interno di un lungometra
 
 Oltre a riprendere visivamente opere come Princess Mononoke, il motore proprietario di Nintendo rappresenta le ambientazioni con l'effetto [En Plain Air][youtube-epa], come detto all'E3 da [Artsy Omni][artsy].
 
-Si avverte il senso di un modo misterioso e sacro, di una semplicità visiva che nasconde una grande complessità strutturale, grazie anche al motore fisico e a come il team è riuscito ad integrarlo con le meccaniche di gioco.
+Si avverte il senso di un mondo misterioso e sacro, di una semplicità visiva che nasconde una grande complessità strutturale, grazie anche al motore fisico e a come il team è riuscito ad integrarlo con le meccaniche di gioco.
 
 [
   ![Zelda e Link a cavallo](zelda-e-link-a-cavallo.jpg)
@@ -84,7 +84,7 @@ I biomi delle aree di gioco sono suddivisi dai classici fattori come geologia, f
   ![In alcune aree è opportuno riscaldarsi durante la notte](come-accendere-fuoco-tenere-link-caldo.jpg)
 ](come-accendere-fuoco-tenere-link-caldo.jpg)
 
-Mi ha colpito moltissimo la possibilità di scalare la stragrande maggioranza di superfici, infatti è possibile arrivare praticamente ovunque, l'importante è avere abbastanza forza residua, altrimenti converrà tornare quando avremo le risorse per superare l'ostacolo. In questo modo il mondo risulta colmo di posti che possiamo raggiungere ma che siamo costretti a lasciare li per poter tornare successivamente, riusciremo a ricordarcene? Molto probabilmente no, so che ho lasciato indietro molte aree e non sempre ne ricordo la posizione esatta.
+Mi ha colpito moltissimo la possibilità di scalare la stragrande maggioranza di superfici, infatti è possibile arrivare praticamente ovunque, l'importante è avere abbastanza forza residua, altrimenti converrà tornare una volta acquisite le risorse sufficienti a superare l'ostacolo. In questo modo il mondo risulta colmo di posti che possiamo raggiungere ma che siamo costretti a lasciare li per poter tornare successivamente, riusciremo a ricordarcene? Molto probabilmente no, so che ho lasciato indietro molte aree e non sempre ne ricordo la posizione esatta.
 
 ### Segreti
 
@@ -94,7 +94,7 @@ Ad oggi, dubito che esista un gioco che possa offrire un così vasto numero di s
   ![Un Korok dopo essere stato scovato](korok-trovato.jpg)
 ](korok-trovato.jpg)
 
-Non sono solo questi i segreti di Breath of the Wild, ce ne sono di ogni genere, dai sacrari, i draghi erranti, i set di armature, le armi, i cavalli, in pratica ogni cosa è fatta per essere scoperta e mai realmente necessaria per ultimare il gioco, la quest principale di per se non è particolarmente lunga, è il perdersi in questo meraviglioso mondo, così colmo di dettagli che ci fa vivere la vera essenza di come è stato pensato.
+Non sono solo questi i segreti di Breath of the Wild, ce ne sono di ogni genere, dai sacrari, i draghi erranti, i set di armature, le armi, i cavalli, le oasi delle fate, in pratica ogni cosa è fatta per essere scoperta e mai realmente necessaria per ultimare il gioco, la quest principale di per se non è particolarmente lunga, è il perdersi in questo meraviglioso mondo, così colmo di dettagli che ci fa vivere la vera essenza di come è stato pensato.
 
 [
   ![Uno dei draghi che si possono incontrare durante l'avventura](uno-dei-draghi-incontrati.jpg)
@@ -103,7 +103,7 @@ Non sono solo questi i segreti di Breath of the Wild, ce ne sono di ogni genere,
 
 ### Combattimenti
 
-Lo standard così alto di Breath of the Wild è presente in ogni aspetto del gioco da rendere meno interessanti dettagli che in altri giochi sarebbero elementi di grande rilevanza.
+Anche un album come [Dark Side of the Moon][pink] ha per chi l'ascolta una parte più interessante, nonostante sia considerato uno degli album più importanti del 900, non può esistere un album dove amiamo alla stessa maniera ogni canzone. Così è anche per **Breath of the Wild**, l'aspetto che forse mi ha colpito meno sono i combattimenti
 
 [
   ![Scontro con una grande roccia Talus](talus.jpg)
@@ -111,5 +111,6 @@ Lo standard così alto di Breath of the Wild è presente in ogni aspetto del gio
 
 [artsy]: https://twitter.com/artsyomni
 [breath]: http://www.nintendo.it/Giochi/Nintendo-Switch/The-Legend-of-Zelda-Breath-of-the-Wild-1173609.html
+[pink]: https://it.wikipedia.org/wiki/The_Dark_Side_of_the_Moon
 [switch]: https://www.nintendo.com/switch/
 [youtube-epa]: https://youtu.be/sf4gtlM0mYs?t=1m51s

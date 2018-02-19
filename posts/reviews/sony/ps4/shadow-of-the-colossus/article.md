@@ -9,33 +9,45 @@ view: review.twig
 
 review:
   -
-    name: Atmosfera
-    vote: 95
+    name: Direzione
+    vote: 100
   -
     name: Effetti visivi
-    vote: 90
-  -
-    name: Animazioni
-    vote: 90
+    vote: 100
   -
     name: Level design
-    vote: 85
+    vote: 100
   -
-    name: Filmati
-    vote: 80
+    name: Musiche
+    vote: 95
+  -
+    name: Animazioni
+    vote: 95
   -
     name: Storia
-    vote: 80
+    vote: 95
   -
-    name: Telecamera
-    vote: 60
+    name: Filmati
+    vote: 85
   -
     name: Controlli
-    vote: 60
+    vote: 75
+  -
+    name: Telecamera
+    vote: 65
+
+pros:
+  - Evocativo come pochi
+  - Le ambientazioni schiacciano giochi simili a mani basse
+  - Un netto gioco d'autore
 
 cons:
-  - Il contesto della trama parte un po' debole
+  - Controlli non particolarmente raffinati
+  - Filmati poco immersivi a differenza dei momenti in gioco
+  - Telecamera introversa, regala momenti magici e momenti frustranti
 
 ---
+
+
 
 Ciaone di articolo, prova di un [link qualsiasi](http://www.google.com) per vedere se funge. C'ho messo un sacco de testo per vedere come si comporta con un sacco de testo visto che dovrei testarlo anche su mobbbile.
