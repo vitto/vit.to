@@ -29,7 +29,6 @@
   }
 
   @include element ('furniture') {
-    @extend %text;
     margin-top: 4px;
   }
 
@@ -38,7 +37,7 @@
   }
 
   @include element ('social') {
-    padding-top: s(1);
     overflow: visible;
+    padding-top: s(1);
   }
 }

@@ -13,13 +13,13 @@ review:
     vote: 100
   -
     name: Gameplay
-    vote: 95
+    vote: 100
   -
     name: Animazioni
     vote: 90
   -
     name: Level design
-    vote: 85
+    vote: 90
   -
     name: Direzione
     vote: 85
@@ -27,10 +27,10 @@ review:
     name: Musiche
     vote: 85
   -
-    name: Pixel art
+    name: Storia
     vote: 85
   -
-    name: Storia
+    name: Pixel art
     vote: 80
 
 pros:
@@ -43,3 +43,13 @@ cons:
 ---
 
 Ciaone di articolo
+
+
+---
+
+### Verdetto
+
+Isaac da il massimo proprio nei punti cruciali dove un titolo indie come questo dovrebbe fare, per quanto sia semplice, il level design e la meccanica [Roguelike][roguelike] molto simile al bellissimo [Risk of Rain][ror] lo rendono incredibilimente longevo e divertente, soprattutto per la piega che può prendere una partita e il modo improvviso in cui tutto può cambiare, con un po' di fortuna o con una botta di sfiga.
+
+[roguelike]: https://it.wikipedia.org/wiki/Roguelike
+[ror]: https://riskofraingame.com/

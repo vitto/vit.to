@@ -80,7 +80,6 @@
   a {
     @extend %underline;
     color: inherit;
-    text-decoration: none;
 
     &:hover {
       @extend %underline-visible;

@@ -33,11 +33,8 @@
                 </div>
               </li>
             {% endif %}
-            <li class="article__info">
-              <i class="article__icon material-icons">videogame_asset</i>
-              <span class="article__detail">
-                {{ manufacturer }} {{ platform }}
-              </span>
+            <li class="article__info article__info--console">
+              {% include 'partials/reviews/console.twig' with { 'console': { 'manufacturer': manufacturer, 'platform': platform }, 'isColored': true, 'isLarge': true } %}
             </li>
             <li class="article__info">
               <i class="article__icon material-icons">watch_later</i>

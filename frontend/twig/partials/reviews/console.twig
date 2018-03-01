@@ -1,0 +1,46 @@
+{% if isPost is defined %}
+  <div class="console post__console">
+    {% for item in metadata.consoles %}
+      {% if item.manufacturer.name|lower ==  console.manufacturer|lower %}
+        <div class="console__item">
+          <img src="{{ relativePath }}img/{{ item.manufacturer.logo }}" alt="{{ item.manufacturer.name }}" class="console__logo">
+        </div>
+        <div class="console__item">
+          <img src="{{ relativePath }}img/{{ item.platform.logo }}" alt="{{ item.platform.name }}" class="console__logo">
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% else %}
+
+  {% if isColored is defined %}
+    {% set colored = 'console__item--colored' %}
+  {% else %}
+    {% set colored = '' %}
+  {% endif %}
+
+  {% if isLarge is defined %}
+    {% set large = 'console__logo--large' %}
+  {% else %}
+    {% set large = '' %}
+  {% endif %}
+
+  {% if hasHover is defined %}
+    {% set hover = 'console__item--hover' %}
+  {% else %}
+    {% set hover = '' %}
+  {% endif %}
+
+  <div class="console">
+    {% for item in metadata.consoles %}
+      {% if item.manufacturer.name|lower ==  console.manufacturer|lower %}
+        <a href="{{ item.manufacturer.href }}" target="_blank" class="console__item console__item--link {{ hover }} {{ colored }}">
+          <img src="{{ relativePath }}img/{{ item.manufacturer.logo }}" alt="{{ item.manufacturer.name }}" class="console__logo {{ large }}">
+        </a>
+        <a href="{{ item.platform.href }}" target="_blank" class="console__item console__item--link {{ hover }} {{ colored }}">
+          <img src="{{ relativePath }}img/{{ item.platform.logo }}" alt="{{ item.platform.name }}" class="console__logo {{ large }}">
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}

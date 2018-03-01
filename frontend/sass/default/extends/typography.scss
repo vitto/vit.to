@@ -40,14 +40,16 @@
   display: inline-block;
 
   &::after {
+    $underline-size: 2px;
+
     animation-duration: 0.75s;
     animation-iteration-count: infinite;
     animation-name: underline-blink;
     background-color: $color-mercury;
-    border-radius: 2px;
+    border-radius: $underline-size;
     content: '';
     display: block;
-    height: 2px;
+    height: $underline-size;
     opacity: 0;
     transition: opacity 0.5s ease('out-expo');
   }
@@ -63,18 +65,21 @@ $link-underline: mix($color-chicago, $color-desert-storm, 25%);
 
 %underline {
   display: inline-block;
-  text-shadow: 1px 1px 0 $color-desert-storm, 0 1px 0 $color-desert-storm, -1px 1px 0 $color-desert-storm;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 $color-desert-storm, 0 1px 0 $color-desert-storm, -1px 1px 0 $color-desert-storm, 1px 1px 0 $color-desert-storm, 0 1px 0 $color-desert-storm, -1px 1px 0 $color-desert-storm;
 
   &::after {
+    $underline-size: 2px;
+
     animation-duration: 0.75s;
     animation-iteration-count: infinite;
     animation-name: none;
     background-color: $link-underline;
-    border-radius: 2px;
+    border-radius: $underline-size;
     content: '';
     display: block;
-    height: 2px;
-    margin-top: -3px;
+    height: $underline-size;
+    margin-top: -5px;
     transition: background-color 0.5s ease('out-expo');
   }
 }

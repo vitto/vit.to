@@ -1,0 +1,34 @@
+@include block ('console') {
+  align-items: center;
+  display: flex;
+
+  @include element ('item') {
+    filter: grayscale(1);
+    opacity: 0.5;
+    transition: filter $hover-ease, opacity $hover-ease;
+
+    & + & {
+      margin-left: s(0.25);
+    }
+
+    @include modifier ('hover') {
+      &:hover {
+        filter: none;
+        opacity: 1;
+      }
+    }
+
+    @include modifier ('colored') {
+      filter: none;
+      opacity: 1;
+    }
+  }
+
+  @include element ('logo') {
+    height: 12px;
+
+    @include modifier ('large') {
+      height: 24px;
+    }
+  }
+}

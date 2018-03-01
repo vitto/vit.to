@@ -20,6 +20,10 @@
     width: 100%;
   }
 
+  @include element ('console') {
+    margin-top: s(0.25);
+  }
+
   @include element ('title') {
     @extend %title;
     display: inline-block;

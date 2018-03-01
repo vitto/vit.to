@@ -12,7 +12,6 @@ const robots = require('metalsmith-robots')
 const sitemap = require('metalsmith-sitemap')
 const twig = require('metalsmith-twig')
 const yaml = require('js-yaml')
-const pureText = require('metalsmith-pure-text');
 
 var renderer = new marked.Renderer()
 
@@ -39,6 +38,8 @@ m.twig.global = {
 m.markdown.renderer = renderer
 m.metadata.lastmod = moment().format()
 m.metadata.last_edit_year = moment().format('YYYY')
+m.metadata.consoles = yaml.safeLoad(fs.readFileSync('data/consoles.yml', 'utf-8'))
+
 m.sitemap.lastmod = moment().format('YYYY-MM-DD')
 
 var showDrafts = false
@@ -58,10 +59,6 @@ if (showDrafts) {
   .use(collections(m.collections))
   .use(markdown(m.markdown))
   .use(excerpts())
-//   .use(pureText({
-//   pattern: ['**/*.html'],
-//   preserveLineBreaks: true
-// }))
   .use(permalinks(m.permalinks))
   .use(twig(m.twig))
   .use(sitemap(m.sitemap))

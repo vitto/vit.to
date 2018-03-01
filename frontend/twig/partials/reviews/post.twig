@@ -12,10 +12,7 @@
       {{ item.title }}
     </h2>
     <div class="post__infos">
-      <i class="post__icon material-icons">videogame_asset</i>
-      <h4 class="post__text">
-        {{ item.manufacturer }} {{ item.platform }}
-      </h4>
+      {% include 'console.twig' with { 'console': item, 'isPost': true } %}
       <div class="post__vote">
         {% set finalVote = 0 %}
         {% for review in item.review %}
