@@ -30,12 +30,13 @@ review:
     name: Combattimenti
     vote: 85
   -
-    name: Interfaccia
-    vote: 85
+    name: Bilanciamento
+    vote: 80
 
 pros:
   - Bestiario con gestione foto geniale
   - Curato in ogni minimo dettaglio
+  - Ottima interfaccia di gioco
   - Coraggiosissimo cambio della saga
   - Sendbox e motore fisico rivoluzionari
   - Superba direzione artistica
@@ -76,7 +77,7 @@ Probabilmente tra i più brillanti che si possono trovare in un video gioco, poc
 
 ### Esplorazione
 
-Muoversi per Hyrule è molto stimolante, la zona nella quale è possibile muoversi è molto vasta ma sempre piena di scorci interessanti, luoghi da visitare e personaggi con i quali interagire o avversari da fronteggiare.
+Muoversi per Hyrule è molto piacevole, la zona nella quale è possibile muoversi è molto vasta e sempre piena di scorci suggestivi, luoghi da visitare, segreti da scoprire, personaggi con i quali interagire o avversari da fronteggiare.
 
 I biomi delle aree di gioco sono suddivisi dai classici fattori come geologia, fauna e flora, tuttavia viene introdotto anche un aspetto legato alla temperatura atmosferica che rende l'esperienza più survival, impedendo così al giocatore di addentrarsi in alcune aree a meno che prima non si sia procurato l'equipaggiamento adatto.
 
@@ -84,11 +85,14 @@ I biomi delle aree di gioco sono suddivisi dai classici fattori come geologia, f
   ![In alcune aree è opportuno riscaldarsi durante la notte](come-accendere-fuoco-tenere-link-caldo.jpg)
 ](come-accendere-fuoco-tenere-link-caldo.jpg)
 
-Mi ha colpito moltissimo la possibilità di scalare la stragrande maggioranza di superfici, infatti è possibile arrivare praticamente ovunque, l'importante è avere abbastanza forza residua, altrimenti converrà tornare una volta acquisite le risorse sufficienti a superare l'ostacolo. In questo modo il mondo risulta colmo di posti che possiamo raggiungere ma che siamo costretti a lasciare li per poter tornare successivamente, riusciremo a ricordarcene? Molto probabilmente no, so che ho lasciato indietro molte aree e non sempre ne ricordo la posizione esatta.
+Mi ha colpito la possibilità di scalare la stragrande maggioranza di superfici, infatti è possibile arrivare praticamente ovunque, l'importante è avere abbastanza forza residua, altrimenti converrà tornare una volta acquisite le risorse sufficienti a superare l'ostacolo. In questo modo il mondo risulta colmo di posti che possiamo raggiungere ma che siamo costretti a lasciare li per poter tornare successivamente, riusciremo a ricordarcene? Probabilmente no, so che ho lasciato indietro molte aree e non sempre ne ricordo la posizione esatta.
+
+
+Durante il viaggio, avremo la possibilità di collezionare nel bestiario tutti gli avversari che incontriamo, basterà fotografarli, magari senza essere visti per poter salvare le informazioni contestuali, col tempo inizierete ad avere un bestiario pieno di foto fatte fa voi, cosa che lo renderà personale e in qualche modo, prezioso per questo motivo. Per me questa è una trovata semplicemente geniale.
 
 ### Segreti
 
-Ad oggi, dubito che esista un gioco che possa offrire un così vasto numero di segreti. Sono semplicemente ovunque, come i 900 Korok, che potrebbero essere sotto ad un sasso, dietro ad una statua per le offerte, potrebbero celarsi in un punto specifico dell'acqua.
+Ad oggi, dubito che esista un gioco che possa offrire un così vasto numero di segreti. Sono semplicemente ovunque, come i 900 Korok, che potrebbero essere sotto ad un sasso, dietro ad una statua per le offerte, potrebbero celarsi in un punto specifico dell'acqua oppure sotto un mucchio di foglie.
 
 [
   ![Un Korok dopo essere stato scovato](korok-trovato.jpg)
@@ -103,11 +107,32 @@ Non sono solo questi i segreti di Breath of the Wild, ce ne sono di ogni genere,
 
 ### Combattimenti
 
-Anche un album come [Dark Side of the Moon][pink] ha per chi l'ascolta una parte più interessante, nonostante sia considerato uno degli album più importanti del 900, non può esistere un album dove amiamo alla stessa maniera ogni canzone. Così è anche per **Breath of the Wild**, l'aspetto che forse mi ha colpito meno sono i combattimenti
+Anche un album come [Dark Side of the Moon][pink] ha per chi l'ascolta una parte più interessante di un'altra, nonostante sia considerato un capolavoro, non può esistere un album dove amiamo alla stessa maniera ogni canzone. Così è anche per **Breath of the Wild**, l'aspetto che forse mi ha colpito meno sono i combattimenti.
 
 [
   ![Scontro con una grande roccia Talus](talus.jpg)
 ](talus.jpg)
+
+Non si può certo dire che sono tirati via, i combattimenti sono impegnativi e forse un po' legnosi, ma comunque intuitivi come il resto delle meccaniche di gioco.
+
+Di norma abbattere un nemico come un gruppo di Boblin non è particolarmente impegnativo, tuttavia sarà raro svolgere un combattimento pulito, la vastità del gioco porta ad affrontarli in modo sbrigativo, proprio per la pazienza che richiedono se si vuole "giocare bene".
+
+### Bilanciamento
+
+Ci sono scelte nel Bilanciamento che faccio fatica a considerarli errori, tuttavia sono scelte che mettono automaticamente questo titolo nella fascia "non per tutti".
+
+La durabilità delle armi ad esempio, può risultare frustrante se siete uno di quei giocatori che si affezionano ad una spada o un arco, preparatevi perché li cambierete pressapoco in continuazione.
+Questo aspetto è probabilmente voluto per rendere l'esperienza più survival e meno <abbr title="Role playing game">RPG</abbr> riuscendoci, si tende infatti ad adattarsi a quello che passa il convento, cioè gli avversari abbattuti.
+
+Anche alcuni avversari sembrano non essere bilanciati, probabilmente sempre per l'impronta survival decisa. I Lynel ad esempio, non sono solo temibili avversari, sono probabilmente i più difficili da battere nel gioco, anche più dei boss della quest principale. Con queste creature, la maggior parte delle volte finiremo per venire uccisi, richiederà un sacco di pratica imparare a batterli.
+
+
+---
+
+### Verdetto
+
+Breath of the Wild è un complesso capolavoro, che sa regalare ore e ore di avventure, in un mondo malinconico e pieno, pieno, pieno di cose da fare, meccaniche da scoprire, terre da visitare, villaggi in cui stabilirsi, avversari da affrontare, e potrei andare oltre nel descrivere l'innumerevole mole di cose da fare in questa opera curata in ogni suo aspetto, con amore ed attenzione. Un must per i possessori di [Switch][switch].
+
 
 [artsy]: https://twitter.com/artsyomni
 [breath]: http://www.nintendo.it/Giochi/Nintendo-Switch/The-Legend-of-Zelda-Breath-of-the-Wild-1173609.html

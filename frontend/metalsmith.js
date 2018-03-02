@@ -39,6 +39,7 @@ m.markdown.renderer = renderer
 m.metadata.lastmod = moment().format()
 m.metadata.last_edit_year = moment().format('YYYY')
 m.metadata.consoles = yaml.safeLoad(fs.readFileSync('data/consoles.yml', 'utf-8'))
+m.metadata.manufacturers = yaml.safeLoad(fs.readFileSync('data/manufacturers.yml', 'utf-8'))
 
 m.sitemap.lastmod = moment().format('YYYY-MM-DD')
 
