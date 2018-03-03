@@ -2,6 +2,7 @@
 collection: reviews
 date: 2017-06-14T23:10
 draft: true
+private: true
 manufacturer: Nintendo
 platform: Switch
 title: Mario + Rabbids Kingdom Battle

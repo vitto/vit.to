@@ -2,6 +2,7 @@
 collection: reviews
 date: 1997-09-21T23:10
 draft: true
+private: true
 manufacturer: Sony
 platform: PlayStation
 title: Tomb Raider

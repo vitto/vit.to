@@ -2,6 +2,7 @@
 collection: reviews
 date: 2006-07-25T09:11
 draft: true
+private: true
 manufacturer: Nintendo
 platform: Gamecube
 title: Metroid Prime

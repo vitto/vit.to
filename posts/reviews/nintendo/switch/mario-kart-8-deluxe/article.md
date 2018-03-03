@@ -2,6 +2,7 @@
 collection: reviews
 date: 2017-04-28T23:10
 draft: true
+private: true
 manufacturer: Nintendo
 platform: Switch
 title: Mario Kart 8 Deluxe

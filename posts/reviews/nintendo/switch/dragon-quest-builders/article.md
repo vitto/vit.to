@@ -2,6 +2,7 @@
 collection: reviews
 date: 2018-02-19T23:58
 draft: true
+private: true
 manufacturer: Nintendo
 platform: Switch
 title: Dragon Quest Builders

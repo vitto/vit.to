@@ -2,6 +2,7 @@
 collection: reviews
 date: 2017-10-20T13:29
 draft: true
+private: true
 manufacturer: Nintendo
 platform: Switch
 title: 'The Binding of Isaac: Afterbirth +'

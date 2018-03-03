@@ -71,6 +71,6 @@ sitemap:
   privateProperty: private
 robots:
   useragent: '*'
-  disallow:
+  allow:
     - /
   sitemap: http://vit.to/sitemap.xml

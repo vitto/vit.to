@@ -2,6 +2,7 @@
 collection: reviews
 date: 2010-02-18T23:10
 draft: true
+private: true
 manufacturer: Sony
 platform: PS3
 title: Borderlands

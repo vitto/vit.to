@@ -2,6 +2,7 @@
 collection: reviews
 date: 2017-10-27T18:45
 draft: true
+private: true
 manufacturer: Nintendo
 platform: Switch
 title: Super Mario Odissey

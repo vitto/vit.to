@@ -2,6 +2,7 @@
 collection: reviews
 date: 2018-02-15T23:10
 draft: true
+private: true
 manufacturer: Sony
 platform: PS4 Pro
 title: Shadow of the Colossus

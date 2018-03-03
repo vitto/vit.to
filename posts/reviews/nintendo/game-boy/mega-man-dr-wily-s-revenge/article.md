@@ -2,6 +2,7 @@
 collection: reviews
 date: 1992-08-10T23:35
 draft: true
+private: true
 manufacturer: Nintendo
 platform: Game Boy
 title: "Mega Man: Dr. Wily's Revenge"

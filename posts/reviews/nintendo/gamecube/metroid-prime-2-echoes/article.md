@@ -2,6 +2,7 @@
 collection: reviews
 date: 2006-09-12T11:27
 draft: true
+private: true
 manufacturer: Nintendo
 platform: Gamecube
 title: 'Metroid Prime 2: Echoes'
