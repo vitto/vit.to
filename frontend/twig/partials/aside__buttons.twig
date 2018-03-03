@@ -1,15 +1,19 @@
 <div class="aside__buttons">
   <a href="{{ metadata.home }}" class="button button--back button--paginate">
-    <i class="material-icons button__icon">eject</i>
+    <i class="material-icons button__icon">power_settings_new</i>
   </a>
   {% if previous is defined %}
-    <a href="{{ metadata.home }}/{{ previous.path }}" class="button button--back button--paginate">
-      <i class="material-icons button__icon">arrow_back</i>
-    </a>
+    {% if previous.draft and metadata.enable.drafts or previous.draft is not defined %}
+      <a href="{{ metadata.home }}/{{ previous.path }}" class="button button--back button--paginate">
+        <i class="material-icons button__icon">arrow_back</i>
+      </a>
+    {% endif %}
   {% endif %}
   {% if next is defined %}
-    <a href="{{ metadata.home }}/{{ next.path }}" class="button button--back button--paginate">
-      <i class="material-icons button__icon">arrow_forward</i>
-    </a>
+    {% if next.draft and metadata.enable.drafts or next.draft is not defined %}
+      <a href="{{ metadata.home }}/{{ next.path }}" class="button button--back button--paginate">
+        <i class="material-icons button__icon">arrow_forward</i>
+      </a>
+    {% endif %}
   {% endif %}
 </div>

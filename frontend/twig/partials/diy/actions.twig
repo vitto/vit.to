@@ -1,4 +1,4 @@
-{% if onFooter and metadata.enable_store == false %}
+{% if onFooter and metadata.enable.store == false %}
   {% set hideButton = false %}
 {% else %}
   {% set hideButton = onFooter %}
@@ -6,7 +6,7 @@
 
 {% if sold_out == false %}
   <div class="actions {% if onFooter %} actions--footer {% endif %} actions--available">
-    {% if metadata.enable_store == true %}
+    {% if metadata.enable.store == true %}
     <a class="actions__item button button--available" href="{{ store }}" target="_blank">
       <i class="button__icon material-icons">shopping_cart</i>
       <span class="button__infos">
@@ -40,7 +40,7 @@
   </div>
 {% else %}
   <div class="actions {% if onFooter %} actions--footer {% endif %}">
-    {% if metadata.enable_store == true %}
+    {% if metadata.enable.store == true %}
     <a class="actions__item button button--sold-out action--try-budget" href="{{ store }}" target="_blank">
       <i class="button__icon material-icons">remove_shopping_cart</i>
       <span class="button__infos">

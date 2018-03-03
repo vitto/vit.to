@@ -17,14 +17,18 @@
           {% include 'partials/policy.twig' with { bordered: true } %}
         </div>
         {% for item in metadata.collections.reviews %}
-          <a class="posts__item" href="{{ item.path }}">
-            {% include 'partials/reviews/post.twig' with { item: item } %}
-          </a>
+          {% if item.draft and metadata.enable.drafts or item.draft is not defined %}
+            <a class="posts__item" href="{{ item.path }}">
+              {% include 'partials/reviews/post.twig' with { item: item } %}
+            </a>
+          {% endif %}
         {% endfor %}
         {% for item in metadata.collections.diy %}
-          <a class="posts__item" href="{{ item.path }}">
-            {% include 'partials/diy/post.twig' with { item: item } %}
-          </a>
+          {% if item.draft and metadata.enable.drafts or item.draft is not defined %}
+            <a class="posts__item" href="{{ item.path }}">
+              {% include 'partials/diy/post.twig' with { item: item } %}
+            </a>
+          {% endif %}
         {% endfor %}
         <div class="posts__call">
           {% include 'partials/email-message.twig' %}
