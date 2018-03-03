@@ -24,7 +24,7 @@ review:
     vote: 95
   -
     name: Musiche
-    vote: 90
+    vote: 85
   -
     name: Combattimenti
     vote: 85
@@ -125,12 +125,19 @@ Questo aspetto è probabilmente voluto per rendere l'esperienza più survival e 
 
 Anche alcuni avversari sembrano non essere bilanciati, probabilmente sempre per l'impronta survival decisa. I Lynel ad esempio, non sono solo temibili avversari, sono probabilmente i più difficili da battere nel gioco, anche più dei boss della quest principale. Con queste creature, la maggior parte delle volte finiremo per venire uccisi, richiederà un sacco di pratica imparare a batterli.
 
+### Musiche
+
+Anche nella colonna sonora si può sentire la forte ispirazione ai lungometraggi di [Studio Ghibli][ghibli], che come per lo stile visivo accompagna tutta l'avventura. Per quanto non si sia rivoluzionato totalmente, l'atmosfera malinconica viene caricata anche dalle musiche, che si sposano a pennello con le aree verdi, di montagna e nelle zone desertiche.
+
+Interessante anche la leggerezza con la quale accompagna il gioco, mai insistenti e di base a volume basso, senza l'intenzione di dover dimostrarne la presenza, che così facendo da ancora più colore alle scene.
 
 ---
 
 ### Verdetto
 
-Breath of the Wild è un complesso capolavoro, che sa regalare ore e ore di avventure, in un mondo malinconico e pieno, pieno, pieno di cose da fare, meccaniche da scoprire, terre da visitare, villaggi in cui stabilirsi, avversari da affrontare, e potrei andare oltre nel descrivere l'innumerevole mole di cose da fare in questa opera curata in ogni suo aspetto, con amore ed attenzione. Un must per i possessori di [Switch][switch].
+Breath of the Wild è un complesso capolavoro, che sa regalare ore e ore di avventure, in un mondo più maturo, malinconico e pieno, pieno, pieno di cose da fare, meccaniche da scoprire, terre da visitare, villaggi in cui stabilirsi, avversari da affrontare, e potrei andare oltre nel descrivere l'innumerevole mole di cose da fare in questa opera curata in ogni suo aspetto, con amore ed attenzione.
+
+Il titolo d'esordio per una console in assoluto più azzeccato nella storia dei videogiochi.
 
 
 [artsy]: https://twitter.com/artsyomni
@@ -138,3 +145,4 @@ Breath of the Wild è un complesso capolavoro, che sa regalare ore e ore di avve
 [pink]: https://it.wikipedia.org/wiki/The_Dark_Side_of_the_Moon
 [switch]: https://www.nintendo.com/switch/
 [youtube-epa]: https://youtu.be/sf4gtlM0mYs?t=1m51s
+[ghibli]: https://youtu.be/sf4gtlM0mYs?t=1m51s
