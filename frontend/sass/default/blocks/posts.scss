@@ -2,10 +2,15 @@
 
   $post--availability--sold-out: $color-mercury;
 
-  background-color: $craft--hover;
+  @include block ('console') {
+    @include element ('item') {
+      filter: none;
+      opacity: 1;
+    }
+  }
 
-  @include block ('piece') {
-    @include element ('furniture') {
+  @include block ('post') {
+    @include element ('details') {
       color: $text-color--hover;
     }
 
@@ -23,8 +28,23 @@
       }
     }
 
+    @include element ('picture') {
+      // border-bottom-color: mix(background('foreground'), background('latter'), 17%);
+    }
+
     @include element ('details') {
-      border-top-color: $craft--hover;
+      $background: mix(background('foreground'), background('latter'), 67%);
+      background-color: $background;
+      transform: translate(0, s(0.5));
+
+      &::after {
+        background-color: $background;
+        transform: translate(0, s(0.5));
+      }
+
+      &::before {
+        background-color: $background;
+      }
     }
   }
 }
@@ -82,12 +102,6 @@
     text-decoration: none;
     transition: background-color tween('hover');
     width: 33.3333%;
-
-    &:link {
-      .post__vote {
-        display: none;
-      }
-    }
 
     @include media ('<=desktop-small') {
       width: 50%;

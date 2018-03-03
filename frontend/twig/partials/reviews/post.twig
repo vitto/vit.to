@@ -13,25 +13,6 @@
     </h2>
     <div class="post__infos">
       {% include 'console.twig' with { 'console': item, 'isPost': true } %}
-      <div class="post__vote">
-        {% set finalVote = 0 %}
-        {% for review in item.review %}
-        {% set finalVote = finalVote + review.vote %}
-        {% endfor %}
-        {% set finalVote = (finalVote / item.review|length)|round %}
-
-        {% if finalVote >= 90 %}
-          {% set reviewVerdict = 'positive' %}
-        {% elseif finalVote < 70 %}
-          {% set reviewVerdict = 'negative' %}
-        {% else %}
-          {% set reviewVerdict = 'average' %}
-        {% endif %}
-
-        <div class="post-vote post-vote--{{ reviewVerdict }}">
-          {{ finalVote }}
-        </div>
-      </div>
     </div>
   </div>
 </article>

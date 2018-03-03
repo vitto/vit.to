@@ -10,11 +10,14 @@
   @include element ('picture') {
     align-items: flex-end;
     background-color: transparent;
+    border-bottom: $post-dedails-border-top;
     display: flex;
     flex-grow: 1;
     justify-content: space-around;
     overflow: hidden;
     position: relative;
+    transition: border-color tween('hover');
+    z-index: 1;
   }
 
   @include element ('image') {
@@ -38,10 +41,37 @@
   }
 
   @include element ('details') {
-    border-top: $post-dedails-border-top;
-    padding-bottom: s(1);
-    padding-top: s(1);
-    transition: border-color tween('hover');
+    padding: s(1);
+    position: relative;
+    transition: background-color tween('hover'), transform tween('hover');
+    z-index: 0;
+
+    &::after {
+      background-color: background('latter');
+      border-radius: 0 0 radius('large') radius('large');
+      bottom: 0;
+      content: '';
+      display: inline-block;
+      height: s(0.5);
+      left: 0;
+      line-height: 0;
+      position: absolute;
+      transition: transform tween('hover'), background-color tween('hover');
+      width: 100%;
+    }
+
+    &::before {
+      background-color: background('latter');
+      content: '';
+      display: inline-block;
+      height: s(1);
+      left: 0;
+      line-height: 0;
+      position: absolute;
+      top: s(-1);
+      transition: background-color tween('hover');
+      width: 100%;
+    }
   }
 
   @include element ('icon') {
@@ -52,9 +82,5 @@
   @include element ('infos') {
     align-items: center;
     display: flex;
-  }
-
-  @include element ('vote') {
-    margin-left: s(0.25);
   }
 }

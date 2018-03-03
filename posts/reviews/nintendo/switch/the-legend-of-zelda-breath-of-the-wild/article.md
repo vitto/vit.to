@@ -3,7 +3,7 @@ collection: reviews
 date: 2017-03-10T01:26
 manufacturer: Nintendo
 platform: Switch
-title: The Legend of Zelda Breath of the Wild
+title: 'The Legend of Zelda: Breath of the Wild'
 view: review.twig
 
 review:
