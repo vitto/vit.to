@@ -1,4 +1,7 @@
 @include block ('write-me') {
+
+  $border-top: $border;
+
   background-color: $craft--hover;
   border-radius: radius('small');
   padding: s(1.5);
@@ -6,12 +9,12 @@
   width: 100%;
 
   @include media ('<=tablet-small') {
-    background-color: $body--background;
+    background-color: background('latter');
     border-radius: 0;
-    border-top: $input--border;
+    border-top: $border-top;
 
     &:hover {
-      background-color: $body--background;
+      background-color: background('latter');
     }
   }
 
@@ -23,7 +26,7 @@
     background-color: $craft--hover;
 
     @include media ('<=tablet-small') {
-      background-color: $body--background;
+      background-color: background('latter');
       margin-left: s(-2);
       margin-right: s(-2);
       width: auto;

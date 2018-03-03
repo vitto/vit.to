@@ -18,24 +18,24 @@
   ), $property);
 }
 
-$actions--available--background: rgba($color-chicago, 0.1);
-$actions--background: $color-chicago;
-$article--body--width: 768px;
-$aside--background--blur: blur(4px);
-$aside--background--opaque-strenght: rgba($color-white, 0.95);
-$aside--background--opaque: rgba($color-white, 0.85);
-$aside--background: $color-white;
-$aside--min-width: 330px;
-$aside--shadow: shadow('card');
-$aside--width: 26%;
-$body--background: $color-desert-storm;
+@function background($property) {
+  @return get((
+      'foreground': $color-white,
+      'latter': $color-desert-storm
+  ), $property);
+}
+
+$article-width: 768px;
+$aside-width-min: 330px;
+$aside-width: 26%;
+$backdrop-background-no-support: rgba($color-white, 0.95);
+$backdrop-background: rgba($color-white, 0.85);
+$backdrop-blur: blur(4px);
 $border: 2px solid $color-mercury;
+
 $craft--hover: $color-white;
-$craft--radius: 4px;
-$header--background: $color-white;
 $header--shadow: shadow('card');
-$input--border: 2px solid $color-mercury;
-$post--dedails--border-top: 2px solid $color-mercury;
+
 $text-color--hover: $color-chicago;
 $text-color: $color-gray;
 $title-color: $color-chicago;

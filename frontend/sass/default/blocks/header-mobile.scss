@@ -1,8 +1,7 @@
 @include block ('header-mobile') {
 
-
   align-items: center;
-  background-color: $header--background;
+  background-color: background('foreground');
   box-shadow: $header--shadow;
   display: none;
   justify-content: space-between;

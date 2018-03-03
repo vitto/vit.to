@@ -1,8 +1,6 @@
 @include block ('body') {
 
-  $body--background--mobile: $color-white;
-  
-  background-color: $body--background;
+  background-color: background('latter');
   color: $text-color;
   font-family: $font-family-sans;
   line-height: 1.25;
@@ -15,6 +13,6 @@
   }
 
   @include media ('<=tablet-small') {
-    background-color: $body--background--mobile;
+    background-color: background('foreground');
   }
 }

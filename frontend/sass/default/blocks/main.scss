@@ -1,9 +1,9 @@
 @include block ('main') {
-  margin-left: $aside--width;
+  margin-left: $aside-width;
   padding: 0 s(3);
 
   @include media ('<=desktop-small') {
-    margin-left: $aside--min-width;
+    margin-left: $aside-width-min;
   }
 
   @include media ('<tablet-large') {
@@ -41,12 +41,12 @@
   }
 
   @include element ('contents') {
-    margin-left: $aside--width;
+    margin-left: $aside-width;
     min-height: 100vh;
     padding: s(2);
 
     @include media ('<=desktop-small') {
-      margin-left: $aside--min-width;
+      margin-left: $aside-width-min;
     }
 
     @include media ('<tablet-large') {

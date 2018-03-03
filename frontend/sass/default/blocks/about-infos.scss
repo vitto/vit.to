@@ -1,12 +1,19 @@
 @include block ('about-infos') {
-  backdrop-filter: $aside--background--blur;
-  background-color: $aside--background--opaque;
+
+  $background-color: 0;
+
+  backdrop-filter: $backdrop-blur;
+  background-color: $backdrop-background;
   bottom: 0;
   display: none;
   flex-wrap: wrap;
   padding: s(0.5);
   position: absolute;
   width: 100%;
+
+  @supports not (backdrop-filter: $backdrop-blur) {
+    background-color: $backdrop-background-no-support;
+  }
 
   @include media ('<tablet-large') {
     display: flex;

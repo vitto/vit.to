@@ -1,6 +1,6 @@
 @include block ('footer-mobile') {
   align-items: center;
-  background-color: $header--background;
+  background-color: background('foreground');
   bottom: 0;
   box-shadow: $header--shadow;
   display: none;

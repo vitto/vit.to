@@ -1,5 +1,6 @@
 @include block ('input') {
 
+  $input-border: $border;
   $input--unfocus: $color-star-dust;
   $input--focus: $color-chicago;
   $input--focus-background: mix($color-white, $color-mercury);
@@ -32,7 +33,7 @@
   @include element ('element') {
     background-color: transparent;
     border: 0;
-    border-bottom: $input--border;
+    border-bottom: $input-border;
     border-top: 2px solid transparent;
     font-family: $font-family-sans;
     padding: s(0.5) s(1.75) s(0.5) 0;

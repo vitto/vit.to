@@ -1,5 +1,7 @@
 @include block ('article') {
 
+  $contents-width: $article-width;
+
   @include element ('header') {
     line-height: 0;
     margin-left: s(-3);
@@ -26,6 +28,7 @@
     color: $title-color;
     font-size: 36px;
     font-weight: 700;
+    line-height: 1.125;
     margin: s(3) 0 s(1);
 
     @include media ('<=mobile-large') {
@@ -78,7 +81,7 @@
 
   @include element ('contents') {
     margin: auto;
-    max-width: $article--body--width;
+    max-width: $contents-width;
 
     @include media ('<=tablet-small') {
       padding-bottom: s(1.5);

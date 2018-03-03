@@ -1,4 +1,9 @@
 @include block ('actions') {
+
+  $actions--background: $color-chicago;
+  $actions--available--background: rgba($color-chicago, 0.1);
+
+
   background-color: $actions--background;
   border-radius: radius('large');
   display: flex;

@@ -1,5 +1,7 @@
 @include block ('post') {
 
+  $post-dedails-border-top: $border;
+
   align-items: stretch;
   display: flex;
   flex-direction: column;
@@ -36,7 +38,7 @@
   }
 
   @include element ('details') {
-    border-top: $post--dedails--border-top;
+    border-top: $post-dedails-border-top;
     padding-bottom: s(1);
     padding-top: s(1);
     transition: border-color tween('hover');
