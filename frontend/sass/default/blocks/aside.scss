@@ -30,6 +30,7 @@
   }
 
   @include element ('buttons') {
+    display: flex;
     margin-top: s(2);
   }
 

@@ -1,10 +1,8 @@
 <header class="header-mobile">
   <div class="header-mobile__nav">
-    {% if path != '' %}
-      <a href="javascript:history.back()" class="button button--home button--inline">
-        <i class="button__icon material-icons">keyboard_backspace</i>
-      </a>
-    {% endif %}
+    <a href="{{ metadata.home }}" class="button button--home button--inline">
+      <i class="material-icons button__icon">eject</i>
+    </a>
   </div>
   <a href="{{ relativePath }}" class="header-mobile__home">
     <img class="header-mobile__logo" src="{{ relativePath }}img/vittorio-vittori-logo.svg" alt="Vittorio Vittori">

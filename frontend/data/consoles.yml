@@ -1,7 +1,11 @@
 -
   href: https://www.playstation.com/it-it/
-  logo: playstation-ps4-logo.svg
+  logo: sony-playstation-ps4-logo.svg
   name: PS4 Pro
+-
+  href: https://www.playstation.com/it-it/explore/ps3/
+  logo: sony-playstation-ps3-logo.svg
+  name: PS3
 -
   href: http://www.nintendo.it/Nintendo-Switch/Nintendo-Switch-1148779.html
   logo: nintendo-switch-logo.svg
@@ -10,3 +14,7 @@
   href: https://www.nintendo.it/Chi-siamo/Storia-di-Nintendo/Nintendo-GameCube/Nintendo-GameCube-627129.html
   logo: nintendo-gamecube-logo.svg
   name: Gamecube
+-
+  href: https://www.nintendo.it/Chi-siamo/Storia-di-Nintendo/Game-Boy/Game-Boy-627031.html
+  logo: nintendo-game-boy-logo.svg
+  name: Game Boy

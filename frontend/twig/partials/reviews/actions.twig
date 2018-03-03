@@ -1,4 +1,10 @@
 <div class="actions {% if onFooter %} actions--footer {% endif %} actions--available">
+  {% if previous is defined %}
+    <a href="{{ metadata.home }}/{{ previous.path }}" class="button button--inline button--home">
+      <i class="material-icons button__icon">arrow_back</i>
+    </a>
+  {% endif %}
+
   {% if metadata.social.messenger %}
     <a class="actions__item actions__item--short button button--chat-available" href="{{ metadata.social.messenger }}" target="_blank">
       <i class="button__icon material-icons">chat</i>
@@ -7,6 +13,12 @@
           Scrivimi via chat
         </div>
       </span>
+    </a>
+  {% endif %}
+
+  {% if next is defined %}
+    <a href="{{ metadata.home }}/{{ next.path }}" class="button button--inline button--home">
+      <i class="material-icons button__icon">arrow_forward</i>
     </a>
   {% endif %}
 </div>

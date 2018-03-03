@@ -101,19 +101,21 @@
               {% elseif finalVote >= 90 %}
                 {% set reviewVerdictPhrase = 'Bellissimo' %}
               {% elseif finalVote >= 85 %}
-                {% set reviewVerdictPhrase = 'Ottimo' %}
+                {% set reviewVerdictPhrase = 'Molto bello' %}
               {% elseif finalVote >= 80 %}
                 {% set reviewVerdictPhrase = 'Bello' %}
-              {% elseif finalVote >= 70 %}
+              {% elseif finalVote >= 75 %}
                 {% set reviewVerdictPhrase = 'Non male' %}
-              {% elseif finalVote >= 60 %}
+              {% elseif finalVote >= 70 %}
                 {% set reviewVerdictPhrase = 'Carino' %}
-              {% elseif finalVote >= 50 %}
+              {% elseif finalVote >= 60 %}
                 {% set reviewVerdictPhrase = 'Niente di che' %}
+              {% elseif finalVote >= 50 %}
+                {% set reviewVerdictPhrase = 'Scarso' %}
               {% elseif finalVote >= 40 %}
                 {% set reviewVerdictPhrase = 'Brutto' %}
               {% elseif finalVote >= 30 %}
-                {% set reviewVerdictPhrase = 'Orribile' %}
+                {% set reviewVerdictPhrase = 'Fa schifo' %}
               {% elseif finalVote >= 20 %}
                 {% set reviewVerdictPhrase = 'Osceno' %}
               {% elseif finalVote >= 10 %}
@@ -154,6 +156,8 @@
               </div>
             </div>
           </div>
+
+          {% include 'partials/disqus.twig' %}
 
         </div>
       </article>

@@ -1,10 +1,10 @@
 ---
 collection: reviews
-date: 2006-07-25T09:11
+date: 1992-08-10T23:35
 draft: true
 manufacturer: Nintendo
-platform: Gamecube
-title: Metroid Prime
+platform: Game Boy
+title: "Mega Man: Dr. Wily's Revenge"
 view: review.twig
 
 review:
@@ -53,10 +53,6 @@ Penso che quel giorno invece di comprare il Gamecube, forse avrei dovuto giocare
 
 Il Gamecube era una console vecchia quando l'ho acquistata, tra l'altro in quel periodo giocavo su PC, quindi ero abituato bene per quanto riguarda standard grafici, per cui pensavo che ci avrei giochicchiato un po' e che molto probabilmente avrei lasciato la console li a prendere polvere.
 
-[
-  ![Samus aran appena atterrata sulla stazione spaziale disastrata](samus-aran-appena-atterrata-sulla-stazione-spaziale-disastrata.jpg)
-](samus-aran-appena-atterrata-sulla-stazione-spaziale-disastrata.jpg)
-
 Appena iniziata la partita, ho subito capito che si trattava di un titolo tutt'altro che da poco, era eccezzionale fin dai primi istanti, i limiti della console passavano subito in secondo piano grazie alla grande atmosfera, subito immersiva e coinvolgente.
 
 
@@ -66,9 +62,6 @@ Di per se gli effetti visivi sono pochi, ma sempre calibrati al millimetro, ogni
 
 La grande scommessa ha fatto [Retro Studios][retro] (team che ta dietro questo capolavoro) stava nel portare in 3D un gioco le cui meccaniche sono di natura strettamente legate al 2D, pochi avrebbero scommesso che sarebbero riusciti a dare la stessa profondità di esplorazione.
 
-[
-  ![Ingresso al core del reattore](ingresso-al-core-del-reattore.jpg)
-](ingresso-al-core-del-reattore.jpg)
 
 Il punto è che non solo sono arrivati ad eguagliare la profondità di esplorazione dei titoli 2D, sono riusciti ad esaltarla e superarla, grazie anche ad un level design magistrale, si ha costantemente la sensazione di avere lasciato qualcosa indietro, come se non avessimo guardato abbastanza in una zona, perché c'era un dettaglio sospetto in una parete.
 

@@ -21,6 +21,7 @@ metadata:
     messenger: https://www.messenger.com/t/vttrx
   enable_store: false
   enable_trackers: true
+  enable_comments: false
 clean: true
 source: source
 destination: build

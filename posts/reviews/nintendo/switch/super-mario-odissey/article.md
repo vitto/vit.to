@@ -1,6 +1,6 @@
 ---
 collection: reviews
-date: 2018-02-17T23:10
+date: 2017-10-27T18:45
 draft: true
 manufacturer: Nintendo
 platform: Switch

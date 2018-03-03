@@ -3,14 +3,14 @@
     {% for item in metadata.manufacturers %}
       {% if item.name|lower ==  console.manufacturer|lower %}
         <div class="console__item">
-          <img src="{{ relativePath }}img/{{ item.logo }}" alt="{{ item.name }}" class="console__logo">
+          <img src="{{ relativePath }}img/reviews/{{ item.logo }}" alt="{{ item.name }}" class="console__logo">
         </div>
       {% endif %}
     {% endfor %}
     {% for item in metadata.consoles %}
       {% if item.name|lower ==  console.platform|lower %}
         <div class="console__item">
-          <img src="{{ relativePath }}img/{{ item.logo }}" alt="{{ item.name }}" class="console__logo">
+          <img src="{{ relativePath }}img/reviews/{{ item.logo }}" alt="{{ item.name }}" class="console__logo">
         </div>
       {% endif %}
     {% endfor %}
@@ -39,14 +39,14 @@
     {% for item in metadata.manufacturers %}
       {% if item.name|lower ==  console.manufacturer|lower %}
         <a href="{{ item.href }}" target="_blank" class="console__item console__item--link {{ hover }} {{ colored }}">
-          <img src="{{ relativePath }}img/{{ item.logo }}" alt="{{ item.name }}" class="console__logo {{ large }}">
+          <img src="{{ relativePath }}img/reviews/{{ item.logo }}" alt="{{ item.name }}" class="console__logo {{ large }}">
         </a>
       {% endif %}
     {% endfor %}
     {% for item in metadata.consoles %}
       {% if item.name|lower ==  console.platform|lower %}
         <a href="{{ item.href }}" target="_blank" class="console__item console__item--link {{ hover }} {{ colored }}">
-          <img src="{{ relativePath }}img/{{ item.logo }}" alt="{{ item.name }}" class="console__logo {{ large }}">
+          <img src="{{ relativePath }}img/reviews/{{ item.logo }}" alt="{{ item.name }}" class="console__logo {{ large }}">
         </a>
       {% endif %}
     {% endfor %}

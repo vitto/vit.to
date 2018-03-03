@@ -52,6 +52,9 @@ process.argv.forEach(function (val, index, array) {
 })
 
 if (showDrafts) {
+
+  m.metadata.home = 'http://localhost:8000'
+
   metalsmith(__dirname)
   .metadata(m.metadata)
   .source(m.source)

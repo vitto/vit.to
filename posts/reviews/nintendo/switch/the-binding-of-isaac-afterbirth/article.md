@@ -1,10 +1,10 @@
 ---
 collection: reviews
-date: 2018-02-17T13:29
+date: 2017-10-20T13:29
 draft: true
 manufacturer: Nintendo
 platform: Switch
-title: The Binding of Isaac Afterbirth +
+title: 'The Binding of Isaac: Afterbirth +'
 view: review.twig
 
 review:
@@ -15,20 +15,20 @@ review:
     name: Gameplay
     vote: 100
   -
-    name: Animazioni
+    name: Atmosfera
+    vote: 90
+  -
+    name: Storia
     vote: 90
   -
     name: Level design
-    vote: 90
-  -
-    name: Direzione
     vote: 85
   -
     name: Musiche
     vote: 85
   -
-    name: Storia
-    vote: 85
+    name: Direzione
+    vote: 80
   -
     name: Pixel art
     vote: 80
@@ -36,14 +36,21 @@ review:
 pros:
   - Buona atmosfera
   - Incredibile longevità
+  - Quantità smisurata di creature
+  - Sistema di avanzamento deliziosamente imprevedibile
 
 cons:
+  - I filmati non sono all'altezza del resto
   - Pixel art non sempre ben scalata
 
 ---
 
 Ciaone di articolo
 
+
+[
+  ![Preparati a morire, ancora e ancora!](preparati-a-morire-ancora-e-ancora.jpg)
+](preparati-a-morire-ancora-e-ancora.jpg)
 
 ---
 

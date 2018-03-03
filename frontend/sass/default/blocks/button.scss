@@ -3,10 +3,10 @@
   @extend %text;
 
   align-items: center;
-  background-color: black;
+  background-color: $button--available--background;
   border: 0;
   border-radius: $button--radius;
-  color: white;
+  color: $button--available--color;
   cursor: pointer;
   display: flex;
   height: s(2);
@@ -15,6 +15,11 @@
   text-decoration: none;
   transition: background-color $hover-ease, color $hover-ease, opacity $hover-ease;
   user-select: none;
+
+  &:hover {
+    background-color: $button--available--background--hover;
+    color: $button--available--color--hover;
+  }
 
   @include media ('<=tablet-large') {
     font-size: 11px;
@@ -42,10 +47,25 @@
   @include modifier ('back') {
     background-color: $button--back--background;
     color: $button--back--color;
+    flex-basis: 0;
+    flex-grow: 1;
 
     &:hover {
       background-color: $button--back--background--hover;
       color: $button--back--color--hover;
+    }
+
+    & + & {
+      margin-left: s(0.5);
+    }
+  }
+
+  @include modifier ('paginate') {
+    flex-basis: 0;
+    flex-grow: 1;
+
+    & + & {
+      margin-left: s(0.5);
     }
   }
 
