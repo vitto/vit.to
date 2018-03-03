@@ -1,4 +1,7 @@
 @mixin interact {
+
+  $post--availability--sold-out: $color-mercury;
+
   background-color: $craft--hover;
 
   @include block ('piece') {
@@ -71,13 +74,13 @@
 
   @include element ('item') {
     align-items: flex-start;
-    border-radius: $craft--radius;
+    border-radius: radius('small');
     color: inherit;
     cursor: pointer;
     display: flex;
     padding: s(1.5);
     text-decoration: none;
-    transition: background-color $hover-ease;
+    transition: background-color tween('hover');
     width: 33.3333%;
 
     &:link {

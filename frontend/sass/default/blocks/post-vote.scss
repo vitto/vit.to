@@ -1,6 +1,6 @@
 @include block ('post-vote') {
   background-color: $color-chicago;
-  border-radius: $radius-normal;
+  border-radius: radius('small');
   color: $color-white;
   font-size: 11px;
   padding: s(0.125) s(0.25);

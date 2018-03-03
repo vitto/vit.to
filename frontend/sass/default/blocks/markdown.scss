@@ -1,5 +1,8 @@
 @include block ('markdown') {
 
+  $article--text--color: mix($color-chicago, $color-gray);
+  $markdown--border-top: $border;
+
   margin-bottom: s(1);
   margin-top: s(1);
 
@@ -70,7 +73,7 @@
 
   img {
     @extend %image;
-    border-radius: $markdown--image--radius;
+    border-radius: radius('large');
     height: auto;
     width: 100%;
   }

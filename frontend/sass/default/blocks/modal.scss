@@ -1,4 +1,12 @@
 @include block ('modal') {
+
+  $modal--background: mix($color-white, $color-mercury);
+  $modal--body--background: $color-white;
+  $modal--background--opaque: rgba($modal--background, 0.85);
+  $modal--background--opaque-strenght: rgba($modal--background, 0.95);
+  $modal--background--blur: blur(4px);
+  $modal--shadow: shadow('card');
+
   align-items: center;
   backdrop-filter: $modal--background--blur;
   background-color: $modal--background--opaque;
@@ -18,7 +26,7 @@
   right: 0;
   top: 0;
   transform: scale(1.25);
-  transition: opacity $hover-ease, transform $hover-ease, background-position $hover-ease;
+  transition: opacity tween('activate'), transform tween('activate'), background-position tween('activate');
   z-index: 4;
 
   @supports not (backdrop-filter: $modal--background--blur) {

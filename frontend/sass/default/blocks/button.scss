@@ -10,7 +10,6 @@
   $button--back--color: $text-color;
   $button--comment--color: $color-star-dust;
   $button--price--color: $color-star-dust;
-  $button--radius: 4px;
   $button--sold-out--background--hover: $color-white;
   $button--sold-out--background: $color-mercury;
   $button--sold-out--color--hover: $color-chicago;
@@ -29,7 +28,7 @@
   align-items: center;
   background-color: $button--available--background;
   border: 0;
-  border-radius: $button--radius;
+  border-radius: radius('small');
   color: $button--available--color;
   cursor: pointer;
   display: flex;
@@ -37,7 +36,7 @@
   justify-content: center;
   padding: 0 s(0.5);
   text-decoration: none;
-  transition: background-color $hover-ease, color $hover-ease, opacity $hover-ease;
+  transition: background-color tween('hover'), color tween('hover'), opacity tween('hover');
   user-select: none;
 
   &:hover {
@@ -302,12 +301,12 @@
 
   @include element ('price') {
     color: $button--price--color;
-    transition: color $hover-ease;
+    transition: color tween('hover');
   }
 
   @include element ('comment') {
     color: $button--comment--color;
-    transition: color $hover-ease;
+    transition: color tween('hover');
   }
 
 }

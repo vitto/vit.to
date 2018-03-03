@@ -1,3 +1,11 @@
+$noui--handle--background: $color-chicago;
+$noui--target--background: $color-mercury;
+$noui--handle--height: 32px;
+$noui--handle--width: 72px;
+$noui--handle--top: -12px;
+$noui--handle--color: $color-mercury;
+$noui--target--height: 8px;
+
 .noUi-target {
   background-color: $noui--target--background;
   border: 0;

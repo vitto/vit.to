@@ -1,8 +1,8 @@
 @include block ('write-me') {
   background-color: $craft--hover;
-  border-radius: $craft--radius;
+  border-radius: radius('small');
   padding: s(1.5);
-  transition: background-color $hover-ease;
+  transition: background-color tween('hover');
   width: 100%;
 
   @include media ('<=tablet-small') {

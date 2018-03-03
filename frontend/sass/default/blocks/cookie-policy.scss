@@ -1,4 +1,7 @@
 @include block ('cookie-policy') {
+
+  $cookie-policy--border: $border;
+
   margin: auto;
   max-width: $article--body--width;
   padding: s(1) s(1) s(2);

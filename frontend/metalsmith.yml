@@ -15,10 +15,12 @@ metadata:
     twitter: '@vttrx'
   social:
     facebook: https://www.facebook.com/vttrx
-    instagram: https://www.instagram.com/vttrx/
-    pinterest: https://it.pinterest.com/vttr/
+    fudo: https://www.instagram.com/fudo.della.montagna
+    instagram: https://www.instagram.com/vttrx
+    pinterest: https://it.pinterest.com/vttr
     twitter: https://twitter.com/vttrx
-    messenger: https://www.messenger.com/t/vttrx
+  sharer: https://www.facebook.com/vttrx
+  chat: https://www.messenger.com/t/vttrx
   enable:
     store: false
     trackers: true

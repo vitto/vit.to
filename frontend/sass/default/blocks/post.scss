@@ -32,19 +32,19 @@
   @include element ('text') {
     @extend %text;
     display: block;
-    transition: color $hover-ease;
+    transition: color tween('hover');
   }
 
   @include element ('details') {
     border-top: $post--dedails--border-top;
     padding-bottom: s(1);
     padding-top: s(1);
-    transition: border-color $hover-ease;
+    transition: border-color tween('hover');
   }
 
   @include element ('icon') {
     margin-right: s(0.25);
-    transition: color $hover-ease;
+    transition: color tween('hover');
   }
 
   @include element ('infos') {

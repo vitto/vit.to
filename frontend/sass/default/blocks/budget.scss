@@ -10,7 +10,7 @@
       filter: blur(2px);
       opacity: 0.35;
       transform: scale(0.75);
-      transition: opacity $hover-ease, filter $hover-ease, transform $hover-ease;
+      transition: opacity tween('activate'), filter tween('activate'), transform tween('activate');
 
       @include modifier ('active') {
         filter: blur(0);
@@ -22,7 +22,7 @@
     @supports not (filter: blur(2px)) {
       opacity: 0.25;
       transform: scale(0.75);
-      transition: opacity $hover-ease, transform $hover-ease;
+      transition: opacity tween('activate'), transform tween('activate');
 
       @include modifier ('active') {
         opacity: 1;

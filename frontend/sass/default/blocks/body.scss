@@ -1,4 +1,7 @@
 @include block ('body') {
+
+  $body--background--mobile: $color-white;
+  
   background-color: $body--background;
   color: $text-color;
   font-family: $font-family-sans;

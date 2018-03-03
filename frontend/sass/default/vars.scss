@@ -1,73 +1,41 @@
-$title-color: $color-chicago;
-$text-color--hover: $color-chicago;
-$text-color: $color-gray;
+@function tween($property) {
+  @return get((
+      'hover': 0.5s ease('out-expo'),
+      'activate': 0.5s ease('out-expo')
+  ), $property);
+}
 
-$border: 2px solid $color-mercury;
+@function radius($property) {
+  @return get((
+      'small': 4px,
+      'large': 8px
+  ), $property);
+}
 
-$article--text--color: mix($color-chicago, $color-gray);
-$article--body--width: 768px;
+@function shadow($property) {
+  @return get((
+      'card': (0 0 0 1px rgba(0, 0, 0, 0.025), 0 0 4px rgba(0, 0, 0, 0.1))
+  ), $property);
+}
 
 $actions--available--background: rgba($color-chicago, 0.1);
 $actions--background: $color-chicago;
-$actions--radius: 8px;
-
-$aside--background: $color-white;
-$aside--background--opaque: rgba($color-white, 0.85);
-$aside--background--opaque-strenght: rgba($color-white, 0.95);
+$article--body--width: 768px;
 $aside--background--blur: blur(4px);
+$aside--background--opaque-strenght: rgba($color-white, 0.95);
+$aside--background--opaque: rgba($color-white, 0.85);
+$aside--background: $color-white;
 $aside--min-width: 330px;
-$aside--shadow: $solid-shadow;
+$aside--shadow: shadow('card');
 $aside--width: 26%;
-
 $body--background: $color-desert-storm;
-$body--background--mobile: $color-white;
-$body--text-color: $color-chicago;
-
+$border: 2px solid $color-mercury;
 $craft--hover: $color-white;
 $craft--radius: 4px;
-
-$cookie-policy--border: $border;
-
 $header--background: $color-white;
-$header--phrase--color: $text-color;
-$header--shadow: $solid-shadow;
-
-$markdown--border-top: $border;
-$markdown--image--radius: 8px;
-
-$modal--background: mix($color-white, $color-mercury);
-$modal--body--background: $color-white;
-$modal--background--opaque: rgba($modal--background, 0.85);
-$modal--background--opaque-strenght: rgba($modal--background, 0.95);
-$modal--background--blur: blur(4px);
-$modal--shadow: $solid-shadow;
-
-$input--border: $border;
-$input--unfocus: $color-star-dust;
-$input--focus: $color-chicago;
-$input--focus-background: mix($color-white, $color-mercury);
-$input--element--error-background: mix($color-error, $color-mercury, 25%);
-$input--error--color: $color-mercury;
-$input--error--background: $color-error;
-
-$noui--handle--background: $color-chicago;
-$noui--target--background: $color-mercury;
-$noui--handle--height: 32px;
-$noui--handle--width: 72px;
-$noui--handle--top: -12px;
-$noui--handle--color: $color-mercury;
-$noui--target--height: 8px;
-
-$policy--background: $color-white;
-$policy--border: $border;
-
-$img--placeholder--background: rgba($color-chicago, 0.1);
-
-$row--border: $border;
-
-$budget-info--text--background: $color-mercury;
-
-$post--availability--sold-out: $color-mercury;
-$post--dedails--border-top: $border;
-
-$selection--background: $color-mercury;
+$header--shadow: shadow('card');
+$input--border: 2px solid $color-mercury;
+$post--dedails--border-top: 2px solid $color-mercury;
+$text-color--hover: $color-chicago;
+$text-color: $color-gray;
+$title-color: $color-chicago;

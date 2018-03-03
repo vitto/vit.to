@@ -46,6 +46,6 @@
     margin-left: s(0.5);
     opacity: 0;
     padding-bottom: 12px;
-    transition: opacity $hover-ease;
+    transition: opacity tween('hover');
   }
 }

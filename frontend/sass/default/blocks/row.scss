@@ -1,4 +1,7 @@
 @include block ('row') {
+
+  $row--border: $border;
+
   display: flex;
   margin-left: s(-1);
   margin-right: s(-1);

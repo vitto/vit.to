@@ -1,5 +1,8 @@
 @include block ('send-status') {
 
+  $color-info: $color-picton-blue;
+  $color-error: $color-cinnabar;
+
   text-align: center;
 
   @include element ('icon') {

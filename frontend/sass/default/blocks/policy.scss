@@ -1,4 +1,8 @@
 @include block ('policy') {
+
+  $policy--background: $color-white;
+  $policy--border: $border;
+
   width: 100%;
 
   @include media ('<=tablet-small') {

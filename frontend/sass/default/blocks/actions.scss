@@ -1,6 +1,6 @@
 @include block ('actions') {
   background-color: $actions--background;
-  border-radius: $actions--radius;
+  border-radius: radius('large');
   display: flex;
   flex-wrap: wrap;
   padding: 4px;

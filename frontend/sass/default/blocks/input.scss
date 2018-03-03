@@ -1,4 +1,12 @@
 @include block ('input') {
+
+  $input--unfocus: $color-star-dust;
+  $input--focus: $color-chicago;
+  $input--focus-background: mix($color-white, $color-mercury);
+  $input--element--error-background: mix($color-cinnabar, $color-mercury, 25%);
+  $input--error--color: $color-mercury;
+  $input--error--background: $color-cinnabar;
+
   display: block;
   position: relative;
 
@@ -28,7 +36,7 @@
     border-top: 2px solid transparent;
     font-family: $font-family-sans;
     padding: s(0.5) s(1.75) s(0.5) 0;
-    transition: border-bottom $hover-ease, background-color $hover-ease, padding $hover-ease;
+    transition: border-bottom tween('activate'), background-color tween('activate'), padding tween('activate');
     width: 100%;
 
     &:focus {
@@ -95,7 +103,7 @@
     max-height: 0;
     overflow: hidden;
     padding: 0 s(0.5);
-    transition: padding $hover-ease, max-height $hover-ease;
+    transition: padding tween('activate'), max-height tween('activate');
   }
 
   @include element ('icon') {
@@ -103,6 +111,6 @@
     position: absolute;
     right: 0;
     top: 10px;
-    transition: color $hover-ease, right $hover-ease;
+    transition: color tween('activate'), right tween('activate');
   }
 }
