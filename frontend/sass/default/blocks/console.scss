@@ -11,6 +11,10 @@
       margin-left: s(0.25);
     }
 
+    &::after {
+      display: none !important;
+    }
+
     @include modifier ('hover') {
       &:hover {
         filter: none;

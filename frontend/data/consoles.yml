@@ -7,6 +7,10 @@
   logo: sony-playstation-ps3-logo.svg
   name: PS3
 -
+  href: https://it.wikipedia.org/wiki/PlayStation
+  logo: sony-playstation-psx-logo.svg
+  name: PlayStation
+-
   href: http://www.nintendo.it/Nintendo-Switch/Nintendo-Switch-1148779.html
   logo: nintendo-switch-logo.svg
   name: Switch

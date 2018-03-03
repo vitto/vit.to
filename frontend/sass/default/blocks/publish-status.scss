@@ -1,10 +1,12 @@
 @include block ('publish-status') {
+  align-items: center;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-name: opacity-blink;
   background-color: $color-star-dust;
   border-radius: radius('small');
   color: $color-white;
+  display: flex;
   font-size: 8px;
   line-height: 1;
   padding: s(0.125) s(0.25);
@@ -18,5 +20,22 @@
     background-color: $color-chicago;
     font-size: inherit;
     position: static;
+
+    @include media ('<=mobile-large') {
+      margin-bottom: s(1);
+    }
+
+    @include element ('icon') {
+      display: inline-block;
+    }
+  }
+
+  @include element ('text') {
+    margin-right: s(0.25);
+  }
+
+  @include element ('icon') {
+    display: none;
+    margin-right: s(0.25);
   }
 }
