@@ -85,16 +85,16 @@ Tutto l'immaginario di **Edmund McMillen** (principale autore) ci mostra un gioc
 
 ### Storia
 
-Oltre a questa atmosfera horror del mondo di un infante, la storia è ispirata alla vicenda biblica di [Isacco][isacco]. Narra del bambino Isaac e di sua madre, intenta ad ucciderlo per il volere divino, in quanto corrotto dal male, la vicenda è in realtà frutto dell'immaginazione di Isaac, in quanto si può capire che è tutto basato sui suoi disegni, assieme a parti della sua vita reale, mischiate anche nei finali, oltre ad oggetti di sua fantasia, Isaac troverà oggetti collegati alla sua vita, come una collana della madre, chiavi di papà.
+Oltre a questa atmosfera horror del mondo di un infante, la storia è ispirata alla vicenda biblica di [Isacco][isacco]. Narra del bambino Isaac e di sua madre, intenta ad ucciderlo per il volere divino, in quanto corrotto dal male, la narrazione gioca sulla vicenda mettendo in dubbio che i fatti stiano accadendo realmente o tutto sia frutto dell'immaginazione di Isaac, in quanto tutto è basato sui suoi disegni, assieme a momenti della vita reale come si può notare nei vari finali.
 
-Per questo motivo, il gioco non venne pubblicato su App Store di Apple, in quanto giudicato blasfemo, tuttavia ora lo si può scaricare anche li.
+A causa della tematica a fondo religioso, inizialmente il gioco non venne pubblicato su App Store di Apple, in quanto giudicato blasfemo, tuttavia ora lo si può acquistare anche li.
 
 
 ### Combattimenti
 
-Ho trovato il gioco subito severo e con un AI basilare ma terribilmente malefica, sempre pronto a prenderti di sorpresa, nonostante tu ti stia aspettando la sorpresa. Il comportamenti dei mostri è piuttosto vario, e come il nostro personaggio, anche loro hanno una serie di modificatori che ne virano gli attacchi e il comportamento, non come Isaac, ma comunque anche gli avversari regalano sempre varietà e non ci fanno mai abbassare la guardia.
+Ho trovato il gioco subito severo e con un AI basilare ma terribilmente malefica e insidiosa, i mostri sono sempre pronti a prenderti di sorpresa, nonostante tu stia attento, spesso le creature ti prenderanno in contropiede a causa dei loro movimenti spesso inprevedibili. Il comportamento dei mostri è piuttosto vario, e come il nostro personaggio, anche loro hanno una serie di modificatori che ne virano gli attacchi e il comportamento, non così tanti come Isaac, ma comunque regalano sempre varietà e non ci fanno mai abbassare la guardia.
 
-Anche il più insignificante dei nemici, come quegli gli odiosi ragnetti, sono sempre pericolosi e sanno rovinarti l'umore colpendoti a tradimento con uno scatto improvviso.
+Anche il più insignificante dei nemici, come i maledetti ragnetti, sono sempre pericolosi e sanno rovinarti l'umore colpendoti a tradimento con uno scatto improvviso.
 
 Gli scontri coi boss sono abbastanza semplici, a parte Ultra Creed che può essere davvero frustrante da abbattere e qualche altro mostro, tuttavia l'essenza del combattimento sta nello schivare i mostri nelle stanze, soprattutto a difficoltà hard core il gioco sa essere davvero un bastardo.
 
