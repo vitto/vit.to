@@ -1,6 +1,7 @@
 @include block ('post') {
 
   $post-dedails-border-top: $border;
+  $post-picture-background: $color-white;
 
   align-items: stretch;
   display: flex;
@@ -9,7 +10,7 @@
 
   @include element ('picture') {
     align-items: flex-end;
-    background-color: transparent;
+    background-color: $post-picture-background;
     border-bottom: $post-dedails-border-top;
     display: flex;
     flex-grow: 1;
@@ -58,6 +59,10 @@
       position: absolute;
       transition: transform tween('hover'), background-color tween('hover');
       width: 100%;
+
+      @include media ('<tablet-large') {
+        display: none;
+      }
     }
 
     &::before {
@@ -71,6 +76,10 @@
       top: s(-1);
       transition: background-color tween('hover');
       width: 100%;
+
+      @include media ('<tablet-large') {
+        display: none;
+      }
     }
   }
 
