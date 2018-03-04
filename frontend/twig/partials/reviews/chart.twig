@@ -23,9 +23,14 @@
   }
 
   var minTickScale = Math.max.apply(Math, votes) - Math.min.apply(Math, votes)
-  minTickScale = Math.min.apply(Math, votes) - minTickScale
+  minTickScale = Math.min.apply(Math, votes) - 10
+  if (minTickScale < 0) {
+    minTickScale = 0
+  }
 
   finalVote = Math.round(finalVote / review.length)
+
+  console.log(minTickScale, 100)
 
   if (finalVote >= 90) {
     areaBackgroundColor = 'rgba(115, 187, 62, 0.75)'
