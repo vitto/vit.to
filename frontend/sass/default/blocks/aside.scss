@@ -9,7 +9,6 @@
   overflow: auto;
   padding: s(3);
   position: fixed;
-  white-space: nowrap;
   width: $aside-width;
 
   @supports not (backdrop-filter: $backdrop-blur) {
@@ -45,6 +44,7 @@
 
   @include element ('title') {
     @extend %title;
+    white-space: nowrap;
   }
 
   @include element ('text') {
