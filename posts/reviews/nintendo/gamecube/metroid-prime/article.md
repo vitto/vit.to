@@ -52,7 +52,7 @@ Penso che quel giorno invece di comprare il Gamecube, forse avrei dovuto giocare
 
 ### Atmosfera
 
-Il Gamecube era una console vecchia quando l'ho acquistata, tra l'altro in quel periodo giocavo su PC, quindi ero abituato bene per quanto riguarda standard grafici, per cui pensavo che ci avrei giochicchiato un po' e che molto probabilmente avrei lasciato la console li a prendere polvere.
+Il Gamecube era una console vecchia quando l'ho acquistata, tra l'altro in quel periodo giocavo su PC, quindi ero abituato bene per quanto riguarda standard grafici, pensavo che ci avrei giochicchiato un po' e che molto probabilmente avrei lasciato la console li a prendere polvere.
 
 [
   ![Samus aran appena atterrata sulla stazione spaziale disastrata](samus-aran-appena-atterrata-sulla-stazione-spaziale-disastrata.jpg)
@@ -71,11 +71,11 @@ La grande scommessa ha fatto [Retro Studios][retro] (team che ta dietro questo c
   ![Ingresso al core del reattore](ingresso-al-core-del-reattore.jpg)
 ](ingresso-al-core-del-reattore.jpg)
 
-Il punto è che non solo sono arrivati ad eguagliare la profondità di esplorazione dei titoli 2D, sono riusciti ad esaltarla e superarla, grazie anche ad un level design magistrale, si ha costantemente la sensazione di avere lasciato qualcosa indietro, come se non avessimo guardato abbastanza in una zona, perché c'era un dettaglio sospetto in una parete.
+Il punto è che non solo sono arrivati ad eguagliare la profondità di esplorazione dei vari Metroid 2D, sono riusciti ad esaltarla e superarla grazie ad un level design magistrale, si ha costantemente la sensazione di avere lasciato qualcosa indietro, come se non avessimo guardato abbastanza in una zona, perché c'era un dettaglio sospetto in una parete o item visibile ma non raggiungibile dalla posizione attuale.
 
 ### Meccaniche
 
-Samus
+Oltre che il grandioso lavoro di trasposizione del genere Metroidvania su 3D, sono rimasto esaltato dalle meccaniche legate al visore, essenziale per poter procedere nel gioco e in altri casi per poter accedere a segreti, capire meglio dettagli sulla storia o eventuali punti deboli dei mostri che si incontrano durante il cammino. Ci sono tre tipi di visore, quello termico, il visore a raggi x e uno scanner che ci accompagneranno nel gioco analizzando
 
 
 ### Combattimenti
