@@ -9,7 +9,8 @@ module.exports = {
       path.join(__sass, '/import.scss')
     ],
     vendor: [
-      path.join(__modules, '/material-design-icons/iconfont/material-icons.css')
+      path.join(__modules, '/material-design-icons/iconfont/material-icons.css'),
+      path.join(__modules, '/typeface-exo-2/index.css')
     ]
   },
   js: {

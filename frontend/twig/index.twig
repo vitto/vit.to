@@ -6,36 +6,36 @@
     }
   %}
   <body class="body">
-    {% include 'partials/header-mobile.twig' %}
-    <aside class="aside">
-      {% include 'partials/aside__header.twig' %}
-      {% include 'partials/aside__footer.twig' %}
-    </aside>
-    <main class="main">
-      <section class="posts">
-        <div id="policy-message" class="posts__item posts__item--policy policy-container">
-          {% include 'partials/policy.twig' with { bordered: true } %}
-        </div>
-        {% for item in metadata.collections.reviews %}
-          {% if item.draft and metadata.enable.drafts or item.draft is not defined %}
-            <a class="posts__item" href="{{ item.path }}">
-              {% include 'partials/reviews/post.twig' with { item: item } %}
-            </a>
-          {% endif %}
+    <canvas class="cover" id="canvas-webgl" data-image="{{ relativePath }}img/{{ cover }}"></canvas>
+
+    <div class="contents">
+      <div class="items">
+        {% for item in work %}
+        {% include 'partials/item.twig' with { item: item } %}
         {% endfor %}
-        {% for item in metadata.collections.diy %}
-          {% if item.draft and metadata.enable.drafts or item.draft is not defined %}
-            <a class="posts__item" href="{{ item.path }}">
-              {% include 'partials/diy/post.twig' with { item: item } %}
-            </a>
-          {% endif %}
+      </div>
+
+      <div class="items">
+        {% for item in personal %}
+        {% include 'partials/item.twig' with { item: item } %}
         {% endfor %}
-        <div class="posts__call">
-          {% include 'partials/email-message.twig' %}
-        </div>
-      </section>
-      {% include 'partials/cookie-policy.twig' %}
-    </main>
+      </div>
+
+      <div class="items">
+        {% for item in contact %}
+        {% include 'partials/item.twig' with { item: item } %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <svg class="logo" viewBox="0 0 22 19">
+      <g>
+        <path d="M1.875,0.375l17.25,0l-6.75,11.625l-1.5,-2.625l3.75,-6.375l-14.25,0l1.5,-2.625Z" style="fill:#545454;fill-rule:nonzero;"/>
+        <path d="M0.375,3.375l13.5,0l-1.5,2.625l-7.5,0l6.75,12.375l-2.625,0l-8.625,-15Z" style="fill:#545454;fill-rule:nonzero;"/>
+        <path d="M5.625,6.375l3,0l3.75,6.375l7.125,-12l1.5,2.625l-9,14.625l-6.375,-11.625Z" style="fill:#545454;fill-rule:nonzero;"/>
+      </g>
+    </svg>
+
     {% include 'partials/assets.twig' %}
   </body>
 </html>

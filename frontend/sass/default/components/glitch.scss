@@ -1,0 +1,107 @@
+@mixin animation($animate...) {
+  $max: length($animate);
+  $animations: '';
+
+  @for $i from 1 through $max {
+    $animations: #{$animations + nth($animate, $i)};
+
+    @if $i < $max {
+      $animations: #{$animations + ', '};
+    }
+  }
+  animation: $animations;
+}
+
+@mixin keyframes($animationName) {
+
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@mixin transform($value){
+  transform: $value;
+}
+
+$offset: 6px;
+$bgcolor: #111;
+
+*{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body{
+  background: $bgcolor;
+  font-family: 'Bungee', cursive;
+  font-size: 80px;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+#root{
+  position: absolute;
+  top: 50%;
+  @include transform(translateY(-50%) translateX(-50%));
+  left: 50%;
+}
+#text{
+  top: 0;
+  left: -$offset;
+  color: red;
+  mix-blend-mode: screen;
+  position: relative;
+  white-space: nowrap;
+   filter: blur(1px);
+  animation: skew 2s infinite, flash .04s infinite;
+
+  &:after, &:before{
+    content: attr(data-text);
+    mix-blend-mode: screen;
+    position: absolute;
+  }
+
+  &::after {
+    animation: move 1.5s infinite;
+    color: blue;
+    left: $offset;
+    top: 0;
+  }
+
+  &::before {
+    color: limegreen;
+    left: 0.6 * $offset;
+    top: -0.4 * $offset;
+  }
+}
+
+
+
+
+@keyframes skew {
+  0%    { transform: none; }
+  30%   { transform: none; }
+  30.2% { transform: skewX(50deg); }
+  30.4% { transform: skewX(-50deg); }
+  31%   { transform: none; }
+}
+
+@keyframes move {
+  0%   { transform: none; }
+  30%  { transform: none; }
+  31%  { transform: translateX(-$offset); }
+  33%  { transform: none; }
+  98%  { transform: none; }
+  100% { transform: translateX($offset); }
+}
+
+@keyframes flash {
+  0% { opacity: 1; }
+  50%  { opacity: 0.5; }
+}
+
+@keyframes lines {
+  0%   { opacity: 0.1; }
+  50%  { opacity: 1; }
+}

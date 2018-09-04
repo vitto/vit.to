@@ -1,0 +1,8 @@
+@include block ('items') {
+  margin: 0 s(2);
+  padding: s(2) 0;
+
+  & + & {
+    border-top: 2px solid $color-cinnabar;
+  }
+}

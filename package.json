@@ -70,7 +70,8 @@
   "dependencies": {
     "frontsize": "^4.0.3",
     "material-design-icons": "^3.0.1",
-    "three": "^0.96.0"
+    "three": "^0.96.0",
+    "typeface-exo-2": "0.0.54"
   },
   "standard": {
     "globals": [

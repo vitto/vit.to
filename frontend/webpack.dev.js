@@ -100,12 +100,6 @@ module.exports = function (env) {
               presets: ['es2015']
             }
           }
-        }, {
-          test: require.resolve('headroom.js'),
-          use: 'imports-loader?this=>window,define=>false,exports=>false'
-        }, {
-          test: require.resolve('jquery-range/jquery.range.js'),
-          use: 'imports-loader?this=>window,define=>false,exports=>false'
         }
       ]
     },

@@ -1,0 +1,13 @@
+@include block ('logo') {
+  bottom: s(2);
+  height: auto;
+  opacity: 0.7;
+  position: fixed;
+  right: s(2);
+  width: 60px;
+  z-index: 3;
+
+  path {
+    fill: $color-cinnabar !important;
+  }
+}

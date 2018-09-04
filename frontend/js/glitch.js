@@ -283,8 +283,8 @@ class PostEffect {
 
 class ConsoleSignature {
   constructor() {
-    this.message = `created by yoichi kobayashi`;
-    this.url = `http://www.tplh.net`;
+    this.message = `created by yoichi kobayashi, reused by vittorio vittori`;
+    this.url = `http://vit.to`;
     this.show();
   }
   show() {
@@ -368,7 +368,9 @@ const init = () => {
   cameraBack.position.set(0, 0, 100);
   cameraBack.lookAt(new THREE.Vector3());
 
-  bgImg.init('http://www.tplh.net/file/osaka01.jpg', () => {
+  var image = canvas.getAttribute('data-image');
+
+  bgImg.init(image, () => {
     sceneBack.add(bgImg.obj);
     scene.add(postEffect.obj);
   })
