@@ -2,7 +2,21 @@
   margin: 0 s(2);
   padding: s(2) 0;
 
+  @include media ('>=tablet-large') {
+    margin: 0 s(3);
+  }
+
+  @include media ('>=desktop-small') {
+    margin: 0 s(4);
+  }
+
   & + & {
     border-top: 2px solid $color-cinnabar;
+  }
+
+  @include modifier ('desktop') {
+    @include media ('<tablet-small') {
+      display: none;
+    }
   }
 }

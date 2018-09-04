@@ -27,7 +27,7 @@ personal:
     title: Production date
     value: 16/10/2046
   -
-    title: Model serial
+    title: Product serial
     value: P2501
   -
     title: Type

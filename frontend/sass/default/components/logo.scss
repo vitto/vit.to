@@ -1,13 +1,28 @@
 @include block ('logo') {
-  bottom: s(2);
-  height: auto;
+  display: inline-block;
+  left: s(2);
+  line-height: 0;
   opacity: 0.7;
   position: fixed;
-  right: s(2);
-  width: 60px;
+  top: s(2);
   z-index: 3;
+
+  @include element ('image') {
+    height: auto;
+    width: 60px;
+  }
 
   path {
     fill: $color-cinnabar !important;
+  }
+
+  @include media ('>=tablet-large') {
+    left: s(3);
+    top: s(3);
+  }
+
+  @include media ('>=desktop-small') {
+    left: s(4);
+    top: s(4);
   }
 }

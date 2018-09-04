@@ -1,9 +1,11 @@
+
+
 @include block ('item') {
   $size: 30px;
   $title-background: rgba($color-cinnabar, 0.7);
   $title-color: $color-black-russian;
   $value-background: rgba($color-cinnabar, 0.2);
-  $value-background-mobile: rgba($color-black-russian, 0.4);
+  $value-background-mobile: rgba($color-cinnabar, 0.3);
   $value-color: $color-cinnabar;
 
   align-items: stretch;
@@ -38,6 +40,13 @@
 
     @include media ('<tablet-small') {
       background-color: $value-background-mobile;
+
+      @supports (backdrop-filter: blur(2px)) or (-webkit-backdrop-filter: blur(2px)) {
+        @include media ('<tablet-small') {
+          backdrop-filter: blur(2px);
+          background-color: $value-background;
+        }
+      }
     }
   }
 }
