@@ -12,17 +12,26 @@
     width: 60px;
   }
 
-  path {
-    fill: $color-cinnabar !important;
+  @include media ('>=mobile-large') {
+    bottom: s(2);
+    left: auto;
+    right: s(2);
+    top: auto;
   }
 
-  @include media ('>=tablet-large') {
+  @include media ('>=tablet-small') {
+    bottom: auto;
     left: s(3);
+    right: auto;
     top: s(3);
   }
 
   @include media ('>=desktop-small') {
     left: s(4);
     top: s(4);
+  }
+
+  path {
+    fill: $color-cinnabar !important;
   }
 }

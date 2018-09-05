@@ -1,5 +1,3 @@
-
-
 @include block ('item') {
   $size: 30px;
   $title-background: rgba($color-cinnabar, 0.7);
@@ -40,13 +38,6 @@
 
     @include media ('<tablet-small') {
       background-color: $value-background-mobile;
-
-      @supports (backdrop-filter: blur(2px)) or (-webkit-backdrop-filter: blur(2px)) {
-        @include media ('<tablet-small') {
-          backdrop-filter: blur(2px);
-          background-color: $value-background;
-        }
-      }
     }
   }
 }
