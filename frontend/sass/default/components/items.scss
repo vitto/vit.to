@@ -11,7 +11,7 @@
   }
 
   & + & {
-    border-top: 2px solid $color-cinnabar;
+    border-top: 2px solid $color-graphics;
   }
 
   @include modifier ('desktop') {

@@ -1,7 +1,7 @@
 @include block ('body') {
 
-  background-color: background('latter');
-  color: $text-color;
+  background-color: $color-background;
+  color: $color-graphics;
   font-family: $font-family-sans;
   font-size: 14px;
   font-weight: 600;
