@@ -1,17 +1,28 @@
 @include block ('items') {
-  margin: 0 s(2);
-  padding: s(2) 0;
+  margin: 0 s(2) s(2);
+
+  & + & {
+    margin-top: s(2);
+  }
 
   @include media ('>=tablet-large') {
-    margin: 0 s(3);
+    margin-bottom: s(3);
+    margin-left: s(3);
+    margin-right: s(3);
+
+    & + & {
+      margin-top: s(3);
+    }
   }
 
   @include media ('>=desktop-small') {
-    margin: 0 s(4);
-  }
+    margin-bottom: s(4);
+    margin-left: s(4);
+    margin-right: s(4);
 
-  & + & {
-    border-top: 2px solid $color-graphics;
+    & + & {
+      margin-top: s(4);
+    }
   }
 
   @include modifier ('desktop') {
