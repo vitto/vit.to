@@ -12,7 +12,7 @@ work:
     value: ideato srl
   -
     title: Occupation
-    value: Front-end developer
+    value: Front-end engineer
   -
     title: Technology
     value: CSS / HTML / JS

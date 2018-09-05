@@ -1,12 +1,12 @@
 metadata:
-  background: '#faf9f7'
+  background: '#e74737'
   first_edit_year: 2011
   home: http://vit.to
   lang: it
   locale: it_IT
   repo: https://github.com/vitto/vit.to
   title: Vittorio Vittori
-  description: Interaction desginer, frontend developer, video game addicted.
+  description: Interaction desginer, front-end engineer, video game addicted.
   service:
     email_js:
       user_id: user_eswCclJ3zfAWR2RR4qapH
