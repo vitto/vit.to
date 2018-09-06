@@ -8,17 +8,18 @@ work:
     title: Subject
     value: Vittorio Vittori
   -
-    title: Corporation
+    title: Corp
     value: ideato srl
+    url: http://www.ideato.it
   -
-    title: Occupation
+    title: Role
     value: Front-end engineer
+  -
+    title: Creative
+    value: UI / BEM / Visual
   -
     title: Technology
     value: CSS / HTML / JS
-  -
-    title: Method
-    value: BEM
 personal:
   -
     title: Sex
@@ -31,12 +32,14 @@ personal:
     value: P2501
   -
     title: Type
-    value: Nexus 6 model replicant
+    value: Nexus 6 replicant
 contact:
   -
     title: Mobile device
     value: +39 320 1852742
+    url: tel:+393201852742
   -
     title: E-mail
     value: vv@ideato.it
+    url: mailto:vv@ideato.it
 ---

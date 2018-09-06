@@ -1,8 +1,18 @@
-<div class="item">
-  <div class="item__title">
-    {{ item.title }}
-  </div>
-  <div class="item__value">
-    {{ item.value }}
-  </div>
+<div class="items {% if modifier is defined %} {{ modifier }} {% endif %}">
+  {% for item in items %}
+    <div class="item">
+      <div class="item__title">
+        {{ item.title }}
+      </div>
+      {% if item.url is defined %}
+        <a href="{{ item.url }}" class="item__value item__value--resource" style="animation-delay:{{ global.faker.finance.amount(0, 1, 1) }}s">
+          {{ item.value }}
+        </a>
+      {% else %}
+        <div class="item__value">
+          {{ item.value }}
+        </div>
+      {% endif %}
+    </div>
+  {% endfor %}
 </div>

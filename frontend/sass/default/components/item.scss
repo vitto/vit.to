@@ -1,14 +1,30 @@
+
+
 @include block ('item') {
   $size: 30px;
   $title-background: rgba($color-graphics, 0.7);
   $title-color: $color-background;
   $value-background: rgba($color-graphics, 0.2);
   $value-background-mobile: rgba($color-graphics, 0.3);
+  $value-background-pulse: rgba($color-graphics, 0.4);
+  $value-background-hover: rgba($color-graphics, 0.5);
   $value-color: $color-graphics;
 
   align-items: stretch;
   display: flex;
   line-height: $size;
+
+  @keyframes pulse-mobile {
+    50% { background-color: $value-background-mobile; }
+    51% { background-color: $value-background-pulse; }
+    75% { background-color: $value-background-mobile; }
+  }
+
+  @keyframes pulse-desktop {
+    50% { background-color: $value-background; }
+    51% { background-color: $value-background-pulse; }
+    75% { background-color: $value-background; }
+  }
 
   &:first-child {
     @include element ('title') {
@@ -33,11 +49,31 @@
   @include element ('value') {
     background-color: $value-background;
     color: $value-color;
+    display: block;
     font-weight: 200;
     padding: 0 s(1);
+    text-decoration: none;
+    transition: padding $hover;
 
     @include media ('<tablet-small') {
       background-color: $value-background-mobile;
+    }
+
+    @include modifier ('resource') {
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-name: pulse-desktop;
+
+      @include media ('<tablet-small') {
+        animation-name: pulse-mobile;
+      }
+
+      &:hover {
+        animation: none;
+        background-color: $value-background-hover;
+        padding-left: s(1.5);
+        padding-right: s(1.5);
+      }
     }
   }
 }

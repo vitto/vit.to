@@ -9,23 +9,9 @@
     <canvas class="cover" id="canvas-webgl" data-image="{{ relativePath }}img/{{ cover }}"></canvas>
 
     <div class="contents">
-      <div class="items">
-        {% for item in work %}
-        {% include 'partials/item.twig' with { item: item } %}
-        {% endfor %}
-      </div>
-
-      <div class="items items--desktop">
-        {% for item in personal %}
-        {% include 'partials/item.twig' with { item: item } %}
-        {% endfor %}
-      </div>
-
-      <div class="items">
-        {% for item in contact %}
-        {% include 'partials/item.twig' with { item: item } %}
-        {% endfor %}
-      </div>
+      {% include 'partials/item.twig' with { items: work } %}
+      {% include 'partials/item.twig' with { items: personal, modifier: 'items--desktop' } %}
+      {% include 'partials/item.twig' with { items: contact } %}
     </div>
 
     <a class="logo" href="mailto:vv@ideato.it">
