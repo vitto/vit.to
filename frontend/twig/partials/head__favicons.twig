@@ -1,5 +1,5 @@
-<meta name="theme-color" content="{{ metadata.background }}">
-<link rel="mask-icon" color="{{ metadata.background }}" href="{{ relativePath }}img/safari-mask-icon.svg">
+<meta name="theme-color" content="{{ metadata.icon }}">
+<link rel="mask-icon" color="{{ metadata.icon }}" href="{{ relativePath }}img/safari-mask-icon.svg">
 <link href="{{ relativePath }}img/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
 <link href="{{ relativePath }}img/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
 <link href="{{ relativePath }}img/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
@@ -14,5 +14,15 @@
 <link href="{{ relativePath }}img/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
 <link href="{{ relativePath }}img/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
 <link href="{{ relativePath }}img/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png">
-<meta content="{{ metadata.background }}" name="msapplication-TileColor">
+<meta content="{{ metadata.icon }}" name="msapplication-TileColor">
 <meta content="{{ relativePath }}img/mstile-144x144.png" name="msapplication-TileImage">
+
+<style>
+  body {
+    background-color: {{ metadata.background }};
+  }
+  .items,
+  .logo {
+    display: none;
+  }
+</style>

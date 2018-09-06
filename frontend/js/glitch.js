@@ -371,8 +371,10 @@ const init = () => {
   var image = canvas.getAttribute('data-image');
 
   bgImg.init(image, () => {
-    sceneBack.add(bgImg.obj);
+    var body = document.getElementsByClassName('body')[0];
+    body.classList.add('body--loaded');
     scene.add(postEffect.obj);
+    sceneBack.add(bgImg.obj);
   })
 
   on();

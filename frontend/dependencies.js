@@ -2,6 +2,7 @@ const path = require('path')
 const __modules = path.join(__dirname, '/../node_modules')
 const __js = path.join(__dirname, '/js')
 const __sass = path.join(__dirname, '/sass/default')
+const __vendors = path.join(__dirname, '/vendors')
 
 module.exports = {
   css: {
@@ -10,7 +11,7 @@ module.exports = {
     ],
     vendor: [
       // path.join(__modules, '/material-design-icons/iconfont/material-icons.css'),
-      path.join(__modules, '/typeface-exo-2/index.css')
+      path.join(__vendors, '/typeface-exo-2.css')
     ]
   },
   js: {
