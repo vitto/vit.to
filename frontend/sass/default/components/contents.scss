@@ -1,11 +1,13 @@
 @include block ('contents') {
   bottom: 0;
+  opacity: 0;
   position: fixed;
   transform: translate(-100%, 100%);
-  transition: transform $ease-intro;
+  transition: opacity $ease-intro, transform $ease-intro;
   z-index: 2;
 
   @include has-parent('body--loaded') {
+    opacity: 1;
     transform: translate(0, 0);
   }
 }
