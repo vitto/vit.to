@@ -1,6 +1,37 @@
 @include block ('items') {
   display: block;
   margin: 0 s(2) s(2);
+  transform: translate(-100%, 0);
+  transition: transform $ease-intro;
+
+
+  @include has-parent ('body--loaded') {
+    transform: translate(0, 0);
+  }
+
+  $reverse: true;
+  $i: 1;
+  $item: 2;
+  $items: 3;
+  $delay: 0.105;
+
+  @if $reverse == true {
+    @while $item > 0 {
+      &:nth-child(#{$item}) {
+        transition-delay: #{($delay * $i)}s;
+      }
+      $item: $item - 1;
+      $i: $i + 1;
+    }
+  } @else {
+    @while $item <= $items {
+      &:nth-child(#{$item}) {
+        transition-delay: #{($delay * ($item - 1))}s;
+      }
+      $item: $item + 1;
+    }
+  }
+
 
   & + & {
     margin-top: s(2);
