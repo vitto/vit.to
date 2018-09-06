@@ -3,10 +3,12 @@
   opacity: 0;
   position: fixed;
   top: 0;
-  transition: opacity $ease-intro;
+  transform: translate(-20%, 0) scale(2) perspective(500px) rotateY(-10deg) rotateZ(10deg);
+  transition: opacity $ease-intro, transform $ease-intro;
   z-index: 1;
 
   @include has-parent('body--loaded') {
     opacity: 1;
+    transform: translate(0, 0) scale(1) perspective(100px) rotateY(0deg) rotateZ(0deg);
   }
 }
