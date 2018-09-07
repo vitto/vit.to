@@ -22,17 +22,17 @@ work:
     value: CSS / HTML / JS
 personal:
   -
-    title: Sex
-    value: Male
+    title: Status
+    value: Active
   -
-    title: Production date
-    value: 16/10/2046
+    title: Production year
+    value: 2046
   -
-    title: Product serial
-    value: P2501
+    title: Project name
+    value: 2501
   -
     title: Type
-    value: Nexus 6 replicant
+    value: Nexus-6 replicant
 contact:
   -
     title: Mobile device
