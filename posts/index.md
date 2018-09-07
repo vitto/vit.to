@@ -8,7 +8,7 @@ work:
     title: Subject
     value: Vittorio Vittori
   -
-    title: Corp
+    title: Corporation
     value: ideato srl
     url: http://www.ideato.it
   -
