@@ -12,8 +12,9 @@
       {% include 'partials/item.twig' with { items: work } %}
       {% include 'partials/item.twig' with { items: personal, modifier: 'items--desktop' } %}
       {% include 'partials/item.twig' with { items: contact } %}
-      <a href="{{ metadata.repo }}" class="source">
-        Source code URL / {{ metadata.repo|replace({'http://': '', 'https://': ''}) }}
+      <a href="{{ metadata.repo.url }}" class="source">
+        {{ metadata.repo.description }}
+        {{ metadata.repo.url|replace({'http://': '', 'https://': ''}) }}
       </a>
     </div>
 

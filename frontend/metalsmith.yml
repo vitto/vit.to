@@ -5,7 +5,9 @@ metadata:
   home: http://vit.to
   lang: it
   locale: it_IT
-  repo: https://github.com/vitto/vit.to
+  repo:
+    description: Source code URL / 
+    url: https://github.com/vitto/vit.to
   title: Vittorio Vittori
   description: Interaction desginer, front-end engineer, video game addicted.
   service:
