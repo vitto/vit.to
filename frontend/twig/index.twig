@@ -12,6 +12,9 @@
       {% include 'partials/item.twig' with { items: work } %}
       {% include 'partials/item.twig' with { items: personal, modifier: 'items--desktop' } %}
       {% include 'partials/item.twig' with { items: contact } %}
+      <a href="{{ metadata.repo }}" class="source">
+        Source data URL / {{ metadata.repo|replace({'http://': '', 'https://': ''}) }}
+      </a>
     </div>
 
     <a class="logo" href="mailto:vv@ideato.it">

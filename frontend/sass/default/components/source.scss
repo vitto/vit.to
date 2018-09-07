@@ -1,0 +1,36 @@
+@include block ('source') {
+  background-color: transparent;
+  color: $color-graphics;
+  display: inline-block;
+  font-weight: 200;
+  line-height: $rows-height;
+  margin: 0 s(2) s(2);
+  text-decoration: none;
+  text-shadow: $text-shadow;
+  transition: padding $hover;
+
+  &:hover {
+    background-color: $item-background-hover;
+    padding: 0 s(1);
+  }
+
+  @include media ('>=tablet-large') {
+    margin-bottom: s(3);
+    margin-left: s(3);
+    margin-right: s(3);
+
+    & + & {
+      margin-top: s(3);
+    }
+  }
+
+  @include media ('>=desktop-small') {
+    margin-bottom: s(4);
+    margin-left: s(4);
+    margin-right: s(4);
+
+    & + & {
+      margin-top: s(4);
+    }
+  }
+}

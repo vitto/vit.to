@@ -3,3 +3,6 @@ $color-graphics: $color-cinnabar;
 $selection-color: $color-graphics;
 $hover: 0.5s ease('out-expo');
 $ease-intro: 0.875s ease('out-expo');
+$text-shadow: 0 0 2px $color-background;
+$rows-height: 30px;
+$item-background-hover: rgba($color-graphics, 0.5);

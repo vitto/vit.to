@@ -4,7 +4,6 @@
   transform: translate(-100%, 0);
   transition: transform $ease-intro;
 
-
   @include has-parent ('body--loaded') {
     transform: translate(0, 0);
   }

@@ -1,18 +1,16 @@
-
-
 @include block ('item') {
-  $size: 30px;
+
   $title-background: rgba($color-graphics, 0.7);
   $title-color: $color-background;
   $value-background: rgba($color-graphics, 0.2);
-  $value-background-mobile: rgba($color-graphics, 0.3);
+  $value-background-mobile: rgba(darken($color-graphics, 20%), 0.3);
   $value-background-pulse: rgba($color-graphics, 0.4);
-  $value-background-hover: rgba($color-graphics, 0.5);
+  $value-background-hover: $item-background-hover;
   $value-color: $color-graphics;
 
   align-items: stretch;
   display: flex;
-  line-height: $size;
+  line-height: $rows-height;
 
   @keyframes pulse-mobile {
     50% { background-color: $value-background-mobile; }
@@ -57,6 +55,7 @@
 
     @include media ('<tablet-small') {
       background-color: $value-background-mobile;
+      text-shadow: $text-shadow;
     }
 
     @include modifier ('resource') {
