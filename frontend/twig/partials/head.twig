@@ -7,6 +7,15 @@
   </title>
   {% include 'head__favicons.twig' %}
   {% include 'head__social.twig' %}
+  <style>
+    body {
+      background-color: {{ metadata.background }};
+    }
+    .contents,
+    .logo {
+      display: none;
+    }
+  </style>
   <link async rel="stylesheet" href="{{ relativePath }}css/vendor-style.css?v={{ global.faker.random.uuid }}">
   <link rel="stylesheet" href="{{ relativePath }}css/style.css?v={{ global.faker.random.uuid }}">
 </head>

@@ -1,5 +1,4 @@
 @include block ('items') {
-  display: block;
   margin: 0 s(2) s(2);
   transform: translate(-100%, 0);
   transition: transform $ease-intro;
