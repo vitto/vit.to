@@ -1,5 +1,7 @@
 # vit.to
 
+<img src="https://raw.githubusercontent.com/vitto/vit.to/2018-website/frontend/sass/default/img/social-image.png" width="100%" height="auto">
+
 Test my website at https://vitto.github.io/vit.to/ or http://vit.to
 
 ### Develop
