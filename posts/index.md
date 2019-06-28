@@ -9,8 +9,8 @@ work:
     value: Vittorio Vittori
   -
     title: Corporation
-    value: ideato srl
-    url: http://www.ideato.it
+    value: FLOWING
+    url: https://flowing.it
   -
     title: Role
     value: Front-end engineer
@@ -40,6 +40,6 @@ contact:
     url: tel:+393201852742
   -
     title: E-mail
-    value: vv@ideato.it
-    url: mailto:vv@ideato.it
+    value: vv@flowing.it
+    url: mailto:vv@flowing.it
 ---
