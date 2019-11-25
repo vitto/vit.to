@@ -1,0 +1,35 @@
+.phrases {
+  bottom: s(4);
+  font-size: 18px;
+
+  @include media ('>tablet-small') {
+    font-size: 28px;
+  }
+
+  position: fixed;
+  text-transform: uppercase;
+  z-index: 10;
+
+  .text-item {
+    $opacity: 1;
+
+    display: none;
+    float: left;
+    margin-left: s(0.5);
+
+    &:first-child {
+      margin-left: 0;
+      opacity: $opacity;
+    }
+
+    &--visible {
+      display: block;
+    }
+
+    &--clear {
+      clear: left;
+      margin-left: 0;
+      opacity: $opacity;
+    }
+  }
+}

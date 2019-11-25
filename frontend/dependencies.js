@@ -16,13 +16,16 @@ module.exports = {
   },
   js: {
     app: [
-      path.join(__js, '/glitch.js')
+      path.join(__js, '/glitch.js'),
+      path.join(__js, '/textShuffle.js')
     ],
     vendor: [
+      path.join(__modules, '/jquery/dist/jquery.slim.js'),
       path.join(__modules, '/three/build/three.js')
     ],
     provider: {
-      THREE: 'three'
+      THREE: 'three',
+      jquery: 'jQuery'
     }
   }
 }
