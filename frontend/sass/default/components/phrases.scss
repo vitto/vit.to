@@ -2,7 +2,7 @@
   bottom: s(4);
   font-size: 18px;
 
-  @include media ('>tablet-small') {
+  @include media ('>=tablet-small') {
     font-size: 28px;
   }
 

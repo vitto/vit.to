@@ -73,7 +73,7 @@ $(function () {
   add(2, '-', 0, true)
   add(0.5, 'This is my homepage', 0, true)
   add(2, 'I love', 0, true)
-  add(0.5, ['video-games', 'my dogs', 'growing bonsais', 'experimenting with code', 'visual design'], [0.85, 1.1, 1, 1.25, 1])
+  add(0.5, ['video-games', 'my dogs', 'growing my bonsais', 'experimenting with code', 'visual design'], [0.85, 1.1, 1, 1.25, 1])
   add(2, '-', 0, true)
   add(0.5, 'need help?', 0, true)
   add(1, ['+39 320 1852742', 'vittorivittorio@gmail.com'], [10, 10], true)
