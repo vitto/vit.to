@@ -6,7 +6,7 @@
   "scripts": {
     "prod": "npm run clean && cd frontend && ../node_modules/.bin/webpack --progress --profile --colors --env=prod && npm run pre-deploy",
     "clean": "rm -rf frontend/build/* || true && rm -rf frontend/source/* || true && rm -rf frontend/assets/* || true",
-    "deploy": "git add dist/ && git commit -m 'Update contents' && git subtree push --prefix dist origin gh-pages",
+    "deploy": "git add dist/ && git commit -m 'Update contents' && git subtree push --prefix dist origin gh-pages --force",
     "go": "npm run prod && npm run deploy && git push",
     "pre-deploy": "rm -rf dist/* && cp -a frontend/build/. dist/ && cp CNAME dist/.",
     "serve": "cd frontend/build && python -m SimpleHTTPServer 8000",
