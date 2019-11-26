@@ -17,9 +17,11 @@
   .text-item {
     $color-static: $color-graphics;
     $color-dynamic: rgba($color-graphics, 0.5);
+    $color-static-mobile: $color-graphics;
+    $color-dynamic-mobile: rgba($color-graphics, 0.75);
 
     background-color: $color-background;
-    color: $color-dynamic;
+    color: $color-dynamic-mobile;
     display: none;
     float: left;
     line-height: 1;
@@ -27,19 +29,31 @@
     margin-top: s(-0.5);
     padding: s(0.5) s(1);
 
-    &:first-child {
-      color: $color-static;
-      margin-left: 0;
+    @include media ('>=tablet-small') {
+      color: $color-dynamic;
     }
 
-    &--visible {
-      display: block;
+    &--clear,
+    &:first-child {
+      color: $color-static-mobile;
+      margin-left: 0;
+      padding-left: s(2);
+
+      @include media ('>=tablet-small') {
+        color: $color-static;
+      }
+
+      @include media ('>tablet-small') {
+        padding-left: s(0.5);
+      }
     }
 
     &--clear {
       clear: left;
-      color: $color-static;
-      margin-left: 0;
+    }
+
+    &--visible {
+      display: block;
     }
 
     &__content {
