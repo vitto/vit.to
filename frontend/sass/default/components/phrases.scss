@@ -3,7 +3,11 @@
   font-size: 18px;
 
   @include media ('>=tablet-small') {
-    font-size: 28px;
+    font-size: 32px;
+  }
+
+  @include media ('>=tablet-large') {
+    font-size: 36px;
   }
 
   position: fixed;
@@ -11,15 +15,21 @@
   z-index: 10;
 
   .text-item {
-    $opacity: 1;
+    $color-static: $color-graphics;
+    $color-dynamic: rgba($color-graphics, 0.5);
 
+    background-color: $color-background;
+    color: $color-dynamic;
     display: none;
     float: left;
-    margin-left: s(0.5);
+    line-height: 1;
+    margin-left: s(-1);
+    margin-top: s(-0.5);
+    padding: s(0.5) s(1);
 
     &:first-child {
+      color: $color-static;
       margin-left: 0;
-      opacity: $opacity;
     }
 
     &--visible {
@@ -28,8 +38,12 @@
 
     &--clear {
       clear: left;
+      color: $color-static;
       margin-left: 0;
-      opacity: $opacity;
+    }
+
+    &__content {
+      margin-bottom: 2px;
     }
   }
 }

@@ -8,7 +8,8 @@
   line-height: 1.25;
   margin: 0;
   min-height: 100vh;
-  padding: s(4);
+
+  padding: 0;
 
   @include modifier ('no-scroll') {
     overflow: hidden;
@@ -16,5 +17,9 @@
 
   @include media ('<=tablet-small') {
     background-color: background('foreground');
+  }
+
+  @include media ('>=tablet-small') {
+    padding: s(4);
   }
 }
