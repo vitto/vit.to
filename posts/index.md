@@ -9,11 +9,11 @@ work:
     value: Vittorio Vittori
   -
     title: Corporation
-    value: FLOWING
-    url: https://flowing.it
+    value: Gruppo Maggioli
+    url: https://maggioli.it
   -
     title: Role
-    value: Front-end engineer
+    value: UX desginer / UI desginer
   -
     title: Creative
     value: UI / BEM / Visual

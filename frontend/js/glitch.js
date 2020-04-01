@@ -283,7 +283,7 @@ class PostEffect {
 
 class ConsoleSignature {
   constructor() {
-    this.message = `created by yoichi kobayashi, reused by vittorio vittori`;
+    this.message = `text effect created by yoichi kobayashi, reused by vittorio vittori`;
     this.url = `http://vit.to`;
     this.show();
   }
