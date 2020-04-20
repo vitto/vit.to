@@ -87,5 +87,5 @@ $(function () {
   add(0.5, ['work', 'buy', 'consume', 'die'], [0.5, 0.5, 0.5, 0.5], true)
   add(1, '_', 0, true)
   add(0.5, 'need help?', 0, true)
-  add(1, ['+39 320 1852742', 'vittorio.vittorio@maggioli.it'], [10, 10], true)
+  add(1, ['+39 320 1852742', 'vittorio.vittori@maggioli.it'], [10, 10], true)
 })
